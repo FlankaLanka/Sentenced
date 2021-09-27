@@ -7,6 +7,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public bool interacted = false;
+    [SerializeField] private Sprite interactedSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     
     // LEFT CLICK ON AN OBJECT - swap its "interacted" value
@@ -28,6 +29,12 @@ public class Interactable : MonoBehaviour
         this.interacted = true;
         
         Debug.Log("Clicked on " + this.name);
+
+        // OPTIONAL: change the object sprite if a new one is assigned
+        // can make interactedSprite an array of sprites if multiple "phases" are desired
+        if(this.interactedSprite)
+            this.GetComponent<SpriteRenderer>().sprite = interactedSprite;
+        
     }
 
     // RIGHT CLICK ON AN OBJECT - debug.log the status of this object

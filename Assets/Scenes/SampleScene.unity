@@ -263,11 +263,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 237.96365, y: 148.3517}
+  scrollPos: {x: 261.25424, y: 182.49799}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.73000026
+  zoom: 0.76000017
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -306,7 +306,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.242031
     y: 7.206315
-    width: 77.39725
+    width: 78.42104
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -431,9 +431,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 73.47515
-    y: 113.4329
-    width: 96.02738
+    x: 87.94883
+    y: 118.69605
+    width: 100.526306
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -462,7 +462,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -88.74426
     y: 117.51573
-    width: 96.02738
+    width: 100.526306
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: NO UR MOM GAY
+  storyText: choice a picked
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: XYAXYXYAXYA
+  storyText: Choice b picked
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -588,7 +588,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -88.76778
     y: -77.91619
-    width: 102.60272
+    width: 106.84209
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1004,7 +1004,7 @@ MonoBehaviour:
           spriteVal: {fileID: 0}
         stringData:
           stringRef: {fileID: 0}
-          stringVal: UR MOM GAY
+          stringVal: UR MAMA
         textureData:
           textureRef: {fileID: 0}
           textureVal: {fileID: 0}
@@ -5119,7 +5119,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2765105034738135645, guid: ab65b707f5680954f8308ee0a74bfb39, type: 3}
       propertyPath: defaultWord
-      value: MOM GAY
+      value: MAMA
       objectReference: {fileID: 0}
     - target: {fileID: 4483834694567480634, guid: ab65b707f5680954f8308ee0a74bfb39, type: 3}
       propertyPath: m_Pivot.x

@@ -9,14 +9,11 @@ public class CardClickFunctions : MonoBehaviour
 {
     //currently only handles all buttons' color change and contains cardAttributes value
     //for everything else check MatchMechanic
-
-    [Serializable]
     public class cardAttributes
     {
 
         public bool selected;
         //private int category; //1 or 2, 0 is default and needs to be assigned
-        [SerializeField]
         private string words;
 
         public cardAttributes(string w)
@@ -24,12 +21,10 @@ public class CardClickFunctions : MonoBehaviour
             selected = false;
             words = w;
         }
-
         public void setWord(string w)
         {
             words = w;
         }
-
         public string getWord()
         {
             return words;
@@ -47,20 +42,18 @@ public class CardClickFunctions : MonoBehaviour
         //StartCoroutine(LateStart());
     }
 
-    private void Update()
-    {
-        //SetTexttoWords(ca);
-    }
     private void SetTexttoWords(cardAttributes a)
     {
         gameObject.GetComponentInChildren<Text>().text = a.getWord();
     }
 
+    /*
     IEnumerator LateStart()
     {
         yield return new WaitForSeconds(3f);
         SetTexttoWords(ca);
     }
+    */
 
     /*
     public void SelectCard()

@@ -281,9 +281,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 48095620}
+  - {fileID: 48095626}
   selectedCommands:
-  - {fileID: 48095661}
+  - {fileID: 48095659}
   variables:
   - {fileID: 48095634}
   - {fileID: 48095635}
@@ -1772,10 +1772,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 46
   indentLevel: 0
-  InputWords: Added card to 1
+  InputWords: Justin Happy
   ContentNumber: 0
-  GreyIf: 0
-  FeelingsLessThan: 0
+  GreyIf: 1
+  FeelingsLessThan: 10
 --- !u!114 &48095652
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1914,7 +1914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 48
   indentLevel: 0
-  InputWords: Added 2 fungus
+  InputWords: Justin Sad
   ContentNumber: 1
   GreyIf: 1
   FeelingsLessThan: 80

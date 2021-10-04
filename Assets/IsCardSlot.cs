@@ -23,6 +23,9 @@ public class IsCardSlot : MonoBehaviour, IDropHandler, IPointerExitHandler
     IEnumerator DelayDisplay()
     {
         yield return new WaitForEndOfFrame();
-        display.GetComponent<Text>().text = transform.GetComponentInChildren<Text>().text;
+        if(transform.childCount != 0)
+        {
+            display.GetComponent<Text>().text = transform.GetComponentInChildren<Text>().text;
+        }
     }
 }

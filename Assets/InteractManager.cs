@@ -25,8 +25,6 @@ public class InteractManager : MonoBehaviour
         mainCam = GameObject.FindWithTag("MainCamera").GetComponent<CameraManager>();
         selectSFX = Resources.Load("select") as AudioClip;
         deselectSFX = Resources.Load("deselect") as AudioClip;
-
-        interactableObjects = Object.FindObjectsOfType<Interactable>();
     }
 
     // Update is called once per frame
@@ -73,6 +71,8 @@ public class InteractManager : MonoBehaviour
 
     public void CheckAllInteractableObjectStatus() 
     {
+        // check for all interactable objects in the scene
+        interactableObjects = Object.FindObjectsOfType<Interactable>();
         Debug.Log("Checking Interactables Status:");
         
         foreach (Interactable i in interactableObjects){

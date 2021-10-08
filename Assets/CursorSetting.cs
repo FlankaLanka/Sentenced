@@ -16,8 +16,6 @@ public class CursorSetting : MonoBehaviour
     // offset for the cursor's focus point (from top left corner)
     public static Vector2 hotspot = new Vector2(2f, 2f);
 
-    public Interactable[] interactableObjects;
-
     // define the cursors from Resources Folder
     void Awake()
     {
@@ -29,15 +27,5 @@ public class CursorSetting : MonoBehaviour
     void Start()
     {
         Cursor.SetCursor(d_cursor, hotspot, CursorMode.Auto);
-        interactableObjects = Object.FindObjectsOfType<Interactable>();
-    }
-    
-    public void CheckAllInteractableObjectStatus() 
-    {
-        Debug.Log("Checking Interactables Status:");
-        
-        foreach (Interactable i in interactableObjects){
-            Debug.Log(i.name + " interaction: " + i.interacted );
-        }
     }
 }

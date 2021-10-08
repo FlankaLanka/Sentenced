@@ -35,7 +35,7 @@ public class CameraManager : MonoBehaviour
         // find vector 3 for distance to travel
         //Vector3 dist = new Vector3(toZoomPosition.x, toZoomPosition.x, 0) ;
 
-        if(target != null)
+        if(target != init_camPos)
             Debug.Log("Changing Targets while target is already set");
 
 

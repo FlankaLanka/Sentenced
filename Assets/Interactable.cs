@@ -4,40 +4,25 @@ using UnityEngine;
 using Fungus;
 
 // basic script to add to any interactable objects in the scene
-
 public class Interactable : MonoBehaviour
 {
     public bool interacted = false;     // true if object has been interacted with
-    //public bool selected = false;       // true if object is currently being interacted with (cam zoom?)
-    // static var for selected obj
-    public string selected;       
 
+    public Flowchart fc;
     private Sprite defaultSprite;       // the original sprite to be rendered
 
     // can possibly turn this into an array if more sprite "stages" are desired
     [SerializeField] private Sprite interactedSprite;   // new sprite to render after being interacted with
 
-    private CameraManager mainCam;
+    InteractManager im;
 
-    // consider moving to another script to save resources?
-    public Flowchart fc;
-
-    // consider moving audio to an audio manager to save resources?
-    private AudioClip selectSFX;
-    private AudioClip deselectSFX;
 
     // Start is called before the first frame update
     void Start()
     {
-        fc = GameObject.Find("Flowchart").GetComponent<Flowchart>();
-
-        selected = "";
         defaultSprite = this.GetComponent<SpriteRenderer>().sprite;
-        mainCam = GameObject.FindWithTag("MainCamera").GetComponent<CameraManager>();
-
-        // setting SFX values -- can also do this manually with [SerializeField] or public variable
-        selectSFX = Resources.Load("select") as AudioClip;
-        deselectSFX = Resources.Load("deselect") as AudioClip;
+        im = GameObject.Find("InteractManager").GetComponent<InteractManager>();
+        fc = GameObject.Find("Flowchart").GetComponent<Flowchart>();
     }
 
     // Update is called once per frame
@@ -51,26 +36,18 @@ public class Interactable : MonoBehaviour
     void OnMouseDown(){
 
         //Debug.Log("Clicked on " + this.name);
-        
-        // only play the SFX once
-        if (selected == "")
-        {
-            this.GetComponent<AudioSource>().PlayOneShot(selectSFX);
-        }
 
-        //this.interacted = !this.interacted;     //swap interacted value
-        this.interacted = true;
+        // select this object
+        im.Select(this.gameObject);
 
-        //this.selected = true;
-        selected = this.name;
-        
-        fc.SetStringVariable("objName", selected);
-        mainCam.cameraZoom(this.transform.position);
-        
+        //change interacted value
+        //this.interacted = !this.interacted;     // swap           
+        this.interacted = true;                   // change to true (one time only)
+
         // OPTIONAL: change the object sprite if a new one is assigned
         if(this.interactedSprite)
             this.GetComponent<SpriteRenderer>().sprite = interactedSprite;
-        
+            
     }
 
     // RIGHT CLICK ON AN OBJECT - stop focus on object (reset camera)
@@ -78,17 +55,10 @@ public class Interactable : MonoBehaviour
     void OnMouseOver () {
         if (Input.GetMouseButtonDown(1)) 
         {
-            //Debug.Log(this.name + " is " + (interacted ? "selected" : "not selected") );
-            
-            // only play SFX once
-            if (selected != ""){
-                this.GetComponent<AudioSource>().PlayOneShot(deselectSFX);
+            if (!fc.GetBooleanVariable("locked")){
+                // deselect this object
+                im.Deselect();
             }
-
-            //this.selected = false;
-            selected = "";
-            
-            mainCam.cameraReset();
         }
     }
     

@@ -4,6 +4,16 @@ using UnityEngine;
 using Fungus;
 
 // Class to manage Interactable Objects, Camera Zoom, and Fungus Text
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// ------------------------------------------ IMPORTANT: ------------------------------------------ //
+// the fungus "locked" variable is important in controlling what/when player can click              //
+// -- if (locked == false), the player cannot click on any objects                                  //
+// -- ideally, set locked to false at the start of the inspection + once all text has been said     //
+// -- set locked to true once text is displayed or before the inspection phase                      //
+// ------------------------------------------------------------------------------------------------ //
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 public class InteractManager : MonoBehaviour
 {
     public Flowchart fc;
@@ -12,17 +22,19 @@ public class InteractManager : MonoBehaviour
     public AudioClip selectSFX;
     public AudioClip deselectSFX;
 
-    public static bool selected;
+    //public static bool selected;
+    public string selected;
     public Interactable[] interactableObjects;
 
     // Start is called before the first frame update
     void Start()
     {
-        selected = false;
+        selected = "";
 
         fc = GameObject.Find("Flowchart").GetComponent<Flowchart>();
-
         mainCam = GameObject.FindWithTag("MainCamera").GetComponent<CameraManager>();
+        
+        // getting SFX from resources
         selectSFX = Resources.Load("select") as AudioClip;
         deselectSFX = Resources.Load("deselect") as AudioClip;
     }
@@ -33,13 +45,15 @@ public class InteractManager : MonoBehaviour
         
     }
 
-    public void Select(GameObject obj)
+    public bool Select(GameObject obj)
     {
-        if (!selected)
+        // only execute this code if object is not already selected
+        if (selected != obj.name && !fc.GetBooleanVariable("locked"))
         {
-            selected = true;
-            mainCam.cameraZoom(obj.transform.position);
+            //selected = true;
+            selected = obj.name;
 
+            mainCam.cameraZoom(obj.transform.position);
 
             // "lock" the scene upon getting clicked on
             fc.SetStringVariable("objName", obj.name);
@@ -49,14 +63,19 @@ public class InteractManager : MonoBehaviour
         else
         {
             Debug.Log("Calling Select() with a selected object");
+            return false;
         }
+        
+        return true;
     }
 
-    public void Deselect()
+    public void Deselect(GameObject obj)
     {
-        if (selected)
+        // only deselect if clicked on the selected object
+        if (selected == obj.name)
         {
-            selected = false;
+            //selected = false;
+            selected = "";
             
             mainCam.cameraReset();
             // "unlock" the scene upon getting deselected

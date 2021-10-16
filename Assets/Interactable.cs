@@ -4,6 +4,8 @@ using UnityEngine;
 using Fungus;
 
 // basic script to add to any interactable objects in the scene
+// currently supports changing sprite ONCE when clicked
+
 public class Interactable : MonoBehaviour
 {
     public bool interacted = false;     // true if object has been interacted with
@@ -37,17 +39,21 @@ public class Interactable : MonoBehaviour
 
         //Debug.Log("Clicked on " + this.name);
 
-        // select this object
-        im.Select(this.gameObject);
+        // try to select this object
+        if (im.Select(this.gameObject))
+        {   
+            //code to execute if object is selected
 
-        //change interacted value
-        //this.interacted = !this.interacted;     // swap           
-        this.interacted = true;                   // change to true (one time only)
+            //change interacted value
+            //this.interacted = !this.interacted;     // swap           
+            this.interacted = true;                   // change to true (one time only)
 
-        // OPTIONAL: change the object sprite if a new one is assigned
-        if(this.interactedSprite)
-            this.GetComponent<SpriteRenderer>().sprite = interactedSprite;
-            
+            // OPTIONAL: change the object sprite if a new one is assigned
+            if(this.interactedSprite)
+            {
+                this.GetComponent<SpriteRenderer>().sprite = interactedSprite;
+            }
+        }    
     }
 
     // RIGHT CLICK ON AN OBJECT - stop focus on object (reset camera)
@@ -55,9 +61,10 @@ public class Interactable : MonoBehaviour
     void OnMouseOver () {
         if (Input.GetMouseButtonDown(1)) 
         {
-            if (!fc.GetBooleanVariable("locked")){
+            if (!fc.GetBooleanVariable("locked"))
+            {
                 // deselect this object
-                im.Deselect();
+                im.Deselect(this.gameObject);
             }
         }
     }
@@ -65,6 +72,8 @@ public class Interactable : MonoBehaviour
     // change cursor on entering a sprite
     void OnMouseEnter()
     {
+        // only change cursor if scene is not locked
+        if(!fc.GetBooleanVariable("locked") || im.selected == this.name)
         Cursor.SetCursor(CursorSetting.i_cursor, CursorSetting.hotspot, CursorMode.Auto);
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 
 // Class to control Camera Movement
 // currently only used to control camera zoom on selected objects
+
 public class CameraManager : MonoBehaviour
 {
 
@@ -40,7 +41,11 @@ public class CameraManager : MonoBehaviour
 
 
         // only go half-way to z so that we can still see the object
-        target = new Vector3(toZoomPosition.x, toZoomPosition.y, init_camPos.z / 2f);
+        Vector3 dist = new Vector3( (toZoomPosition.x - init_camPos.x) * .5f, 
+                                    (toZoomPosition.y - init_camPos.y) * .5f, 
+                                    (init_camPos.z - toZoomPosition.z) * .75f );
+        //target = new Vector3(toZoomPosition.x, toZoomPosition.y, init_camPos.z / 2f);
+        target = dist;
     }
 
     // Sets target to initial camera position

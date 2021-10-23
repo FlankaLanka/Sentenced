@@ -9,6 +9,21 @@ public class FeelingsList : MonoBehaviour
 
     private Text DebugFeelings;
 
+    public static FeelingsList instance { get; private set; }
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void Start()
     {
         DebugFeelings = gameObject.GetComponent<Text>();

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -41,17 +42,28 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             if(cardSlot1.transform.childCount > 0)
             {
-                cardSlot1.transform.GetChild(0).SetParent(parentObj.transform);
+                GameObject childCard = cardSlot1.transform.GetChild(0).gameObject;
+                childCard.GetComponent<IsDraggable>().enabled = true;
+                childCard.GetComponent<CardClickFunctions>().jumpingBack = true;
+                StartCoroutine(childCard.GetComponent<CardClickFunctions>().DialogueLerp());
+                childCard.transform.SetParent(parentObj.transform);
+                
             }
             transform.SetParent(cardSlot1.transform);
+            gameObject.gameObject.GetComponent<IsDraggable>().enabled = false;
         }
         else if (cardSlot2.gameObject.GetComponent<IsCardSlot>().canAdd && parentObj.name == "Content2")
         {
             if (cardSlot2.transform.childCount > 0)
             {
-                cardSlot2.transform.GetChild(0).SetParent(parentObj.transform);
+                GameObject childCard = cardSlot2.transform.GetChild(0).gameObject;
+                childCard.GetComponent<IsDraggable>().enabled = true;
+                childCard.GetComponent<CardClickFunctions>().jumpingBack = true;
+                StartCoroutine(childCard.GetComponent<CardClickFunctions>().DialogueLerp());
+                childCard.transform.SetParent(parentObj.transform);
             }
             transform.SetParent(cardSlot2.transform);
+            gameObject.gameObject.GetComponent<IsDraggable>().enabled = false;
         }
         else
         {

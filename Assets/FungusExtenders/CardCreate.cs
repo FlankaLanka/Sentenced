@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
 
-[CommandInfo("Card", "Create Card", "Create Card, must fill in which content to put and conditions to be grey")]
+[CommandInfo("Card", "Create Card", "Create Card, must fill in which content to put and conditions to be grey.")]
 
 public class CardCreate : Command
 {
@@ -44,16 +44,18 @@ public class CardCreate : Command
 
         newCard = Instantiate(CardPrefab) as GameObject;
         newCard.GetComponent<CardClickFunctions>().defaultWord = InputWords;
-        
+
         //this is where to add card
         GameObject ContentObj;
         if (ContentNumber == ContentBelongsTo.One)
         {
+            newCard.GetComponent<CardClickFunctions>().content = 1;
             ContentObj = GameObject.Find("Content1");
             newCard.transform.SetParent(ContentObj.transform, false);
         }
         else if (ContentNumber == ContentBelongsTo.Two)
         {
+            newCard.GetComponent<CardClickFunctions>().content = 2;
             ContentObj = GameObject.Find("Content2");
             newCard.transform.SetParent(ContentObj.transform, false);
         }

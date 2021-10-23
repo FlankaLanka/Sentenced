@@ -21,6 +21,7 @@ public class MatchMechanic : MonoBehaviour
         matchPanel = GameObject.Find("MatchPanel");
     }
 
+    /*
     public void addCardScroll1()
     {
         newCard = Instantiate(cardPrefab) as GameObject;
@@ -38,6 +39,7 @@ public class MatchMechanic : MonoBehaviour
             newCard.transform.SetParent(content2.transform, false);
         }
     }
+    */
 
     public void SelectChoice() //also means confirm choice and move to different scene based on what is picked
     {

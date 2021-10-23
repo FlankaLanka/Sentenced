@@ -46,6 +46,8 @@ public class CardClickFunctions : MonoBehaviour
         if (ca.content == 1)
         {
             contentTransform = GameObject.Find("Content1").transform;
+            Sprite revDialogue = Resources.Load<Sprite>("dialogue_3x_rev");
+            gameObject.GetComponent<Image>().sprite = revDialogue;
         }
         else
         {

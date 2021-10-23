@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public bool currentlyDragging = false;
+
     private GameObject parentObj;
     private GameObject canvas;
     private GameObject cardSlot1;
@@ -29,6 +31,8 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         parentObj = transform.parent.gameObject;
         transform.SetParent(canvas.transform);
         group.blocksRaycasts = false;
+        currentlyDragging = true;
+        GameObject.Find("MatchPanel").GetComponent<CardPositions>().curDragging = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -38,41 +42,57 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (cardSlot1.gameObject.GetComponent<IsCardSlot>().canAdd && parentObj.name == "Content1")
+        if (cardSlot1.GetComponent<IsCardSlot>().canAdd && parentObj.name == "Content1")
         {
             if(cardSlot1.transform.childCount > 0)
             {
                 GameObject childCard = cardSlot1.transform.GetChild(0).gameObject;
                 childCard.GetComponent<IsDraggable>().enabled = true;
                 childCard.GetComponent<CardClickFunctions>().jumpingBack = true;
+                childCard.GetComponent<Image>().color = Color.white;
                 StartCoroutine(childCard.GetComponent<CardClickFunctions>().DialogueLerp());
                 childCard.transform.SetParent(parentObj.transform);
                 
             }
             transform.SetParent(cardSlot1.transform);
-            gameObject.gameObject.GetComponent<IsDraggable>().enabled = false;
+            gameObject.GetComponent<IsDraggable>().enabled = false;
+            gameObject.GetComponent<Image>().color = Color.magenta;
+            AudioSource SwapSound = cardSlot1.GetComponent<AudioSource>();
+            SwapSound.Play();
+
+            //this below helps fix a bug where image is enlarged if you drag onto nothing
+            //gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize * 1.5f;
         }
-        else if (cardSlot2.gameObject.GetComponent<IsCardSlot>().canAdd && parentObj.name == "Content2")
+        else if (cardSlot2.GetComponent<IsCardSlot>().canAdd && parentObj.name == "Content2")
         {
             if (cardSlot2.transform.childCount > 0)
             {
                 GameObject childCard = cardSlot2.transform.GetChild(0).gameObject;
                 childCard.GetComponent<IsDraggable>().enabled = true;
                 childCard.GetComponent<CardClickFunctions>().jumpingBack = true;
+                childCard.GetComponent<Image>().color = Color.white;
                 StartCoroutine(childCard.GetComponent<CardClickFunctions>().DialogueLerp());
                 childCard.transform.SetParent(parentObj.transform);
             }
             transform.SetParent(cardSlot2.transform);
-            gameObject.gameObject.GetComponent<IsDraggable>().enabled = false;
+            gameObject.GetComponent<IsDraggable>().enabled = false;
+            gameObject.GetComponent<Image>().color = Color.magenta;
+            AudioSource SwapSound = cardSlot1.GetComponent<AudioSource>();
+            SwapSound.Play();
+
+            //this below helps fix a bug where image is enlarged if you drag onto nothing
+            //gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize * 1.5f;
         }
         else
         {
             transform.SetParent(parentObj.transform);
+            //this below helps fix a bug where image is enlarged if you drag onto nothing
+            gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize;
         }
 
-
         group.blocksRaycasts = true;
-
+        currentlyDragging = false;
+        GameObject.Find("MatchPanel").GetComponent<CardPositions>().curDragging = false;
     }
 
 }

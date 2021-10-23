@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class CardPositions : MonoBehaviour
 {
-    public Dictionary<int, Vector2> cardPos = new Dictionary<int, Vector2>();
+    public Dictionary<int, Vector2> cardPos = new Dictionary<int, Vector2>(); //used in CardClickFunctions script
+
+    public GameObject enlargedObject; //used in EnlargeOnPointer script
+
+    public bool curDragging = false; //used in EnlargeOnPointer and IsDraggable scripts
 
     private void Start()
     {
@@ -17,4 +21,5 @@ public class CardPositions : MonoBehaviour
         cardPos.Add(6, new Vector2(1600, 372));
         cardPos.Add(7, new Vector2(1337, 138));
     }
+
 }

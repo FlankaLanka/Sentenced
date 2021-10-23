@@ -67,10 +67,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
-    m_FontStyle: 0
+    m_FontSize: 32
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4483834694567480637}
   - component: {fileID: -2765105034738135645}
   - component: {fileID: 3678581147196393209}
+  - component: {fileID: 628120297663395768}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -227,6 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultWord: 
+  content: 0
+  jumpingBack: 0
 --- !u!114 &3678581147196393209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,5 +240,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dec49e5bb7943724580396a373e68ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &628120297663395768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483834694567480635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8874a9b53e0478c408ae986c532ab151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

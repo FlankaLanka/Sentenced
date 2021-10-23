@@ -24,7 +24,7 @@ public class FadeOut : MonoBehaviour
         Color SlotColor = gameObject.GetComponent<Image>().color;
         while (SlotColor.a > 0)
         {
-            yield return new WaitForSeconds(0.005f);
+            yield return new WaitForSeconds(0.002f);
             gameObject.GetComponent<Image>().color = new Color(SlotColor.r, SlotColor.g, SlotColor.b, fader);
             fader -= 0.01f;
         }

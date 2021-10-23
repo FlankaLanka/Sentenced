@@ -288,7 +288,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 48095620}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 48095663}
   variables:
   - {fileID: 48095634}
   - {fileID: 48095635}
@@ -1992,7 +1993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 56
   indentLevel: 0
-  InputWords: Wassup again
+  InputWords: Wassup again Testing Very Long Text, try to avoid this in narrative
   ContentNumber: 0
   GreyIf: 1
   FeelingsLessThan: 120
@@ -4247,6 +4248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd37e5b68d165ff46beda1ad5c5dcb27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enlargedObject: {fileID: 0}
+  curDragging: 0
 --- !u!1 &678681079
 GameObject:
   m_ObjectHideFlags: 0

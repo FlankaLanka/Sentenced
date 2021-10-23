@@ -61,7 +61,7 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             SwapSound.Play();
 
             //this below helps fix a bug where image is enlarged if you drag onto nothing
-            //gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize * 1.5f;
+            gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize * 1.5f;
         }
         else if (cardSlot2.GetComponent<IsCardSlot>().canAdd && parentObj.name == "Content2")
         {
@@ -81,7 +81,7 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             SwapSound.Play();
 
             //this below helps fix a bug where image is enlarged if you drag onto nothing
-            //gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize * 1.5f;
+            gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize * 1.5f;
         }
         else
         {

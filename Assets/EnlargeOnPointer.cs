@@ -7,10 +7,23 @@ using UnityEngine.UI;
 public class EnlargeOnPointer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Vector2 originalSize;
+    public Sprite whiteDialogue;
+    public Sprite blackDialogue;
+    //public int originalFontSize;
 
     private void Start()
     {
         originalSize = gameObject.GetComponent<RectTransform>().sizeDelta;
+        whiteDialogue = gameObject.GetComponent<Image>().sprite;
+        if(transform.parent.name == "Content1")
+        {
+            blackDialogue = Resources.Load<Sprite>("dialogue_black_rev_3x");
+        }
+        else
+        {
+            blackDialogue = Resources.Load<Sprite>("dialogue_black_3x");
+        }
+        //originalFontSize = gameObject.GetComponentInChildren<Text>().fontSize;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -20,19 +33,15 @@ public class EnlargeOnPointer : MonoBehaviour, IPointerEnterHandler, IPointerExi
             if(!GameObject.Find("MatchPanel").GetComponent<CardPositions>().curDragging)
             {
                 gameObject.GetComponent<RectTransform>().sizeDelta = originalSize * 1.5f;
-            }
-        }
-            /*
-            Debug.Log("poiter enter");
-            if (transform.parent.name == "Content1" || transform.parent.name == "Content2")
-            {
-                if(GameObject.Find("MatchPanel").GetComponent<CardPositions>().enlargedObject == null)
+                
+                //this part should only work if draggable
+                if(gameObject.GetComponent<Image>().color != Color.gray)
                 {
-                    gameObject.GetComponent<RectTransform>().sizeDelta = originalSize * 1.5f;
-                    GameObject.Find("MatchPanel").GetComponent<CardPositions>().enlargedObject = gameObject;
+                    gameObject.GetComponent<Image>().sprite = blackDialogue;
+                    gameObject.GetComponentInChildren<Text>().color = Color.white;
                 }
             }
-            */
+        }
         }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -40,17 +49,8 @@ public class EnlargeOnPointer : MonoBehaviour, IPointerEnterHandler, IPointerExi
         if (transform.parent.name == "Content1" || transform.parent.name == "Content2")
         {
             gameObject.GetComponent<RectTransform>().sizeDelta = originalSize;
+            gameObject.GetComponent<Image>().sprite = whiteDialogue;
+            gameObject.GetComponentInChildren<Text>().color = Color.black;
         }
-        /*
-        Debug.Log("poiter exit");
-        if (transform.parent.name == "Content1" || transform.parent.name == "Content2")
-        {
-            gameObject.GetComponent<RectTransform>().sizeDelta = originalSize;
-        }
-        if(GameObject.Find("MatchPanel").GetComponent<CardPositions>().enlargedObject == gameObject
-            && !gameObject.GetComponent<IsDraggable>().currentlyDragging)
-        {
-            GameObject.Find("MatchPanel").GetComponent<CardPositions>().enlargedObject = null;
-        }*/
     }
 }

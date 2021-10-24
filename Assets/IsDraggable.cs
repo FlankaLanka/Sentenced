@@ -62,6 +62,8 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
             //this below helps fix a bug where image is enlarged if you drag onto nothing
             gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize * 1.5f;
+            gameObject.GetComponent<Image>().sprite = gameObject.GetComponent<EnlargeOnPointer>().blackDialogue;
+            gameObject.GetComponentInChildren<Text>().color = Color.white;
         }
         else if (cardSlot2.GetComponent<IsCardSlot>().canAdd && parentObj.name == "Content2")
         {
@@ -82,12 +84,16 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
             //this below helps fix a bug where image is enlarged if you drag onto nothing
             gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize * 1.5f;
+            gameObject.GetComponent<Image>().sprite = gameObject.GetComponent<EnlargeOnPointer>().blackDialogue;
+            gameObject.GetComponentInChildren<Text>().color = Color.white;
         }
         else
         {
             transform.SetParent(parentObj.transform);
             //this below helps fix a bug where image is enlarged if you drag onto nothing
             gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize;
+            gameObject.GetComponent<Image>().sprite = gameObject.GetComponent<EnlargeOnPointer>().whiteDialogue;
+            gameObject.GetComponentInChildren<Text>().color = Color.black;
         }
 
         group.blocksRaycasts = true;

@@ -53,7 +53,7 @@ public class Interactable : MonoBehaviour
             {
                 this.GetComponent<SpriteRenderer>().sprite = interactedSprite;
             }
-        }    
+        }
     }
 
     // RIGHT CLICK ON AN OBJECT - stop focus on object (reset camera)
@@ -75,11 +75,13 @@ public class Interactable : MonoBehaviour
         // only change cursor if scene is not locked
         if(!fc.GetBooleanVariable("locked") || im.selected == this.name)
         Cursor.SetCursor(CursorSetting.i_cursor, CursorSetting.hotspot, CursorMode.Auto);
+        im.hovering = true;
     }
 
     // change cursor back to default on leaving a sprite
     void OnMouseExit()
     {
         Cursor.SetCursor(CursorSetting.d_cursor, CursorSetting.hotspot, CursorMode.Auto);
+        im.hovering = false;
     }
 }

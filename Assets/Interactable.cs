@@ -18,13 +18,13 @@ public class Interactable : MonoBehaviour
 
     InteractManager im;
 
-
     // Start is called before the first frame update
     void Start()
     {
         defaultSprite = this.GetComponent<SpriteRenderer>().sprite;
-        im = GameObject.Find("InteractManager").GetComponent<InteractManager>();
+        im = GameObject.FindObjectOfType<InteractManager>();
         fc = GameObject.Find("Flowchart").GetComponent<Flowchart>();
+        //fc = GameObject.FindObjectOfType<Flowchart>();
     }
 
     // Update is called once per frame

@@ -4,9 +4,9 @@ using UnityEngine;
 
 
 // Class to control Camera Movement
-// currently only used to control camera zoom on selected objects
+// used to control camera zoom + keyboard scene scrolling
 
-public class CameraManager : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
 
     private Camera cam;
@@ -16,11 +16,12 @@ public class CameraManager : MonoBehaviour
     public bool cameraLocked;
 
     // make sure player cannot drag camera out of scene
-    public float minx; 
-    public float maxx; 
+    //-- INSTANTIATE/EDIT THESE IN THE EDITOR  --//
+    public float minx = -15f; 
+    public float maxx = 15f;
 
-    public float miny; 
-    public float maxy;
+    public float miny = 0; 
+    public float maxy = 0;
 
 
     // Start is called before the first frame update
@@ -31,13 +32,6 @@ public class CameraManager : MonoBehaviour
         init_camPos = this.transform.position;
         target = this.transform.position;
         cameraLocked = false;
-
-        // temporary hard-coded values 
-        //-- IDEALLY INSTANTIATE THESE IN THE EDITOR AND COMMENT THIS CODE OUT --//
-        minx = -15;
-        maxx = 15;
-        miny = 0f;
-        maxy = 0f;
     }
 
     // Update is called once per frame

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Class to Manage Settings (currently only bgm volume / mute)
+// also handles quitting game
+
 public class SettingsManager : MonoBehaviour
 {
     public float bgm_volume = 0.5f;
@@ -30,8 +33,6 @@ public class SettingsManager : MonoBehaviour
         // constantly update volume
         // (can also do this manually on canvas click, etc.)
         GetComponent<AudioSource>().volume = bgm_volume;
-
-
     }
 
     // make this public function in case of use in buttons, etc.

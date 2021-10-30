@@ -11,21 +11,31 @@ using Fungus;
 // -- if (locked == false), the player cannot click on any objects                                  //
 // -- ideally, set locked to false at the start of the inspection + once all text has been said     //
 // -- set locked to true once text is displayed or before the inspection phase                      //    
+//                                                                                                  //
+// fungus also needs an objName string variable -- unsure how things are being handled currently,   //
+// but this is how i've implemented it so far.                                                      //
 //                                                                                                  //    
 // Interact Manager uses a large collider that covers the entire screen for OnMouseDown. Make sure  //
-// that InteractManager's z value in the scene is greater than all interactable objects so that you //
-// can still click on those other objects.                                                          //
+// that InteractManager's **z value in the scene is greater than all interactable objects** so that //
+// you can still click on those other objects.                                                      //
 //                                                                                                  //
+// Interact Manager needs an *AudioSource* attached to handle select/deselect sfx                   //
 // ------------------------------------------------------------------------------------------------ //
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// TLDR: 
+// (Fungus) add a "locked" boolean variable and(???) "objName" string variable
+// (GameObject) add a giant collider that covers the whole screen
+// (GameObject) make sure z value in the scene is larger than all interactable objects
+// (GameObject) add an audio source (don't need to put any audio sources)
 
 public class InteractManager : MonoBehaviour
 {
     public Flowchart fc;
     
-    private CameraManager mainCam;
-    public AudioClip selectSFX;
-    public AudioClip deselectSFX;
+    private CameraMovement mainCam;
+    private AudioClip selectSFX;
+    private AudioClip deselectSFX;
 
     //public static bool selected;
     public string selected;
@@ -42,7 +52,8 @@ public class InteractManager : MonoBehaviour
         selected = "";
 
         fc = GameObject.Find("Flowchart").GetComponent<Flowchart>();
-        mainCam = GameObject.FindWithTag("MainCamera").GetComponent<CameraManager>();
+        //fc = GameObject.FindObjectOfType<Flowchart>();
+        mainCam = GameObject.FindObjectOfType<CameraMovement>();
         
         // getting SFX from resources
         selectSFX = Resources.Load("select") as AudioClip;
@@ -152,6 +163,5 @@ public class InteractManager : MonoBehaviour
             
             prevMousePos = Input.mousePosition;
         }
-
     }
 }

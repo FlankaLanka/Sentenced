@@ -11,15 +11,16 @@ public class ConversationClose : Command
 {
     public override void OnEnter()
     {
-        GameObject convoPanel = GameObject.Find("ConversationPanel");
-        Transform dialogueContainer = convoPanel.transform.Find("Dialogue").transform;
+
+        Transform convoPanel = GameObject.Find("ConversationCanvas").transform.Find("ConversationPanel");
+        Transform dialogueContainer = convoPanel.Find("Dialogue").transform;
 
         foreach(Transform child in dialogueContainer)
         {
             child.GetComponentInChildren<Text>().text = "temp_text";
         }
 
-        convoPanel.SetActive(false);
+        convoPanel.gameObject.SetActive(false);
         Continue();
     }
 }

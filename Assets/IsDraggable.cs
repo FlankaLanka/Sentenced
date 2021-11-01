@@ -16,6 +16,10 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     //private GameObject content2;
     private CanvasGroup group;
 
+
+    //variables below are for cardslot fade
+    private float distance;
+
     private void Start()
     {
         canvas = GameObject.Find("MatchCanvas");
@@ -33,11 +37,35 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         group.blocksRaycasts = false;
         currentlyDragging = true;
         GameObject.Find("MatchPanel").GetComponent<CardPositions>().curDragging = true;
+
+        if (parentObj.name == "Content1")
+        {
+            //for cardslot1 fade
+            distance = Vector2.Distance(transform.position, cardSlot1.transform.position);
+        }
+        else
+        {
+            //for cardslot2 fade
+            distance = Vector2.Distance(transform.position, cardSlot2.transform.position);
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        float curDistance;
+        if (parentObj.name == "Content1")
+        {
+            //cardslot1 fade
+            curDistance = Vector2.Distance(transform.position, cardSlot1.transform.position);
+            cardSlot1.GetComponent<Image>().color = new Color(1f, 1f, 1f, Mathf.Abs(curDistance / distance));
+        }
+        else
+        {
+            //cardslot2 fade
+            curDistance = Vector2.Distance(transform.position, cardSlot2.transform.position);
+            cardSlot2.GetComponent<Image>().color = new Color(1f, 1f, 1f, Mathf.Abs(curDistance / distance));
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -49,14 +77,14 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 GameObject childCard = cardSlot1.transform.GetChild(0).gameObject;
                 childCard.GetComponent<IsDraggable>().enabled = true;
                 childCard.GetComponent<CardClickFunctions>().jumpingBack = true;
-                childCard.GetComponent<Image>().color = Color.white;
+                //childCard.GetComponent<Image>().color = Color.white;
                 StartCoroutine(childCard.GetComponent<CardClickFunctions>().DialogueLerp());
                 childCard.transform.SetParent(parentObj.transform);
                 
             }
             transform.SetParent(cardSlot1.transform);
             gameObject.GetComponent<IsDraggable>().enabled = false;
-            gameObject.GetComponent<Image>().color = Color.magenta;
+            //gameObject.GetComponent<Image>().color = Color.magenta;
             AudioSource SwapSound = cardSlot1.GetComponent<AudioSource>();
             SwapSound.Play();
 
@@ -72,13 +100,13 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 GameObject childCard = cardSlot2.transform.GetChild(0).gameObject;
                 childCard.GetComponent<IsDraggable>().enabled = true;
                 childCard.GetComponent<CardClickFunctions>().jumpingBack = true;
-                childCard.GetComponent<Image>().color = Color.white;
+                //childCard.GetComponent<Image>().color = Color.white;
                 StartCoroutine(childCard.GetComponent<CardClickFunctions>().DialogueLerp());
                 childCard.transform.SetParent(parentObj.transform);
             }
             transform.SetParent(cardSlot2.transform);
             gameObject.GetComponent<IsDraggable>().enabled = false;
-            gameObject.GetComponent<Image>().color = Color.magenta;
+            //gameObject.GetComponent<Image>().color = Color.magenta;
             AudioSource SwapSound = cardSlot1.GetComponent<AudioSource>();
             SwapSound.Play();
 
@@ -94,6 +122,9 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             gameObject.GetComponent<RectTransform>().sizeDelta = gameObject.GetComponent<EnlargeOnPointer>().originalSize;
             gameObject.GetComponent<Image>().sprite = gameObject.GetComponent<EnlargeOnPointer>().whiteDialogue;
             gameObject.GetComponentInChildren<Text>().color = Color.black;
+            //this below fixes fading color of the card slots when cards are dragged near but not added to slot
+            cardSlot1.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+            cardSlot2.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
         }
 
         group.blocksRaycasts = true;

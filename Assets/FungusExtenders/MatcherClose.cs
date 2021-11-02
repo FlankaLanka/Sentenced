@@ -8,28 +8,33 @@ using Fungus;
 public class MatcherClose : Command
 {
     private GameObject matchCanvas;
-    private GameObject content1;
-    private GameObject content2;
+    private Transform content1;
+    private Transform content2;
     //public bool DeleteCards;
     public override void OnEnter()
     {
-        content1 = GameObject.Find("Content1");
-        content2 = GameObject.Find("Content2");
-
-        //if(DeleteCards)
-        //{
-        foreach (Transform child in content1.transform)
-        {
-            Destroy(child.gameObject);
-        }
-        foreach (Transform child in content2.transform)
-        {
-            Destroy(child.gameObject);
-        }
-        //}
-
         matchCanvas = GameObject.Find("MatchCanvas");
-        matchCanvas.transform.Find("MatchPanel").gameObject.SetActive(false);
+        Transform matchPanel = matchCanvas.transform.Find("MatchPanel");
+        if (matchPanel.gameObject.activeInHierarchy)
+        {
+            content1 = matchPanel.transform.Find("Content1");
+            content2 = matchPanel.transform.Find("Content2");
+
+            //if(DeleteCards)
+            //{
+            foreach (Transform child in content1)
+            {
+                Destroy(child.gameObject);
+            }
+            foreach (Transform child in content2)
+            {
+                Destroy(child.gameObject);
+            }
+            //}
+
+            matchPanel.gameObject.SetActive(false);
+        }
+
 
         Continue();
     }

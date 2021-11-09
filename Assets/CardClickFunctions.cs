@@ -38,6 +38,7 @@ public class CardClickFunctions : MonoBehaviour
 
     public bool jumpingBack = false;
 
+
     private void Start()
     {
         ca = new cardAttributes(defaultWord, content);
@@ -46,8 +47,10 @@ public class CardClickFunctions : MonoBehaviour
         if (ca.content == 1)
         {
             contentTransform = GameObject.Find("Content1").transform;
-            Sprite revDialogue = Resources.Load<Sprite>("dialogue_3x_rev");
+            //do adjustments to get text and sprite to look good
+            Sprite revDialogue = Resources.Load<Sprite>("dialogue_rev_3x");
             gameObject.GetComponent<Image>().sprite = revDialogue;
+            gameObject.GetComponent<VerticalLayoutGroup>().padding.left = -70;
         }
         else
         {

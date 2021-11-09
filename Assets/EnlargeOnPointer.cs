@@ -17,11 +17,11 @@ public class EnlargeOnPointer : MonoBehaviour, IPointerEnterHandler, IPointerExi
         whiteDialogue = gameObject.GetComponent<Image>().sprite;
         if(transform.parent.name == "Content1")
         {
-            blackDialogue = Resources.Load<Sprite>("dialogue_black_rev_3x");
+            blackDialogue = Resources.Load<Sprite>("dialogue_rev_3x_black");
         }
         else
         {
-            blackDialogue = Resources.Load<Sprite>("dialogue_black_3x");
+            blackDialogue = Resources.Load<Sprite>("dialogue_quote_black");
         }
         //originalFontSize = gameObject.GetComponentInChildren<Text>().fontSize;
     }

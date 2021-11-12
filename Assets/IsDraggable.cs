@@ -36,7 +36,7 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         transform.SetParent(canvas.transform);
         group.blocksRaycasts = false;
         currentlyDragging = true;
-        GameObject.Find("MatchPanel").GetComponent<CardPositions>().curDragging = true;
+        canvas.GetComponent<CardPositions>().curDragging = true;
 
         if (parentObj.name == "Content1")
         {
@@ -129,7 +129,7 @@ public class IsDraggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         group.blocksRaycasts = true;
         currentlyDragging = false;
-        GameObject.Find("MatchPanel").GetComponent<CardPositions>().curDragging = false;
+        canvas.GetComponent<CardPositions>().curDragging = false;
     }
 
 }

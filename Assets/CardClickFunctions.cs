@@ -51,6 +51,10 @@ public class CardClickFunctions : MonoBehaviour
             Sprite revDialogue = Resources.Load<Sprite>("dialogue_rev_3x");
             gameObject.GetComponent<Image>().sprite = revDialogue;
             gameObject.GetComponent<VerticalLayoutGroup>().padding.left = -70;
+
+            //change anchors of certain cards for free aspect
+            GetComponent<RectTransform>().anchorMin = new Vector2(0f,0.5f);
+            GetComponent<RectTransform>().anchorMax = new Vector2(0f,0.5f);
         }
         else
         {
@@ -87,7 +91,7 @@ public class CardClickFunctions : MonoBehaviour
         {
             if(transform.parent.name == "Content1" || transform.parent.name == "Content2")
             {
-                transform.position = GameObject.Find("MatchPanel").GetComponent<CardPositions>().cardPos[ca.index];
+                transform.position = GameObject.Find("MatchCanvas").GetComponent<CardPositions>().cardPos[ca.index];
 
                 //gameObject.GetComponent<RectTransform>().anchoredPosition = 
                 //    GameObject.Find("MatchPanel").GetComponent<CardPositions>().cardPos[ca.index];
@@ -100,7 +104,7 @@ public class CardClickFunctions : MonoBehaviour
     {   
         float timeStep = 0.05f;
         Vector3 start = transform.position;
-        Vector3 end = GameObject.Find("MatchPanel").GetComponent<CardPositions>().cardPos[ca.index];
+        Vector3 end = GameObject.Find("MatchCanvas").GetComponent<CardPositions>().cardPos[ca.index];
         Vector3 distance = end - start;
         Vector3 step = distance * timeStep;
         Vector3 traveled = new Vector3(0, 0, 0);

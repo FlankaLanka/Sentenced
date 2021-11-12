@@ -30,7 +30,7 @@ public class EnlargeOnPointer : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         if (transform.parent.name == "Content1" || transform.parent.name == "Content2")
         {
-            if(!GameObject.Find("MatchPanel").GetComponent<CardPositions>().curDragging)
+            if(!GameObject.Find("MatchCanvas").GetComponent<CardPositions>().curDragging)
             {
                 gameObject.GetComponent<RectTransform>().sizeDelta = originalSize * 1.5f;
                 

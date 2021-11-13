@@ -25,6 +25,7 @@ using Fungus;
 
 // TLDR: 
 // (Fungus) add a "locked" boolean variable and(???) "objName" string variable
+// ** call InteractManager.Deselect() in fungus after finished "saying" text ** 
 // (GameObject) add a giant collider that covers the whole screen
 // (GameObject) make sure z value in the scene is larger than all interactable objects
 // (GameObject) add an audio source (don't need to put any audio sources)

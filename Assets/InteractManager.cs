@@ -93,10 +93,10 @@ public class InteractManager : MonoBehaviour
         return true;
     }
 
-    public void Deselect(GameObject obj)
+    public void Deselect()
     {
         // only deselect if clicked on the selected object
-        if (selected == obj.name)
+        if (selected != "")
         {
             //selected = false;
             selected = "";
@@ -138,13 +138,15 @@ public class InteractManager : MonoBehaviour
 
     void OnMouseUp()
     {
-        shifting = false;
-        if (!hovering && !fc.GetBooleanVariable("locked") && selected == "")
+        // releasing mouse from drag
+        if (shifting && !hovering && !fc.GetBooleanVariable("locked") && selected == "")
         {
+            shifting = false;
             mainCam.init_camPos = new Vector3(mainCam.transform.position.x,
                                               mainCam.transform.position.y,
                                               -10 );
-            //mainCam.cameraLocked = false;
+            mainCam.target = mainCam.init_camPos;
+            mainCam.cameraLocked = false;
         }
     }
 

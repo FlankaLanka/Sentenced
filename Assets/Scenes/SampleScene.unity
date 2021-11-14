@@ -296,10 +296,8 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 48095620}
-  selectedCommands:
-  - {fileID: 48095661}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 48095634}
   - {fileID: 48095635}
@@ -3376,6 +3374,10 @@ PrefabInstance:
       propertyPath: mainFlow
       value: 
       objectReference: {fileID: 48095619}
+    - target: {fileID: 7007429014322362184, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7007429014982559880, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_Name
       value: ConversationCanvas
@@ -5657,6 +5659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SentencedDialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 6947035216093314324, guid: 00b43275246a340448fe46022f94bc25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6947035216093314350, guid: 00b43275246a340448fe46022f94bc25, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5740,6 +5746,14 @@ PrefabInstance:
     - target: {fileID: 6947035216093314350, guid: 00b43275246a340448fe46022f94bc25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6947035216628217543, guid: 00b43275246a340448fe46022f94bc25, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -109.6105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6947035216628217543, guid: 00b43275246a340448fe46022f94bc25, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 28.2632
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00b43275246a340448fe46022f94bc25, type: 3}
@@ -6645,6 +6659,14 @@ PrefabInstance:
     - target: {fileID: 3176114832525260662, guid: 2b3a00f9a15cbaf4b9f101ce7e1aa7d9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 3176114833391222922, guid: 2b3a00f9a15cbaf4b9f101ce7e1aa7d9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -70.90015
+      objectReference: {fileID: 0}
+    - target: {fileID: 3176114833391222922, guid: 2b3a00f9a15cbaf4b9f101ce7e1aa7d9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -120.06006
       objectReference: {fileID: 0}
     - target: {fileID: 3176114833391222925, guid: 2b3a00f9a15cbaf4b9f101ce7e1aa7d9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

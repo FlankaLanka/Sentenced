@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 167, y: -380}
-  m_SizeDelta: {x: 306.5904, y: 348.4003}
+  m_AnchoredPosition: {x: 225.3204, y: -380}
+  m_SizeDelta: {x: 570, y: 420}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4428376082533266131
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0468e37d889d67a438219c01b156fe72, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c0596db6a0e94704b98d175efaa39e0f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861133d7464fd864f8865cd6e05b1631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsLeftChat: 0
+  status: 0
 --- !u!1 &4428376083525451058
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,8 +125,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.7127, y: 38.01409}
-  m_SizeDelta: {x: 244.095, y: 192.9133}
+  m_AnchoredPosition: {x: 4.1382, y: 32.483}
+  m_SizeDelta: {x: 425.7677, y: 230.9853}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4428376083525451061
 CanvasRenderer:
@@ -147,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -156,12 +158,12 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4467aa49da527944faaeed946437bca4, type: 3}
-    m_FontSize: 32
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MaxSize: 48
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0

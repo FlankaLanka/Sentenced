@@ -39,31 +39,8 @@ public class ConversationOpen : Command
         convoPanel.Find("RightPersonName").GetComponent<Text>().text = RightPersonName;
         convoPanel.Find("LeftPersonName").GetComponent<Text>().text = LeftPersonName;
 
-        //convoPanel.GetComponent<DialogueSystem>().l = sentences.LeftCharSpeaking;
-        //convoPanel.GetComponent<DialogueSystem>().s = sentences.sentence;
         convoPanel.GetComponent<DialogueSystem>().currentSentences.CopyDialogue(sentences);
         convoPanel.GetComponent<DialogueSystem>().i = 0;
-        //Transform dialogueContainer = convoPanel.Find("Dialogue").GetComponent<DialogueSystem>().currentSentences;
-
-        //Transform[] dialogues = new Transform[dialogueContainer.childCount]; //should be 6
-        /*
-        foreach(string a in convoPanel.GetComponent<DialogueSystem>().s)
-        {
-            Debug.Log(a);
-        }
-        */
-
-        /*
-        int i = 0;
-        foreach(Transform child in dialogueContainer)
-        {
-            if(sentences.Length > i)
-            {
-                child.gameObject.GetComponentInChildren<Text>().text = sentences[i];
-                i++;
-            }
-        }
-        */
 
         Continue();
     }

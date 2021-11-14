@@ -27,8 +27,11 @@ public class DialogueSystem : MonoBehaviour
     private Transform RightOutOfView;
     private Transform RightMainText;
     private Transform RightAboveText;
-    public GameObject LeftBubble;
-    public GameObject RightBubble;
+
+    private GameObject LeftBubble;
+    private GameObject RightBubble;
+    private Sprite WhiteLeftBubble;
+    private Sprite WhiteRightBubble;
 
     private void Start()
     {
@@ -45,43 +48,15 @@ public class DialogueSystem : MonoBehaviour
 
         LeftBubble = Resources.Load("Prefabs/LeftMain") as GameObject;
         RightBubble = Resources.Load("Prefabs/RightMain") as GameObject;
+        WhiteLeftBubble = Resources.Load<Sprite>("ConvoPanelSprites/convo_bubble_white_circle");
+        WhiteRightBubble = Resources.Load<Sprite>("ConvoPanelSprites/convo_bubble_white_rect");
+
     }
-
-    /*
-    void OnEnable()
-    {
-        //i = 0;
-
-        
-        displayLine = 1;
-        allSixDisplayed = false;
-
-        dialogueContainer = transform.Find("Dialogue");
-        foreach (Transform child in dialogueContainer)
-        {
-            child.gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
-            child.gameObject.GetComponentInChildren<Text>().color = new Color(0.2f, 0.2f, 0.2f, 0f);
-        }
-        
-    }
-*/
-    private void Update()
-    {
-        Debug.Log(currentSentences.sentence.Count);
-    }
-
 
     public void DisplayNextLine()
     {
-        Debug.Log("SPEAking");
-        //Debug.Log(currentSentences.sentence.Count);
-
-
-        
         if (i < currentSentences.sentence.Count)
         {
-            Debug.Log("SPEAKER");
-            
             //create the new dialogue
             GameObject newLine;
             if (currentSentences.LeftCharSpeaking[i])
@@ -103,7 +78,6 @@ public class DialogueSystem : MonoBehaviour
                 MoveDialogue(child);
             }
 
-
             i++;
         }
         else
@@ -118,30 +92,6 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-
-
-
-        /*
-        GameObject currentDialogue = dialogueContainer.Find("Dialogue" + (displayLine).ToString()).gameObject;
-        if(currentDialogue.GetComponentInChildren<Text>().text != "temp_text" && !allSixDisplayed)
-        {
-            currentDialogue.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
-            currentDialogue.GetComponentInChildren<Text>().color = new Color(0.2f, 0.2f, 0.2f, 1f);
-        }
-        else
-        {
-            mainFlow.SetBooleanVariable("NextStep", true);
-        }
-
-        if(displayLine < 6)
-        {
-            displayLine++;
-        }
-        else
-        {
-            allSixDisplayed = true;
-        }
-        */
     }
 
 
@@ -158,11 +108,15 @@ public class DialogueSystem : MonoBehaviour
             if(isLeft)
             {
                 StartCoroutine(LerpDiagonal(bubble, LeftAboveText.position, 0.5f));
+                bubble.GetComponent<Image>().sprite = WhiteLeftBubble;
             }
             else
             {
                 StartCoroutine(LerpDiagonal(bubble, RightAboveText.position, 0.5f));
+                bubble.GetComponent<Image>().sprite = WhiteRightBubble;
             }
+            bubble.GetComponentInChildren<Text>().color = Color.black;
+            //bubble.GetComponentInChildren<Text>().fontSize = (int)(bubble.GetComponentInChildren<Text>().fontSize / 0.6f);
             bubble.GetComponent<ConversationState>().status = StatementStatus.AlreadyMovedUp;
         }
         else if (bubbleStatus == StatementStatus.AlreadyMovedUp)
@@ -185,6 +139,8 @@ public class DialogueSystem : MonoBehaviour
 
     private IEnumerator LerpDiagonal(Transform start, Vector2 end, float totalTime)
     {
+        Vector3 scale = start.localScale;
+        Transform dialogueText = start.GetChild(0);
         float timer = 0f;
         while(timer < totalTime && start.GetComponent<ConversationState>().status != StatementStatus.OutOfView)
         {
@@ -193,6 +149,11 @@ public class DialogueSystem : MonoBehaviour
                 break;
 
             start.position = Vector2.Lerp(start.position, end, Mathf.Min(timer / totalTime, 1f));
+            if(start.localScale.x > 0.75f)
+            {
+                start.localScale = scale - scale * timer / totalTime;
+                dialogueText.localScale = start.localScale;
+            }
             yield return new WaitForSeconds(0.01f);
             timer += 0.01f;
         }

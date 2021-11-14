@@ -13,11 +13,11 @@ public class ConversationClose : Command
     {
 
         Transform convoPanel = GameObject.Find("ConversationCanvas").transform.Find("ConversationPanel");
-        Transform dialogueContainer = convoPanel.Find("Dialogue").transform;
+        Transform tempDialogue = convoPanel.Find("Dialogue").Find("TempDialogue");
 
-        foreach(Transform child in dialogueContainer)
+        foreach(Transform child in tempDialogue)
         {
-            child.GetComponentInChildren<Text>().text = "temp_text";
+            Destroy(gameObject);
         }
 
         convoPanel.gameObject.SetActive(false);

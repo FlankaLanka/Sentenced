@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
+using UnityEngine.Assertions;
 
-[CommandInfo("ConversationMenu", "Enable Conversation Panel", "Enable Conversation Panel. Please fill in all areas or the" +
+[CommandInfo("ConversationMenuz", "Enable Conversation Panel", "Enable Conversation Panel. Please fill in all areas or the" +
     " old assets from a previous conversation panel will carry over.")]
 
 public class ConversationOpen : Command
@@ -20,14 +21,14 @@ public class ConversationOpen : Command
     public Sprite RightPersonImage;
 
     [Header("Dialogue")]
-    public string[] sentences;
+    public DialogueClass sentences;
     
-
     private Transform convoPanel;
-    
 
     public override void OnEnter()
     {
+        Assert.IsTrue(sentences.sentence.Count == sentences.LeftCharSpeaking.Count);
+
         GameObject.Find("ConversationCanvas").transform.Find("ConversationPanel").gameObject.SetActive(true);
 
         convoPanel = GameObject.Find("ConversationPanel").transform;
@@ -38,10 +39,21 @@ public class ConversationOpen : Command
         convoPanel.Find("RightPersonName").GetComponent<Text>().text = RightPersonName;
         convoPanel.Find("LeftPersonName").GetComponent<Text>().text = LeftPersonName;
 
-        Transform dialogueContainer = convoPanel.Find("Dialogue").transform;
+        //convoPanel.GetComponent<DialogueSystem>().l = sentences.LeftCharSpeaking;
+        //convoPanel.GetComponent<DialogueSystem>().s = sentences.sentence;
+        convoPanel.GetComponent<DialogueSystem>().currentSentences.CopyDialogue(sentences);
+        convoPanel.GetComponent<DialogueSystem>().i = 0;
+        //Transform dialogueContainer = convoPanel.Find("Dialogue").GetComponent<DialogueSystem>().currentSentences;
 
-        Transform[] dialogues = new Transform[dialogueContainer.childCount]; //should be 6
+        //Transform[] dialogues = new Transform[dialogueContainer.childCount]; //should be 6
+        /*
+        foreach(string a in convoPanel.GetComponent<DialogueSystem>().s)
+        {
+            Debug.Log(a);
+        }
+        */
 
+        /*
         int i = 0;
         foreach(Transform child in dialogueContainer)
         {
@@ -51,6 +63,7 @@ public class ConversationOpen : Command
                 i++;
             }
         }
+        */
 
         Continue();
     }

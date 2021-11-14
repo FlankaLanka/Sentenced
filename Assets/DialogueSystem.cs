@@ -13,8 +13,6 @@ public class DialogueSystem : MonoBehaviour
     private bool allSixDisplayed;
     //old variables
 
-    public List<string> s;
-    public List<bool> l;
     public DialogueClass currentSentences;
 
     public int i = 0;
@@ -33,7 +31,14 @@ public class DialogueSystem : MonoBehaviour
     private Sprite WhiteLeftBubble;
     private Sprite WhiteRightBubble;
 
-    private void Start()
+    public GameObject MatchQMark;
+    public GameObject NextIsFinish;
+    public GameObject NextIsLeft;
+    public GameObject NextIsRight;
+
+    public bool LeadsToMatchPanel;
+
+    private void Awake()
     {
         dialogueContainer = transform.Find("Dialogue");
         tempDialogue = dialogueContainer.Find("TempDialogue");
@@ -51,10 +56,35 @@ public class DialogueSystem : MonoBehaviour
         WhiteLeftBubble = Resources.Load<Sprite>("ConvoPanelSprites/convo_bubble_white_circle");
         WhiteRightBubble = Resources.Load<Sprite>("ConvoPanelSprites/convo_bubble_white_rect");
 
+        MatchQMark = transform.Find("MatchPanelQMark").gameObject;
+        NextIsFinish = transform.Find("NextLineFinish").gameObject;
+        NextIsLeft = transform.Find("NextLineLeft").gameObject;
+        NextIsRight = transform.Find("NextLineRight").gameObject;
+
+    }
+
+    private void OnEnable()
+    {
+        if(currentSentences.sentence.Count > 0)
+        {
+            if (currentSentences.LeftCharSpeaking[0])
+            {
+                NextIsLeft.SetActive(true);
+            }
+            else
+            {
+                NextIsRight.SetActive(true);
+            }
+        }
     }
 
     public void DisplayNextLine()
     {
+        MatchQMark.SetActive(false);
+        NextIsFinish.SetActive(false);
+        NextIsLeft.SetActive(false);
+        NextIsRight.SetActive(false);
+
         if (i < currentSentences.sentence.Count)
         {
             //create the new dialogue
@@ -79,6 +109,36 @@ public class DialogueSystem : MonoBehaviour
             }
 
             i++;
+
+            //decide which button to display
+            if(i <= currentSentences.sentence.Count)
+            {
+                if(i == currentSentences.sentence.Count)
+                {
+                    //last sentence leads to match panel or main
+                    if(LeadsToMatchPanel)
+                    {
+                        NextIsLeft.SetActive(true);
+                        MatchQMark.SetActive(true);
+                    }
+                    else
+                    {
+                        NextIsFinish.SetActive(true);
+                    }
+                }
+                else
+                {
+                    if(currentSentences.LeftCharSpeaking[i])
+                    {
+                        NextIsLeft.SetActive(true);
+                    }
+                    else
+                    {
+                        NextIsRight.SetActive(true);
+                    }
+
+                }
+            }
         }
         else
         {
@@ -131,10 +191,12 @@ public class DialogueSystem : MonoBehaviour
             }
             bubble.GetComponent<ConversationState>().status = StatementStatus.OutOfView;
         }
+        /*
         else if (bubbleStatus == StatementStatus.OutOfView)
         {
             //do nothing, the objects will be deleted when conversation panel closes
         }
+        */
     }
 
     private IEnumerator LerpDiagonal(Transform start, Vector2 end, float totalTime)

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
+using UnityEngine.Assertions;
 
-[CommandInfo("ConversationMenu", "Enable Conversation Panel", "Enable Conversation Panel. Please fill in all areas or the" +
-    " old assets from a previous conversation panel will carry over.")]
+[CommandInfo("ConversationMenuz", "Enable Conversation Panel", "Enable Conversation Panel. Please fill in all areas or the" +
+    " old assets from a previous conversation panel will carry over. Make sure list of sentences and list of who is" +
+    " speaking are equal.")]
 
 public class ConversationOpen : Command
 {
@@ -20,14 +22,16 @@ public class ConversationOpen : Command
     public Sprite RightPersonImage;
 
     [Header("Dialogue")]
-    public string[] sentences;
+    public bool LeadsToMatchPanel;
+    public DialogueClass sentences;
     
-
     private Transform convoPanel;
-    
 
     public override void OnEnter()
     {
+        Assert.IsTrue(sentences.sentence.Count == sentences.LeftCharSpeaking.Count);
+        Assert.IsTrue(sentences.sentence.Count > 0 && sentences.LeftCharSpeaking.Count > 0);
+
         GameObject.Find("ConversationCanvas").transform.Find("ConversationPanel").gameObject.SetActive(true);
 
         convoPanel = GameObject.Find("ConversationPanel").transform;
@@ -38,18 +42,24 @@ public class ConversationOpen : Command
         convoPanel.Find("RightPersonName").GetComponent<Text>().text = RightPersonName;
         convoPanel.Find("LeftPersonName").GetComponent<Text>().text = LeftPersonName;
 
-        Transform dialogueContainer = convoPanel.Find("Dialogue").transform;
+        DialogueSystem d = convoPanel.GetComponent<DialogueSystem>();
 
-        Transform[] dialogues = new Transform[dialogueContainer.childCount]; //should be 6
+        d.currentSentences.CopyDialogue(sentences);
+        d.i = 0;
+        d.LeadsToMatchPanel = LeadsToMatchPanel;
 
-        int i = 0;
-        foreach(Transform child in dialogueContainer)
+        d.MatchQMark.SetActive(false);
+        d.NextIsFinish.SetActive(false);
+        d.NextIsLeft.SetActive(false);
+        d.NextIsRight.SetActive(false);
+
+        if(sentences.LeftCharSpeaking[0])
         {
-            if(sentences.Length > i)
-            {
-                child.gameObject.GetComponentInChildren<Text>().text = sentences[i];
-                i++;
-            }
+            d.NextIsLeft.SetActive(true);
+        }
+        else
+        {
+            d.NextIsRight.SetActive(true);
         }
 
         Continue();

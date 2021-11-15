@@ -6,7 +6,8 @@ using Fungus;
 using UnityEngine.Assertions;
 
 [CommandInfo("ConversationMenuz", "Enable Conversation Panel", "Enable Conversation Panel. Please fill in all areas or the" +
-    " old assets from a previous conversation panel will carry over.")]
+    " old assets from a previous conversation panel will carry over. Make sure list of sentences and list of who is" +
+    " speaking are equal.")]
 
 public class ConversationOpen : Command
 {
@@ -29,6 +30,7 @@ public class ConversationOpen : Command
     public override void OnEnter()
     {
         Assert.IsTrue(sentences.sentence.Count == sentences.LeftCharSpeaking.Count);
+        Assert.IsTrue(sentences.sentence.Count > 0 && sentences.LeftCharSpeaking.Count > 0);
 
         GameObject.Find("ConversationCanvas").transform.Find("ConversationPanel").gameObject.SetActive(true);
 
@@ -50,6 +52,15 @@ public class ConversationOpen : Command
         d.NextIsFinish.SetActive(false);
         d.NextIsLeft.SetActive(false);
         d.NextIsRight.SetActive(false);
+
+        if(sentences.LeftCharSpeaking[0])
+        {
+            d.NextIsLeft.SetActive(true);
+        }
+        else
+        {
+            d.NextIsRight.SetActive(true);
+        }
 
         Continue();
     }

@@ -80,6 +80,12 @@ public class DialogueSystem : MonoBehaviour
 
     public void DisplayNextLine()
     {
+        //this will fix the color of the button to original since onpointerexit doesnt trigger when clicked
+        
+        NextIsFinish.GetComponent<ConvoChangeOnPointer>().changeToOriginal();
+        NextIsLeft.GetComponent<ConvoChangeOnPointer>().changeToOriginal();
+        NextIsRight.GetComponent<ConvoChangeOnPointer>().changeToOriginal();
+        
         MatchQMark.SetActive(false);
         NextIsFinish.SetActive(false);
         NextIsLeft.SetActive(false);

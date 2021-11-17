@@ -25,6 +25,7 @@ using Fungus;
 
 // TLDR: 
 // (Fungus) add a "locked" boolean variable and(???) "objName" string variable
+// ** call InteractManager.Deselect() in fungus after finished "saying" text ** 
 // (GameObject) add a giant collider that covers the whole screen
 // (GameObject) make sure z value in the scene is larger than all interactable objects
 // (GameObject) add an audio source (don't need to put any audio sources)
@@ -93,10 +94,10 @@ public class InteractManager : MonoBehaviour
         return true;
     }
 
-    public void Deselect(GameObject obj)
+    public void Deselect()
     {
         // only deselect if clicked on the selected object
-        if (selected == obj.name)
+        if (selected != "")
         {
             //selected = false;
             selected = "";
@@ -138,13 +139,15 @@ public class InteractManager : MonoBehaviour
 
     void OnMouseUp()
     {
-        shifting = false;
-        if (!hovering && !fc.GetBooleanVariable("locked") && selected == "")
+        // releasing mouse from drag
+        if (shifting && !hovering && !fc.GetBooleanVariable("locked") && selected == "")
         {
+            shifting = false;
             mainCam.init_camPos = new Vector3(mainCam.transform.position.x,
                                               mainCam.transform.position.y,
                                               -10 );
-            //mainCam.cameraLocked = false;
+            mainCam.target = mainCam.init_camPos;
+            mainCam.cameraLocked = false;
         }
     }
 

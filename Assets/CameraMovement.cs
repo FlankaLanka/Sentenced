@@ -40,7 +40,7 @@ public class CameraMovement : MonoBehaviour
         if (!cameraLocked) {
             this.transform.position = Vector3.Lerp(transform.position, target, Time.deltaTime * 4);
         }
-        
+        /*
         // dealing with scene scrolling
         if(Input.GetKey(KeyCode.LeftArrow))
         {
@@ -66,13 +66,13 @@ public class CameraMovement : MonoBehaviour
             init_camPos = temp;
             cameraLocked = true;
         }
-        
+        */
     }
 
     // zooms in the camera on a specific gameObject position
     public void cameraZoom(Vector3 toZoomPosition)
     {
-        cameraLocked = false;
+        //cameraLocked = false;
         // find vector 3 for distance to travel
         //Vector3 dist = new Vector3(toZoomPosition.x, toZoomPosition.x, 0) ;
 
@@ -85,9 +85,10 @@ public class CameraMovement : MonoBehaviour
         //                             (toZoomPosition.y - init_camPos.y) * .5f, 
         //                             (init_camPos.z - toZoomPosition.z) * .75f );
         Vector3 dist = new Vector3( 
-            Mathf.Min(Mathf.Max(toZoomPosition.x, minx+(-10 - (init_camPos.z - toZoomPosition.z) * .75f)), maxx-(-10 - (init_camPos.z - toZoomPosition.z) * .75f)), 
-            Mathf.Min(Mathf.Max(toZoomPosition.y, miny+(-10 - (init_camPos.z - toZoomPosition.z) * .75f)), maxy-(-10 - (init_camPos.z - toZoomPosition.z) * .75f)), 
-            (init_camPos.z - toZoomPosition.z) * .75f );
+            Mathf.Min(  Mathf.Max(toZoomPosition.x, minx + (init_camPos.z - (init_camPos.z-toZoomPosition.z) * .75f)), maxx - (init_camPos.z - (init_camPos.z-toZoomPosition.z) * .75f) ),     // x component
+            Mathf.Min(  Mathf.Max(toZoomPosition.y, miny + (init_camPos.z - (init_camPos.z-toZoomPosition.z) * .75f)), maxy - (init_camPos.z - (init_camPos.z-toZoomPosition.z) * .75f) ),     // y component
+            (init_camPos.z - toZoomPosition.z) * .75f );                                                                                                                                    // z component
+        
         //target = new Vector3(toZoomPosition.x, toZoomPosition.y, init_camPos.z / 2f);
         target = dist;
     }
@@ -95,7 +96,7 @@ public class CameraMovement : MonoBehaviour
     // Sets target to initial camera position
     public void cameraReset()
     {
-        cameraLocked = false;
+        //cameraLocked = false;
         target = init_camPos;
     }
 }

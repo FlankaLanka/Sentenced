@@ -58,7 +58,7 @@ public class Interactable : MonoBehaviour
 
     // RIGHT CLICK ON AN OBJECT - stop focus on object (reset camera)
     // detecting right click on an object using a different approach
-    void OnMouseOver () {
+    /*void OnMouseOver () {
         if (Input.GetMouseButtonDown(1)) 
         {
             if (!fc.GetBooleanVariable("locked"))
@@ -67,7 +67,7 @@ public class Interactable : MonoBehaviour
                 im.Deselect(this.gameObject);
             }
         }
-    }
+    }*/
     
     // change cursor on entering a sprite
     void OnMouseEnter()

@@ -56,7 +56,8 @@ public class InteractManager : MonoBehaviour
         //fc = GameObject.FindObjectOfType<Flowchart>();
         mainCam = GameObject.FindObjectOfType<CameraMovement>();
         
-        // getting SFX from resources
+        // getting SFX from resources 
+        // MAKE SURE FILE IS IN RESOURCES FOLDER!!!!!!
         selectSFX = Resources.Load("select") as AudioClip;
         deselectSFX = Resources.Load("deselect") as AudioClip;
 

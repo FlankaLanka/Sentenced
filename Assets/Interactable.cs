@@ -12,9 +12,10 @@ public class Interactable : MonoBehaviour
 
     public Flowchart fc;
     private Sprite defaultSprite;       // the original sprite to be rendered
-
+    
     // can possibly turn this into an array if more sprite "stages" are desired
     [SerializeField] private Sprite interactedSprite;   // new sprite to render after being interacted with
+    private GameObject outline;
 
     InteractManager im;
 
@@ -25,6 +26,12 @@ public class Interactable : MonoBehaviour
         im = GameObject.FindObjectOfType<InteractManager>();
         fc = GameObject.Find("Flowchart").GetComponent<Flowchart>();
         //fc = GameObject.FindObjectOfType<Flowchart>();
+        
+        
+        // outline object is the first child object of interactable object
+        outline = this.gameObject.transform.GetChild(0).gameObject;
+        // make outline start out hidden (???)
+        if (outline) outline.SetActive(false);
     }
 
     // Update is called once per frame
@@ -73,15 +80,23 @@ public class Interactable : MonoBehaviour
     void OnMouseEnter()
     {
         // only change cursor if scene is not locked
-        if(!fc.GetBooleanVariable("locked") || im.selected == this.name)
-        Cursor.SetCursor(CursorSetting.i_cursor, CursorSetting.hotspot, CursorMode.Auto);
-        im.hovering = true;
+        if(!fc.GetBooleanVariable("locked") || im.selected == this.name){
+            // change cursor
+            Cursor.SetCursor(CursorSetting.i_cursor, CursorSetting.hotspot, CursorMode.Auto);
+            // show outline
+            if (outline)    outline.SetActive(true);
+            // set "hovering" to true to prevent scene scrolling
+            im.hovering = true;
+        }
     }
 
     // change cursor back to default on leaving a sprite
     void OnMouseExit()
     {
+        // change cursor back to default
         Cursor.SetCursor(CursorSetting.d_cursor, CursorSetting.hotspot, CursorMode.Auto);
+        // hide outline
+        if (outline)    outline.SetActive(false);
         im.hovering = false;
     }
 }

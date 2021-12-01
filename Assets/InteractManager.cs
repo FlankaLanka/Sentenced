@@ -102,11 +102,16 @@ public class InteractManager : MonoBehaviour
         {
             //selected = false;
             selected = "";
-            
             mainCam.cameraReset();
+            
+            // change the cursor to normal and change hovering
+            Cursor.SetCursor(CursorSetting.d_cursor, CursorSetting.hotspot, CursorMode.Auto);
+            hovering = false;
+
             // "unlock" the scene upon getting deselected
             fc.SetStringVariable("objName", "");
             this.GetComponent<AudioSource>().PlayOneShot(deselectSFX);
+            
         }
         else
         {

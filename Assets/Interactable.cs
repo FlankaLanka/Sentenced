@@ -31,7 +31,7 @@ public class Interactable : MonoBehaviour
         // outline object is the first child object of interactable object
         outline = this.gameObject.transform.GetChild(0).gameObject;
         // make outline start out hidden (???)
-        if (outline) outline.SetActive(false);
+        //if (outline) outline.SetActive(false);
     }
 
     // Update is called once per frame
@@ -83,8 +83,11 @@ public class Interactable : MonoBehaviour
         if(!fc.GetBooleanVariable("locked") || im.selected == this.name){
             // change cursor
             Cursor.SetCursor(CursorSetting.i_cursor, CursorSetting.hotspot, CursorMode.Auto);
+            
             // show outline
-            if (outline)    outline.SetActive(true);
+            if (outline)    
+                outline.GetComponent<Animator>().Play("show_outline"); // outline.SetActive(true);
+
             // set "hovering" to true to prevent scene scrolling
             im.hovering = true;
         }
@@ -95,8 +98,11 @@ public class Interactable : MonoBehaviour
     {
         // change cursor back to default
         Cursor.SetCursor(CursorSetting.d_cursor, CursorSetting.hotspot, CursorMode.Auto);
+        
         // hide outline
-        if (outline)    outline.SetActive(false);
+        if (outline)    
+            outline.GetComponent<Animator>().Play("hide_outline"); //outline.SetActive(false);
+        
         im.hovering = false;
     }
 }

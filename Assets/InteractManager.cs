@@ -167,8 +167,8 @@ public class InteractManager : MonoBehaviour
             mainCam.transform.position = new Vector3(
                     Mathf.Min(Mathf.Max(newPos.x, mainCam.minx), mainCam.maxx),
                     Mathf.Min(Mathf.Max(newPos.y, mainCam.miny - (newPos.z)), mainCam.maxy),
-                    newPos.z 
-                                            );
+                    newPos.z
+            );
             
             prevMousePos = Input.mousePosition;
         }

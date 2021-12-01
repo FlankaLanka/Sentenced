@@ -16,6 +16,8 @@ public class CursorSetting : MonoBehaviour
     // offset for the cursor's focus point (from top left corner)
     public static Vector2 hotspot = new Vector2(2f, 2f);
 
+    //private Camera mainCam;
+
     // define the cursors from Resources Folder
     void Awake()
     {
@@ -26,6 +28,17 @@ public class CursorSetting : MonoBehaviour
     // set default cursor at start
     void Start()
     {
+        //mainCam = GameObject.Find("Main Camera").GetComponent<Camera>();
         Cursor.SetCursor(d_cursor, hotspot, CursorMode.Auto);
+    }
+
+    void Update()
+    {
+        // MOVE THIS OBJECT (AND ITS ATTACHED COLLIDER) TO MOUSE POSITION IN WORLD SPACE
+        // MAKE SURE CURSOR_MANAGER HAS A COLLIDER ATTACHED TO IT
+        this.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(
+            Input.mousePosition.x, 
+            Input.mousePosition.y,
+            11));
     }
 }

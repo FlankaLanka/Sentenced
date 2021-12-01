@@ -24,6 +24,7 @@ public class Interactable : MonoBehaviour
     {
         defaultSprite = this.GetComponent<SpriteRenderer>().sprite;
         im = GameObject.FindObjectOfType<InteractManager>();
+        im.interactableObjects.Add(this);
         fc = GameObject.Find("Flowchart").GetComponent<Flowchart>();
         //fc = GameObject.FindObjectOfType<Flowchart>();
         
@@ -75,6 +76,27 @@ public class Interactable : MonoBehaviour
             }
         }
     }*/
+
+    // use CursorSetting collider to trigger outlines showing
+    void OnCollisionEnter2D(UnityEngine.Collision2D col)
+    {
+        if (col.gameObject.name == "CursorManager")
+        {
+            // show outline
+            if (!fc.GetBooleanVariable("locked"))    
+                ShowOutline();
+        }
+    }
+
+    void OnCollisionExit2D(UnityEngine.Collision2D col)
+    {
+        if (col.gameObject.name == "CursorManager")
+        {
+            // show outline
+            if (!fc.GetBooleanVariable("locked"))    
+                HideOutline();
+        }
+    }
     
     // change cursor on entering a sprite
     void OnMouseEnter()
@@ -84,10 +106,9 @@ public class Interactable : MonoBehaviour
             // change cursor
             Cursor.SetCursor(CursorSetting.i_cursor, CursorSetting.hotspot, CursorMode.Auto);
             
-            // show outline
-            if (outline)    
-                outline.GetComponent<Animator>().Play("show_outline"); // outline.SetActive(true);
-
+            // if (outline)    
+            //     outline.GetComponent<Animator>().Play("hide_outline"); //outline.SetActive(false);
+        
             // set "hovering" to true to prevent scene scrolling
             im.hovering = true;
         }
@@ -100,9 +121,21 @@ public class Interactable : MonoBehaviour
         Cursor.SetCursor(CursorSetting.d_cursor, CursorSetting.hotspot, CursorMode.Auto);
         
         // hide outline
-        if (outline)    
-            outline.GetComponent<Animator>().Play("hide_outline"); //outline.SetActive(false);
+        // if (outline)    
+        //     outline.GetComponent<Animator>().Play("hide_outline"); //outline.SetActive(false);
         
         im.hovering = false;
+    }
+
+    public void ShowOutline()
+    {
+        if (outline)    
+            outline.GetComponent<Animator>().Play("show_outline"); //outline.SetActive(false);
+    }
+
+    public void HideOutline()
+    {
+        if (outline)    
+            outline.GetComponent<Animator>().Play("hide_outline"); //outline.SetActive(false);
     }
 }

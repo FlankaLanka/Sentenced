@@ -65,7 +65,9 @@ public class DialogueSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        if(currentSentences.sentence.Count > 0)
+        i = 0;
+
+        if (currentSentences.sentence.Count > 0)
         {
             if (currentSentences.LeftCharSpeaking[0])
             {
@@ -76,6 +78,7 @@ public class DialogueSystem : MonoBehaviour
                 NextIsRight.SetActive(true);
             }
         }
+
     }
 
     public void DisplayNextLine()

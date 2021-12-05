@@ -22,9 +22,13 @@ public class ConversationOpen : Command
     public Sprite RightPersonImage;
 
     [Header("Dialogue")]
-    public bool LeadsToMatchPanel;
+    public bool LeadsToMatchOrBranch;
     public DialogueClass sentences;
-    
+
+    [Header("Transition")]
+    public bool chooseToFade;
+
+
     private Transform convoPanel;
 
     public override void OnEnter()
@@ -42,11 +46,14 @@ public class ConversationOpen : Command
         convoPanel.Find("RightPersonName").GetComponent<Text>().text = RightPersonName;
         convoPanel.Find("LeftPersonName").GetComponent<Text>().text = LeftPersonName;
 
+        convoPanel.GetComponent<ConvoPanelTransitionIn>().chooseToFade = chooseToFade;
+
+
         DialogueSystem d = convoPanel.GetComponent<DialogueSystem>();
 
         d.currentSentences.CopyDialogue(sentences);
         d.i = 0;
-        d.LeadsToMatchPanel = LeadsToMatchPanel;
+        d.LeadsToMatchPanel = LeadsToMatchOrBranch;
 
         d.MatchQMark.SetActive(false);
         d.NextIsFinish.SetActive(false);

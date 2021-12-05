@@ -40,7 +40,7 @@ public class InteractManager : MonoBehaviour
 
     //public static bool selected;
     public string selected;
-    public Interactable[] interactableObjects;
+    public List<Interactable> interactableObjects;
 
     public bool hovering;  // true if player is hovering over an interactable object
     public bool shifting;
@@ -101,12 +101,24 @@ public class InteractManager : MonoBehaviour
         if (selected != "")
         {
             //selected = false;
-            selected = "";
+            foreach (Interactable i in interactableObjects)
+            {
+                if (i.gameObject.name != selected)
+                    i.HideOutline();
+            }
             
+            selected = "";
             mainCam.cameraReset();
+            
+            // change the cursor to normal and change hovering
+            Cursor.SetCursor(CursorSetting.d_cursor, CursorSetting.hotspot, CursorMode.Auto);
+            hovering = false;
+            
+
             // "unlock" the scene upon getting deselected
             fc.SetStringVariable("objName", "");
             this.GetComponent<AudioSource>().PlayOneShot(deselectSFX);
+            
         }
         else
         {
@@ -117,7 +129,7 @@ public class InteractManager : MonoBehaviour
     public void CheckAllInteractableObjectStatus() 
     {
         // check for all interactable objects in the scene
-        interactableObjects = Object.FindObjectsOfType<Interactable>();
+        //interactableObjects = Object.FindObjectsOfType<Interactable>();
         Debug.Log("Checking Interactables Status:");
         
         foreach (Interactable i in interactableObjects)
@@ -162,8 +174,8 @@ public class InteractManager : MonoBehaviour
             mainCam.transform.position = new Vector3(
                     Mathf.Min(Mathf.Max(newPos.x, mainCam.minx), mainCam.maxx),
                     Mathf.Min(Mathf.Max(newPos.y, mainCam.miny - (newPos.z)), mainCam.maxy),
-                    newPos.z 
-                                            );
+                    newPos.z
+            );
             
             prevMousePos = Input.mousePosition;
         }

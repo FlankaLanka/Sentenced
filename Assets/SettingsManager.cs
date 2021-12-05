@@ -20,7 +20,11 @@ public class SettingsManager : MonoBehaviour
         // comment this out if don't want to play on start
         PlayBGM();
         quit = false;
-        if (quitUI) quitUI.SetActive(false);
+
+        if (quitUI)    
+            quitUI.SetActive(false);
+        else
+            Debug.Log("WARNING: no quit UI object attached to SettingsManager.");
     }
 
     // Update is called once per frame
@@ -39,36 +43,45 @@ public class SettingsManager : MonoBehaviour
         //{
         //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //}
+        
+        
+        /**---------------------------
+        // possible move this to some audio manager script?
+        
         // M => mute bgm
+
         if(Input.GetKeyDown(KeyCode.M))
         {
             GetComponent<AudioSource>().mute = !GetComponent<AudioSource>().mute;
         }
-
         // constantly update volume
         // (can also do this manually on canvas click, etc.)
         GetComponent<AudioSource>().volume = bgm_volume;
+        
+        -------------------------------**/
     }
 
     // make this public function in case of use in buttons, etc.
     public void QuitGame()
     {
         // can add other features (fade out? save game? etc.)
-        if(quit){
+        if(!quitUI || quit){
             Debug.Log("Call Application.Quit()");
             Application.Quit();    
+        }  
+        else {
+            quit = true;
+            quitUI.SetActive(true);
+            Time.timeScale = 0;    
         }
-
-        quit = true;
-        quitUI.SetActive(true);
-        Time.timeScale = 0;
     }
 
     public void CancelQuit()
     {
         Time.timeScale = 1;
         quit = false;
-        quitUI.SetActive(false);
+        if (quitUI)
+            quitUI.SetActive(false);
     }
 
     // call this function to play the sfx (in case you do not want to play on awake)
@@ -84,7 +97,8 @@ public class SettingsManager : MonoBehaviour
 
     public IEnumerator SceneFadeToBlack(string sceneName)
     {
-        fadeObj.SetActive(true);
+        if (fadeObj) 
+            fadeObj.SetActive(true);
         
         // wait one second
         yield return new WaitForSeconds(1.0f);

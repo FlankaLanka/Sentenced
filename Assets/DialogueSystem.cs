@@ -17,6 +17,8 @@ public class DialogueSystem : MonoBehaviour
 
     public int i = 0;
 
+    private AudioSource a;
+
     private Transform dialogueContainer;
     private Transform tempDialogue;
     private Transform LeftOutOfView;
@@ -40,6 +42,8 @@ public class DialogueSystem : MonoBehaviour
 
     private void Awake()
     {
+        a = GetComponent<AudioSource>();
+
         dialogueContainer = transform.Find("Dialogue");
         tempDialogue = dialogueContainer.Find("TempDialogue");
 
@@ -65,7 +69,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        i = 0;
+        //i = 0;
 
         if (currentSentences.sentence.Count > 0)
         {
@@ -83,6 +87,8 @@ public class DialogueSystem : MonoBehaviour
 
     public void DisplayNextLine()
     {
+        a.Play();
+
         //this will fix the color of the button to original since onpointerexit doesnt trigger when clicked
         
         NextIsFinish.GetComponent<ConvoChangeOnPointer>().changeToOriginal();

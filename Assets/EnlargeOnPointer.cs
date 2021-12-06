@@ -11,8 +11,12 @@ public class EnlargeOnPointer : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public Sprite blackDialogue;
     //public int originalFontSize;
 
+    private AudioSource a;
+
     private void Start()
     {
+        a = GetComponent<AudioSource>();
+
         originalSize = gameObject.GetComponent<RectTransform>().sizeDelta;
         whiteDialogue = gameObject.GetComponent<Image>().sprite;
         if(transform.parent.name == "Content1")
@@ -33,6 +37,7 @@ public class EnlargeOnPointer : MonoBehaviour, IPointerEnterHandler, IPointerExi
             if(!GameObject.Find("MatchCanvas").GetComponent<CardPositions>().curDragging)
             {
                 gameObject.GetComponent<RectTransform>().sizeDelta = originalSize * 1.5f;
+                a.Play();
                 
                 //this part should only work if draggable
                 if(gameObject.GetComponent<Image>().color != Color.gray)

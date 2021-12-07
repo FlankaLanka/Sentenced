@@ -16,6 +16,20 @@ public class GenericBranchClose : Command
         branchingPanel.transform.Find("PersonImage").position = branchingPanel.GetComponent<GBFadeIn>().originalImagePosition;
         branchingPanel.transform.Find("PersonImage").localScale = branchingPanel.GetComponent<GBFadeIn>().originalScale;
 
+
+        GameObject choiceButton = branchingPanel.transform.Find("GenericBranchingCard1").gameObject;
+        choiceButton.GetComponent<ConvoChangeOnPointer>().changeToOriginal();
+        choiceButton.GetComponentInChildren<Text>().color = Color.black;
+
+        choiceButton = branchingPanel.transform.Find("GenericBranchingCard2").gameObject;
+        choiceButton.GetComponent<ConvoChangeOnPointer>().changeToOriginal();
+        choiceButton.GetComponentInChildren<Text>().color = Color.black;
+
+        choiceButton = branchingPanel.transform.Find("GenericBranchingCard3").gameObject;
+        choiceButton.GetComponent<ConvoChangeOnPointer>().changeToOriginal();
+        choiceButton.GetComponentInChildren<Text>().color = Color.black;
+
+
         branchingPanel.SetActive(false);
         Continue();
     }

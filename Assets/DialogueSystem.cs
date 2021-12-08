@@ -219,12 +219,11 @@ public class DialogueSystem : MonoBehaviour
         Vector3 scale = start.localScale;
         Transform dialogueText = start.GetChild(0);
         float timer = 0f;
-        while(timer < totalTime && start.GetComponent<ConversationState>().status != StatementStatus.OutOfView)
-        {
-            //prevent error if clicking past text too fast
-            if (start.GetComponent<RectTransform>() == null)
-                break;
 
+        //
+
+        while(timer < totalTime && start != null && start.GetComponent<ConversationState>().status != StatementStatus.OutOfView)
+        {
             start.position = Vector2.Lerp(start.position, end, Mathf.Min(timer / totalTime, 1f));
             if(start.localScale.x > 0.75f)
             {
@@ -239,12 +238,8 @@ public class DialogueSystem : MonoBehaviour
     private IEnumerator LerpUp(Transform start, Vector2 end, float totalTime)
     {
         float timer = 0f;
-        while (timer < totalTime)
+        while (timer < totalTime && start != null)
         {
-            //prevent error if clicking past text too fast
-            if (start.GetComponent<RectTransform>() == null)
-                break;
-
             start.position = Vector2.Lerp(start.position, end, Mathf.Min(timer / totalTime, 1f));
             yield return new WaitForSeconds(0.01f);
             timer += 0.01f;

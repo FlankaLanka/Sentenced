@@ -47,6 +47,7 @@ public class InteractManager : MonoBehaviour
 
     public Vector3 prevMousePos;
 
+    bool showArrows = true;
     // UI arrows to indicate if player can move scene
     public GameObject l_arrow;
     public GameObject r_arrow;
@@ -69,12 +70,13 @@ public class InteractManager : MonoBehaviour
 
         hovering = false;
         shifting = false;
+        showArrows = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (selected == ""){
+        if (selected == "" && showArrows){
             // dealing with UI arrows for scene scroll
             l_arrow.SetActive(mainCam.transform.position.x - mainCam.minx > 0.05f);
             r_arrow.SetActive(mainCam.transform.position.x - mainCam.maxx < -0.05f);
@@ -103,6 +105,7 @@ public class InteractManager : MonoBehaviour
             fc.SetStringVariable("objName", obj.name);
             
             this.GetComponent<AudioSource>().PlayOneShot(selectSFX);
+            showArrows = false;
         }
         else
         {
@@ -136,7 +139,7 @@ public class InteractManager : MonoBehaviour
             // "unlock" the scene upon getting deselected
             fc.SetStringVariable("objName", "");
             this.GetComponent<AudioSource>().PlayOneShot(deselectSFX);
-            
+            StartCoroutine("ShowScrollArrows");
         }
         else
         {
@@ -197,5 +200,10 @@ public class InteractManager : MonoBehaviour
             
             prevMousePos = Input.mousePosition;
         }
+    }
+
+    IEnumerator ShowScrollArrows(){
+        yield return new WaitForSeconds(1f);
+        showArrows = true;
     }
 }

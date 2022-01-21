@@ -47,6 +47,12 @@ public class InteractManager : MonoBehaviour
 
     public Vector3 prevMousePos;
 
+    // UI arrows to indicate if player can move scene
+    public GameObject l_arrow;
+    public GameObject r_arrow;
+    public GameObject t_arrow;
+    public GameObject b_arrow;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,7 +74,19 @@ public class InteractManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (selected == ""){
+            // dealing with UI arrows for scene scroll
+            l_arrow.SetActive(mainCam.transform.position.x - mainCam.minx > 0.05f);
+            r_arrow.SetActive(mainCam.transform.position.x - mainCam.maxx < -0.05f);
+            t_arrow.SetActive(mainCam.transform.position.y - mainCam.miny > 0.05f);
+            b_arrow.SetActive(mainCam.transform.position.y - mainCam.maxy < -0.05f);
+        }
+        else{
+            l_arrow.SetActive(false);
+            r_arrow.SetActive(false);
+            t_arrow.SetActive(false);
+            b_arrow.SetActive(false);
+        }
     }
 
     public bool Select(GameObject obj)

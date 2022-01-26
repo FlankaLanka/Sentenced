@@ -160,8 +160,6 @@ namespace Fungus
 
         protected virtual void OnDisable()
         {
-            Debug.LogError("flowchart DESTROYED");
-
             cachedFlowcharts.Remove(this);
 
             #if UNITY_5_4_OR_NEWER

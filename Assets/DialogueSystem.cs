@@ -117,6 +117,13 @@ public class DialogueSystem : MonoBehaviour
             newLine.GetComponent<ConversationState>().status = StatementStatus.AboutToSpeak;
             newLine.GetComponentInChildren<Text>().text = currentSentences.sentence[i];
 
+            Debug.Log(currentSentences.voiceClips.Count);
+            if(currentSentences.voiceClips.Count > i)
+            {
+                a.clip = currentSentences.voiceClips[i];
+                a.Play();
+            }
+
             //move all other dialogues
             foreach(Transform child in tempDialogue)
             {
@@ -167,6 +174,8 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
+
+        //reset audioclip to the click sound
     }
 
 

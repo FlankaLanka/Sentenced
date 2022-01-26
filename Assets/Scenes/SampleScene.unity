@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 48095701}
   - component: {fileID: 48095700}
   - component: {fileID: 48095699}
+  - component: {fileID: 48095703}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -235,11 +236,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 114.45361, y: 143.03445}
+  scrollPos: {x: 152.12552, y: 204.63046}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.8799997
+  zoom: 0.7599998
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -249,7 +250,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 48095620}
   selectedCommands:
-  - {fileID: 48095697}
+  - {fileID: 48095661}
   variables:
   - {fileID: 48095634}
   - {fileID: 48095635}
@@ -280,7 +281,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -15.803116
     y: 15.3994
-    width: 125.45457
+    width: 128.94739
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -301,6 +302,7 @@ MonoBehaviour:
   - {fileID: 48095624}
   - {fileID: 48095671}
   - {fileID: 48095661}
+  - {fileID: 48095703}
   - {fileID: 48095676}
   - {fileID: 48095675}
   - {fileID: 48095674}
@@ -447,7 +449,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 83.905136
     y: 109.48553
-    width: 99.09093
+    width: 100.52633
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -476,7 +478,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -142.18068
     y: 109.62105
-    width: 99.09093
+    width: 100.52633
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -588,7 +590,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -87.54826
     y: -77.91619
-    width: 104.54547
+    width: 106.84212
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1967,6 +1969,14 @@ MonoBehaviour:
     - coffee??????????????
     - COFFFFFFFFFFFFFFFFFFFFEE
     LeftCharSpeaking: 01000100010100
+    voiceClips:
+    - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
+    - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
+    - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
+    - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
+    - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
+    - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
+    - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
   chooseToFade: 0
 --- !u!114 &48095662
 MonoBehaviour:
@@ -1997,6 +2007,7 @@ MonoBehaviour:
     - ttqweqweqw
     - qqqqqqqqqqqqqqqqqqq
     LeftCharSpeaking: 0100010100
+    voiceClips: []
   chooseToFade: 1
 --- !u!114 &48095663
 MonoBehaviour:
@@ -2468,6 +2479,7 @@ MonoBehaviour:
     - sd
     - aaaaaa
     LeftCharSpeaking: 0001000100
+    voiceClips: []
   chooseToFade: 1
 --- !u!114 &48095669
 MonoBehaviour:
@@ -3064,7 +3076,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 173.57385
     y: -3.6457367
-    width: 76.36365
+    width: 78.42106
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4532,6 +4544,23 @@ MonoBehaviour:
   vector3Data:
     vector3Ref: {fileID: 0}
     vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &48095703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48095618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 616cd37e21c7645c58a89edf5abee56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 123
+  indentLevel: 0
+  duration: 5
+  amount: {x: 1, y: 1}
+  waitUntilFinished: 0
 --- !u!1 &182288710
 GameObject:
   m_ObjectHideFlags: 1
@@ -5355,6 +5384,10 @@ MonoBehaviour:
   hovering: 0
   shifting: 0
   prevMousePos: {x: 0, y: 0, z: 0}
+  l_arrow: {fileID: 0}
+  r_arrow: {fileID: 0}
+  t_arrow: {fileID: 0}
+  b_arrow: {fileID: 0}
 --- !u!4 &1046662066
 Transform:
   m_ObjectHideFlags: 0

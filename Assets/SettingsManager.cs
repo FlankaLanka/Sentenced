@@ -4,13 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Class to Manage Settings (currently only bgm volume / mute)
-// also handles quitting game
+// also handles pause/quitting game
 
 public class SettingsManager : MonoBehaviour
 {
     public float bgm_volume = 0.5f;
+    public static bool paused = false;
     public bool quit = false;
 
+    public GameObject pauseUI;
+    public GameObject optionsUI;
     public GameObject quitUI;
     public GameObject fadeObj;
 
@@ -19,10 +22,20 @@ public class SettingsManager : MonoBehaviour
     {
         // comment this out if don't want to play on start
         PlayBGM();
+
+
+        paused = false;
         quit = false;
 
+        if (pauseUI)
+            pauseUI.SetActive(false);
+
+        if (optionsUI)
+            optionsUI.SetActive(false);
+        
         if (quitUI)    
             quitUI.SetActive(false);
+        
         else
             Debug.Log("WARNING: no quit UI object attached to SettingsManager.");
     }
@@ -36,7 +49,8 @@ public class SettingsManager : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Escape))
         {
             // quit game if escape is pressed
-            QuitGame();
+            PauseGame();
+            
         }
         // R => reset scene
         //if(Input.GetKeyDown(KeyCode.R))
@@ -61,27 +75,31 @@ public class SettingsManager : MonoBehaviour
         -------------------------------**/
     }
 
+    public void PauseGame(){
+        // toggle pausedUI when escape is pressed
+        paused = !paused;
+        if (paused) Time.timeScale = 0; 
+        else Time.timeScale = 1; 
+        
+        quitUI.SetActive(false);
+        optionsUI.SetActive(false);
+        pauseUI.SetActive(paused);
+    }
+
     // make this public function in case of use in buttons, etc.
     public void QuitGame()
     {
-        // can add other features (fade out? save game? etc.)
-        if(!quitUI || quit){
-            Debug.Log("Call Application.Quit()");
-            Application.Quit();    
-        }  
-        else {
-            quit = true;
-            quitUI.SetActive(true);
-            Time.timeScale = 0;    
-        }
+        Debug.Log("Call Application.Quit()");
+        Application.Quit();    
     }
 
-    public void CancelQuit()
+    
+    public void ReturnToPauseMenu()
     {
-        Time.timeScale = 1;
-        quit = false;
         if (quitUI)
             quitUI.SetActive(false);
+        if (optionsUI)
+            optionsUI.SetActive(false);
     }
 
     // call this function to play the sfx (in case you do not want to play on awake)

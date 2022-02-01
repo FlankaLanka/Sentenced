@@ -76,7 +76,7 @@ public class InteractManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (selected == "" && showArrows){
+        if (!SettingsManager.paused && selected == "" && showArrows){
             // dealing with UI arrows for scene scroll
             l_arrow.SetActive(mainCam.transform.position.x - mainCam.minx > 0.05f);
             r_arrow.SetActive(mainCam.transform.position.x - mainCam.maxx < -0.05f);
@@ -93,57 +93,64 @@ public class InteractManager : MonoBehaviour
 
     public bool Select(GameObject obj)
     {
+        if (!SettingsManager.paused)
+        {
         // only execute this code if object is not already selected
-        if (selected != obj.name && !fc.GetBooleanVariable("locked"))
-        {
-            //selected = true;
-            selected = obj.name;
+            if (selected != obj.name && !fc.GetBooleanVariable("locked"))
+            {
+                //selected = true;
+                selected = obj.name;
 
-            mainCam.cameraZoom(obj.transform.position);
+                mainCam.cameraZoom(obj.transform.position);
 
-            // "lock" the scene upon getting clicked on
-            fc.SetStringVariable("objName", obj.name);
+                // "lock" the scene upon getting clicked on
+                fc.SetStringVariable("objName", obj.name);
+                
+                this.GetComponent<AudioSource>().PlayOneShot(selectSFX);
+                showArrows = false;
+            }
+            else
+            {
+                Debug.Log("Calling Select() with a selected object");
+                return false;
+            }
             
-            this.GetComponent<AudioSource>().PlayOneShot(selectSFX);
-            showArrows = false;
+            return true;
         }
-        else
-        {
-            Debug.Log("Calling Select() with a selected object");
-            return false;
-        }
-        
-        return true;
+
+        return false; 
     }
 
     public void Deselect()
     {
-        // only deselect if clicked on the selected object
-        if (selected != "")
-        {
-            //selected = false;
-            foreach (Interactable i in interactableObjects)
+        if (!SettingsManager.paused) {
+            // only deselect if clicked on the selected object
+            if (selected != "")
             {
-                if (i.gameObject.name != selected)
-                    i.HideOutline();
-            }
-            
-            selected = "";
-            mainCam.cameraReset();
-            
-            // change the cursor to normal and change hovering
-            Cursor.SetCursor(CursorSetting.d_cursor, CursorSetting.hotspot, CursorMode.Auto);
-            hovering = false;
-            
+                //selected = false;
+                foreach (Interactable i in interactableObjects)
+                {
+                    if (i.gameObject.name != selected)
+                        i.HideOutline();
+                }
+                
+                selected = "";
+                mainCam.cameraReset();
+                
+                // change the cursor to normal and change hovering
+                Cursor.SetCursor(CursorSetting.d_cursor, CursorSetting.hotspot, CursorMode.Auto);
+                hovering = false;
+                
 
-            // "unlock" the scene upon getting deselected
-            fc.SetStringVariable("objName", "");
-            this.GetComponent<AudioSource>().PlayOneShot(deselectSFX);
-            StartCoroutine("ShowScrollArrows");
-        }
-        else
-        {
-            Debug.Log("Calling Deselect() with no selected object");
+                // "unlock" the scene upon getting deselected
+                fc.SetStringVariable("objName", "");
+                this.GetComponent<AudioSource>().PlayOneShot(deselectSFX);
+                StartCoroutine("ShowScrollArrows");
+            }
+            else
+            {
+                Debug.Log("Calling Deselect() with no selected object");
+            }
         }
     }
 
@@ -163,7 +170,7 @@ public class InteractManager : MonoBehaviour
     {
         // 3 preconditions to dragging camera:
         // cannot click on an interactable object, scene cannot be locked, and object cannot be selected
-        if (!hovering && !fc.GetBooleanVariable("locked") && selected == "")
+        if (!SettingsManager.paused && !hovering && !fc.GetBooleanVariable("locked") && selected == "")
         {
             shifting = true;
             prevMousePos = Input.mousePosition; // store 
@@ -174,7 +181,7 @@ public class InteractManager : MonoBehaviour
     void OnMouseUp()
     {
         // releasing mouse from drag
-        if (shifting && !hovering && !fc.GetBooleanVariable("locked") && selected == "")
+        if (!SettingsManager.paused && shifting && !hovering && !fc.GetBooleanVariable("locked") && selected == "")
         {
             shifting = false;
             mainCam.init_camPos = new Vector3(mainCam.transform.position.x,
@@ -187,7 +194,7 @@ public class InteractManager : MonoBehaviour
 
     void OnMouseDrag()
     {   
-        if (shifting)
+        if (!SettingsManager.paused && shifting)
         {
             // change transform? 
             Vector3 del = (Input.mousePosition - prevMousePos)/100;

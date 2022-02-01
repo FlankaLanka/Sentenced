@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 152.12552, y: 204.63046}
+  scrollPos: {x: 152.36182, y: 202.48717}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -1977,6 +1977,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
     - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
     - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
+    emotionSprites: 00000000010000000200000003000000040000000000000006000000
   chooseToFade: 0
 --- !u!114 &48095662
 MonoBehaviour:
@@ -2008,6 +2009,7 @@ MonoBehaviour:
     - qqqqqqqqqqqqqqqqqqq
     LeftCharSpeaking: 0100010100
     voiceClips: []
+    emotionSprites: 
   chooseToFade: 1
 --- !u!114 &48095663
 MonoBehaviour:
@@ -2480,6 +2482,7 @@ MonoBehaviour:
     - aaaaaa
     LeftCharSpeaking: 0001000100
     voiceClips: []
+    emotionSprites: 
   chooseToFade: 1
 --- !u!114 &48095669
 MonoBehaviour:
@@ -4655,6 +4658,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7007429013737456040, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7007429013737456044, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: mainFlow
       value: 

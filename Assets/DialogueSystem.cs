@@ -8,16 +8,16 @@ public class DialogueSystem : MonoBehaviour
 {
     public Flowchart mainFlow;
 
-    //private int totalLines;
-    private int displayLine;
-    private bool allSixDisplayed;
-    //old variables
-
-    public DialogueClass currentSentences;
-
-    public int i = 0;
+    [Header("Emotion Icon Sprites")]
+    public Sprite AngryIcon;
+    public Sprite ExclamIcon;
+    public Sprite IdeaIcon;
+    public Sprite MessyIcon;
+    public Sprite QuestionIcon;
+    public Sprite SweatIcon;
 
     private AudioSource a;
+    private GameObject emotionIcon;
 
     private Transform dialogueContainer;
     private Transform tempDialogue;
@@ -33,16 +33,27 @@ public class DialogueSystem : MonoBehaviour
     private Sprite WhiteLeftBubble;
     private Sprite WhiteRightBubble;
 
-    public GameObject MatchQMark;
-    public GameObject NextIsFinish;
-    public GameObject NextIsLeft;
-    public GameObject NextIsRight;
 
+    [HideInInspector]
+    public DialogueClass currentSentences;
+    [HideInInspector]
+    public int i = 0;
+    [HideInInspector]
+    public GameObject MatchQMark;
+    [HideInInspector]
+    public GameObject NextIsFinish;
+    [HideInInspector]
+    public GameObject NextIsLeft;
+    [HideInInspector]
+    public GameObject NextIsRight;
+    [HideInInspector]
     public bool LeadsToMatchPanel;
 
     private void Awake()
     {
         a = GetComponent<AudioSource>();
+        emotionIcon = transform.Find("EmotionIcon").gameObject;
+        emotionIcon.SetActive(false);
 
         dialogueContainer = transform.Find("Dialogue");
         tempDialogue = dialogueContainer.Find("TempDialogue");
@@ -117,12 +128,53 @@ public class DialogueSystem : MonoBehaviour
             newLine.GetComponent<ConversationState>().status = StatementStatus.AboutToSpeak;
             newLine.GetComponentInChildren<Text>().text = currentSentences.sentence[i];
 
-            Debug.Log(currentSentences.voiceClips.Count);
+            //dialogue play
             if(currentSentences.voiceClips.Count > i)
             {
                 a.clip = currentSentences.voiceClips[i];
                 a.Play();
             }
+            //change emotion icon
+            if(currentSentences.emotionSprites.Count > i)
+            {
+                if(currentSentences.emotionSprites[i] == DialogueClass.Emotions.None)
+                {
+                    emotionIcon.SetActive(false);
+                }
+                else
+                {
+                    emotionIcon.SetActive(true);
+
+                    if(currentSentences.emotionSprites[i] == DialogueClass.Emotions.Angry)
+                    {
+                        emotionIcon.GetComponent<Image>().sprite = AngryIcon;
+                    }
+                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Exclamation)
+                    {
+                        emotionIcon.GetComponent<Image>().sprite = ExclamIcon;
+                    }
+                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Idea)
+                    {
+                        emotionIcon.GetComponent<Image>().sprite = IdeaIcon;
+                    }
+                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Messy)
+                    {
+                        emotionIcon.GetComponent<Image>().sprite = MessyIcon;
+                    }
+                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Question)
+                    {
+                        emotionIcon.GetComponent<Image>().sprite = QuestionIcon;
+                    }
+                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Sweat)
+                    {
+                        emotionIcon.GetComponent<Image>().sprite = SweatIcon;
+                    }
+
+                }
+            }
+
+
+
 
             //move all other dialogues
             foreach(Transform child in tempDialogue)

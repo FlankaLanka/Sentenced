@@ -6,6 +6,15 @@ using UnityEngine;
 [System.Serializable]
 public class DialogueClass
 {
+    public enum OutlineColors
+    {
+        Red,
+        Green,
+        Blue,
+        Yellow,
+        None
+    }
+
     public enum Emotions
     {
         None,
@@ -17,14 +26,13 @@ public class DialogueClass
         Sweat
     }
 
-
-
     public DialogueClass()
     {
         sentence = new List<string>();
         LeftCharSpeaking = new List<bool>();
         voiceClips = new List<AudioClip>();
         emotionSprites = new List<Emotions>();
+        emotionOutlines = new List<OutlineColors>();
     }
 
     public void CopyDialogue(DialogueClass x)
@@ -33,6 +41,7 @@ public class DialogueClass
         this.LeftCharSpeaking = new List<bool>(x.LeftCharSpeaking);
         this.voiceClips = new List<AudioClip>(x.voiceClips);
         this.emotionSprites = new List<Emotions>(x.emotionSprites);
+        this.emotionOutlines = new List<OutlineColors>(x.emotionOutlines);
     }
 
 
@@ -41,4 +50,5 @@ public class DialogueClass
     public List<bool> LeftCharSpeaking;
     public List<AudioClip> voiceClips;
     public List<Emotions> emotionSprites;
+    public List<OutlineColors> emotionOutlines;
 }

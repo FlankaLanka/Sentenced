@@ -1978,6 +1978,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
     - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
     emotionSprites: 00000000010000000200000003000000040000000000000006000000
+    emotionOutlines: 01000000020000000400000003000000000000000400000000000000
   chooseToFade: 0
 --- !u!114 &48095662
 MonoBehaviour:
@@ -2010,6 +2011,7 @@ MonoBehaviour:
     LeftCharSpeaking: 0100010100
     voiceClips: []
     emotionSprites: 
+    emotionOutlines: 
   chooseToFade: 1
 --- !u!114 &48095663
 MonoBehaviour:
@@ -2483,6 +2485,7 @@ MonoBehaviour:
     LeftCharSpeaking: 0001000100
     voiceClips: []
     emotionSprites: 
+    emotionOutlines: 
   chooseToFade: 1
 --- !u!114 &48095669
 MonoBehaviour:
@@ -4658,6 +4661,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7007429013653414464, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007429013653414464, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007429013653414464, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007429013653414464, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007429013653414464, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007429013653414464, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 7007429013737456040, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4666,6 +4693,10 @@ PrefabInstance:
       propertyPath: mainFlow
       value: 
       objectReference: {fileID: 48095619}
+    - target: {fileID: 7007429013737456044, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: RightPersonOutline
+      value: 
+      objectReference: {fileID: 2100000, guid: 324291d6d27cc134ca6275493e05f790, type: 2}
     - target: {fileID: 7007429014982559880, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_Name
       value: ConversationCanvas
@@ -5133,6 +5164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgm_volume: 0.5
   quit: 0
+  pauseUI: {fileID: 0}
+  optionsUI: {fileID: 0}
   quitUI: {fileID: 0}
   fadeObj: {fileID: 0}
 --- !u!4 &661445747
@@ -5668,7 +5701,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 324291d6d27cc134ca6275493e05f790, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

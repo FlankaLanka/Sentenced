@@ -33,6 +33,16 @@ public class DialogueSystem : MonoBehaviour
     private Sprite WhiteLeftBubble;
     private Sprite WhiteRightBubble;
 
+    private GameObject LeftPerson;
+    private GameObject RightPerson;
+
+    [Header("Outline Materials")]
+    public Material RedOutline;
+    public Material BlueOutline;
+    public Material GreenOutline;
+    public Material YellowOutline;
+    public Material NoOutline;
+
 
     [HideInInspector]
     public DialogueClass currentSentences;
@@ -76,6 +86,8 @@ public class DialogueSystem : MonoBehaviour
         NextIsLeft = transform.Find("NextLineLeft").gameObject;
         NextIsRight = transform.Find("NextLineRight").gameObject;
 
+        LeftPerson = transform.Find("LeftPersonImage").gameObject;
+        RightPerson = transform.Find("RightPersonImage").gameObject;
     }
 
     private void OnEnable()
@@ -134,6 +146,7 @@ public class DialogueSystem : MonoBehaviour
                 a.clip = currentSentences.voiceClips[i];
                 a.Play();
             }
+
             //change emotion icon
             if(currentSentences.emotionSprites.Count > i)
             {
@@ -174,6 +187,30 @@ public class DialogueSystem : MonoBehaviour
             }
 
 
+            //change character outline
+            if(currentSentences.emotionOutlines.Count > i)
+            {
+                if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.None)
+                {
+                    RightPerson.GetComponent<Image>().material = NoOutline;
+                }
+                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Red)
+                {
+                    RightPerson.GetComponent<Image>().material = RedOutline;
+                }
+                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Green)
+                {
+                    RightPerson.GetComponent<Image>().material = GreenOutline;
+                }
+                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Blue)
+                {
+                    RightPerson.GetComponent<Image>().material = BlueOutline;
+                }
+                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Yellow)
+                {
+                    RightPerson.GetComponent<Image>().material = YellowOutline;
+                }
+            }
 
 
             //move all other dialogues

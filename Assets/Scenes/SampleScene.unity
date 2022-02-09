@@ -236,21 +236,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 152.36182, y: 202.48717}
+  scrollPos: {x: 232.4032, y: 258.84506}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.7599998
+  zoom: 0.58
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 48095620}
-  selectedCommands:
-  - {fileID: 48095661}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 48095634}
   - {fileID: 48095635}
@@ -281,7 +279,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -15.803116
     y: 15.3994
-    width: 128.94739
+    width: 124.482765
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -449,7 +447,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 83.905136
     y: 109.48553
-    width: 100.52633
+    width: 96.89655
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -478,7 +476,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -142.18068
     y: 109.62105
-    width: 100.52633
+    width: 96.89655
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -590,7 +588,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -87.54826
     y: -77.91619
-    width: 106.84212
+    width: 103.793106
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3082,7 +3080,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 173.57385
     y: -3.6457367
-    width: 78.42106
+    width: 77.58621
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4684,10 +4682,14 @@ PrefabInstance:
     - target: {fileID: 7007429013653414464, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+      objectReference: {fileID: 2100000, guid: 6be656a369aadf44aad627ae77ff0f9c, type: 2}
+    - target: {fileID: 7007429013653414464, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7007429013737456040, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7007429013737456044, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: mainFlow

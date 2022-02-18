@@ -47,7 +47,7 @@ public class InteractManager : MonoBehaviour
 
     public Vector3 prevMousePos;
 
-    bool showArrows = true;
+    public bool showArrows = true;
     // UI arrows to indicate if player can move scene
     public GameObject l_arrow;
     public GameObject r_arrow;
@@ -212,5 +212,9 @@ public class InteractManager : MonoBehaviour
     IEnumerator ShowScrollArrows(){
         yield return new WaitForSeconds(1f);
         showArrows = true;
+    }
+
+    public void HideArrows(){
+        showArrows = false;
     }
 }

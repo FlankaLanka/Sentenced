@@ -5459,6 +5459,7 @@ MonoBehaviour:
   hovering: 0
   shifting: 0
   prevMousePos: {x: 0, y: 0, z: 0}
+  showArrows: 1
   l_arrow: {fileID: 0}
   r_arrow: {fileID: 0}
   t_arrow: {fileID: 0}
@@ -5792,6 +5793,10 @@ PrefabInstance:
     - target: {fileID: 6947035216093314324, guid: 00b43275246a340448fe46022f94bc25, type: 3}
       propertyPath: m_Name
       value: SentencedDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6947035216093314324, guid: 00b43275246a340448fe46022f94bc25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6947035216093314350, guid: 00b43275246a340448fe46022f94bc25, type: 3}
       propertyPath: m_Pivot.x

@@ -93,7 +93,6 @@ public class DialogueSystem : MonoBehaviour
     private void OnEnable()
     {
         //i = 0;
-
         if (currentSentences.sentence.Count > 0)
         {
             if (currentSentences.LeftCharSpeaking[0])
@@ -105,7 +104,6 @@ public class DialogueSystem : MonoBehaviour
                 NextIsRight.SetActive(true);
             }
         }
-
     }
 
     public void DisplayNextLine()
@@ -125,32 +123,10 @@ public class DialogueSystem : MonoBehaviour
 
         if (i < currentSentences.sentence.Count)
         {
-            //create the new dialogue
-            GameObject newLine;
-            if (currentSentences.LeftCharSpeaking[i])
-            {
-                newLine = Instantiate(LeftBubble, LeftMainText.position, Quaternion.identity, tempDialogue);
-                newLine.GetComponent<ConversationState>().IsLeftChat = true;
-            }
-            else
-            {
-                newLine = Instantiate(RightBubble, RightMainText.position, Quaternion.identity, tempDialogue);
-                newLine.GetComponent<ConversationState>().IsLeftChat = false;
-            }
-            newLine.GetComponent<ConversationState>().status = StatementStatus.AboutToSpeak;
-            newLine.GetComponentInChildren<Text>().text = currentSentences.sentence[i];
-
-            //dialogue play
-            if(currentSentences.voiceClips.Count > i)
-            {
-                a.clip = currentSentences.voiceClips[i];
-                a.Play();
-            }
-
             //change emotion icon
-            if(currentSentences.emotionSprites.Count > i)
+            if (currentSentences.emotionSprites.Count > i)
             {
-                if(currentSentences.emotionSprites[i] == DialogueClass.Emotions.None)
+                if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.None)
                 {
                     emotionIcon.SetActive(false);
                 }
@@ -158,7 +134,7 @@ public class DialogueSystem : MonoBehaviour
                 {
                     emotionIcon.SetActive(true);
 
-                    if(currentSentences.emotionSprites[i] == DialogueClass.Emotions.Angry)
+                    if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Angry)
                     {
                         emotionIcon.GetComponent<Image>().sprite = AngryIcon;
                     }
@@ -186,6 +162,29 @@ public class DialogueSystem : MonoBehaviour
                 }
             }
 
+            //create the new dialogue
+            GameObject newLine;
+            if (currentSentences.LeftCharSpeaking[i])
+            {
+                newLine = Instantiate(LeftBubble, LeftMainText.position, Quaternion.identity, tempDialogue);
+                newLine.GetComponent<ConversationState>().IsLeftChat = true;
+            }
+            else
+            {
+                newLine = Instantiate(RightBubble, RightMainText.position, Quaternion.identity, tempDialogue);
+                newLine.GetComponent<ConversationState>().IsLeftChat = false;
+                //for right dialogue, get the emotion image
+                newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = emotionIcon.GetComponent<Image>().sprite;
+            }
+            newLine.GetComponent<ConversationState>().status = StatementStatus.AboutToSpeak;
+            newLine.GetComponentInChildren<Text>().text = currentSentences.sentence[i];
+
+            //dialogue play
+            if(currentSentences.voiceClips.Count > i)
+            {
+                a.clip = currentSentences.voiceClips[i];
+                a.Play();
+            }
 
             //change character outline
             if(currentSentences.emotionOutlines.Count > i)
@@ -247,7 +246,6 @@ public class DialogueSystem : MonoBehaviour
                     {
                         NextIsRight.SetActive(true);
                     }
-
                 }
             }
         }

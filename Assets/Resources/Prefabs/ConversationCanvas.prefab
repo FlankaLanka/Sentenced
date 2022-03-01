@@ -1202,10 +1202,7 @@ MonoBehaviour:
   MessyIcon: {fileID: 21300000, guid: 532585012e5294240999a9c98d93b474, type: 3}
   QuestionIcon: {fileID: 21300000, guid: e1c54a8bfacccd24cbae8530fa97163f, type: 3}
   SweatIcon: {fileID: 21300000, guid: 2856a32cdc51a7641a40d27a89983289, type: 3}
-  RedOutline: {fileID: 2100000, guid: 324291d6d27cc134ca6275493e05f790, type: 2}
-  BlueOutline: {fileID: 2100000, guid: dc70eb8f686aadc489e660f60876341d, type: 2}
-  GreenOutline: {fileID: 2100000, guid: 6be656a369aadf44aad627ae77ff0f9c, type: 2}
-  YellowOutline: {fileID: 2100000, guid: d8902340efbe360419ab00fcac82cd0c, type: 2}
+  ColoredOutline: {fileID: 2100000, guid: 324291d6d27cc134ca6275493e05f790, type: 2}
   NoOutline: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   currentSentences:
     sentence: []

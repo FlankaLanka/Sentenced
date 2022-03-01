@@ -247,8 +247,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 48095620}
+  selectedCommands:
+  - {fileID: 48095661}
   variables:
   - {fileID: 48095634}
   - {fileID: 48095635}
@@ -279,7 +281,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -15.803116
     y: 15.3994
-    width: 127.09091
+    width: 128.18182
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -447,7 +449,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 83.905136
     y: 109.48553
-    width: 99.454544
+    width: 100.90909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -476,7 +478,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -142.18068
     y: 109.62105
-    width: 99.454544
+    width: 100.90909
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -588,7 +590,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -87.54826
     y: -77.91619
-    width: 106.72727
+    width: 104.545456
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1976,7 +1978,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
     - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
     emotionSprites: 00000000010000000200000003000000040000000000000006000000
-    emotionOutlines: 01000000020000000400000003000000000000000400000000000000
+    emotionOutlines: 01000000020000000100000003000000000000000000000000000000
   chooseToFade: 0
 --- !u!114 &48095662
 MonoBehaviour:
@@ -3080,7 +3082,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 173.57385
     y: -3.6457367
-    width: 79.09091
+    width: 75.454544
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0

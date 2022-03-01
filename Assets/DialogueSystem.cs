@@ -37,10 +37,7 @@ public class DialogueSystem : MonoBehaviour
     private GameObject RightPerson;
 
     [Header("Outline Materials")]
-    public Material RedOutline;
-    public Material BlueOutline;
-    public Material GreenOutline;
-    public Material YellowOutline;
+    public Material ColoredOutline;
     public Material NoOutline;
 
 
@@ -61,6 +58,9 @@ public class DialogueSystem : MonoBehaviour
 
     private void Awake()
     {
+        //set outline color mat to 0, it gets modified in game and applies to material
+        ColoredOutline.SetFloat("DrawTime", 0f);
+
         a = GetComponent<AudioSource>();
         emotionIcon = transform.Find("EmotionIcon").gameObject;
         emotionIcon.SetActive(false);
@@ -195,19 +195,23 @@ public class DialogueSystem : MonoBehaviour
                 }
                 else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Red)
                 {
-                    RightPerson.GetComponent<Image>().material = RedOutline;
+                    RightPerson.GetComponent<Image>().material = ColoredOutline;
+                    StartCoroutine(OutlineTrace(Color.red, ColoredOutline));
                 }
                 else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Green)
                 {
-                    RightPerson.GetComponent<Image>().material = GreenOutline;
+                    RightPerson.GetComponent<Image>().material = ColoredOutline;
+                    StartCoroutine(OutlineTrace(Color.green, ColoredOutline));
                 }
                 else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Blue)
                 {
-                    RightPerson.GetComponent<Image>().material = BlueOutline;
+                    RightPerson.GetComponent<Image>().material = ColoredOutline;
+                    StartCoroutine(OutlineTrace(Color.blue, ColoredOutline));
                 }
                 else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Yellow)
                 {
-                    RightPerson.GetComponent<Image>().material = YellowOutline;
+                    RightPerson.GetComponent<Image>().material = ColoredOutline;
+                    StartCoroutine(OutlineTrace(Color.yellow, ColoredOutline));
                 }
             }
 
@@ -264,6 +268,23 @@ public class DialogueSystem : MonoBehaviour
 
         //reset audioclip to the click sound
     }
+
+
+    private IEnumerator OutlineTrace(Color outlineColor, Material outline)
+    {
+        outline.SetColor("OutlineColor", outlineColor);
+
+        float timer = 0f;
+        float outlineTimer = 1f;
+        while(timer < outlineTimer)
+        {
+            yield return null;
+            timer += Time.deltaTime;
+            outline.SetFloat("DrawTime", 1 - timer / outlineTimer);
+        }
+    }
+
+
 
 
     private void MoveDialogue(Transform bubble)

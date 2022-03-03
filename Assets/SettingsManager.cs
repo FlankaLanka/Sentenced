@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 // Class to Manage Settings (currently only bgm volume / mute)
@@ -8,14 +10,32 @@ using UnityEngine.SceneManagement;
 
 public class SettingsManager : MonoBehaviour
 {
-    public float bgm_volume = 0.5f;
+    // default values; modified in InstantiateSettings()
+    public float game_volume = 5f;
+    public float music_volume = 5f;
+    public float dialogue_volume = 5f;
+    public float sfx_volume = 5f;
+
+    // slider stuff -- assign manually in inspector
+    public Slider g_vol;
+    public Slider m_vol;
+    public Slider d_vol;
+    public Slider s_vol;
+    public TextMeshProUGUI gv_text;
+    public TextMeshProUGUI mv_text;
+    public TextMeshProUGUI dv_text;
+    public TextMeshProUGUI sv_text;
+    
+    // for pausing/quitting game?
     public static bool paused = false;
     public bool quit = false;
 
+    // random UI stuff
     public GameObject pauseUI;
     public GameObject optionsUI;
     public GameObject quitUI;
     public GameObject fadeObj;
+    public bool canPause = true;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +43,7 @@ public class SettingsManager : MonoBehaviour
         // comment this out if don't want to play on start
         PlayBGM();
 
+        InstantiateSettings();
 
         paused = false;
         quit = false;
@@ -46,7 +67,7 @@ public class SettingsManager : MonoBehaviour
         // Some basic scene settings -- TEMPORARY -- ideally hook this up to UI
         
         // ESC => quit game
-        if(Input.GetKeyUp(KeyCode.Escape))
+        if(canPause && Input.GetKeyUp(KeyCode.Escape))
         {
             // quit game if escape is pressed
             PauseGame();
@@ -105,7 +126,9 @@ public class SettingsManager : MonoBehaviour
     // call this function to play the sfx (in case you do not want to play on awake)
     public void PlayBGM()
     {
-        this.GetComponent<AudioSource>().Play();
+        // play audio if it is attached
+        if(GetComponent<AudioSource>())
+            GetComponent<AudioSource>().Play();
     }
 
     public void NextScene(string sceneName)
@@ -135,4 +158,55 @@ public class SettingsManager : MonoBehaviour
         }
     }
 
+    // Setting up the sound settings based on PlayerPrefs
+    public void InstantiateSettings(){
+        // getting values from PlayerPrefs
+        game_volume = PlayerPrefs.GetFloat("g_vol", 5f);
+        music_volume = PlayerPrefs.GetFloat("m_vol", 5f);
+        dialogue_volume = PlayerPrefs.GetFloat("d_vol", 5f);
+        sfx_volume = PlayerPrefs.GetFloat("s_vol", 5f);
+
+        // instantiating slider values
+        g_vol.value = game_volume;
+        m_vol.value = music_volume;
+        d_vol.value = dialogue_volume;
+        s_vol.value = sfx_volume;
+        
+        // set slider text after all values have been set
+        SetSettingsText();
+    }
+
+    public void UpdateSettings()
+    {
+        Debug.Log("Changing Settings");
+
+        game_volume = g_vol.value;
+        music_volume = m_vol.value;
+        dialogue_volume = d_vol.value;
+        sfx_volume = s_vol.value;
+        
+        SetSettingsText();
+    }
+
+    public void SetSettingsText()
+    {
+        Debug.Log("Changing Slider Text");
+
+        gv_text.text = game_volume.ToString();
+        mv_text.text = music_volume.ToString();
+        dv_text.text = dialogue_volume.ToString();
+        sv_text.text = sfx_volume.ToString();
+    }
+
+    // Save New Settings
+    public void SaveSettings(){
+        Debug.Log("saving values");
+
+        PlayerPrefs.SetFloat("g_vol", g_vol.value);
+        PlayerPrefs.SetFloat("m_vol", m_vol.value);
+        PlayerPrefs.SetFloat("d_vol", d_vol.value);
+        PlayerPrefs.SetFloat("s_vol", s_vol.value);
+
+        PlayerPrefs.Save();
+    }
 }

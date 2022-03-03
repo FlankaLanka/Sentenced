@@ -22,7 +22,7 @@ public class TitleScreenManager : MonoBehaviour
         //anim = this.GetComponent<Animator>();
         currscreen = "title";
 
-        if (PlayerPrefs.GetInt("saved") == 1){
+        if (PlayerPrefs.GetInt("saved", 0) == 1){
             newGameButton.SetActive(false);
             continueButton.SetActive(true);
         }
@@ -81,7 +81,7 @@ public class TitleScreenManager : MonoBehaviour
 
         // reset settings everytime this window is opened
         this.GetComponent<SettingsManager>().InstantiateSettings();
-        
+
         currscreen = "settings";
         //menuObj.SetActive(false);
         //settingsObj.SetActive(true);

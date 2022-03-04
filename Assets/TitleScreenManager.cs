@@ -13,20 +13,19 @@ public class TitleScreenManager : MonoBehaviour
     public GameObject newGameButton;
     public GameObject continueButton;
     
+    // saves the current title screen state -- {"title", "settings", "credits", "quit"}
     public string currscreen = "title";
-    //public Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        //anim = this.GetComponent<Animator>();
         currscreen = "title";
 
-        if (PlayerPrefs.GetInt("saved", 0) == 1){
+        // show new game or continue button?
+        if (PlayerPrefs.GetInt("saved", 0) > 0){
             newGameButton.SetActive(false);
             continueButton.SetActive(true);
         }
-
 
         if (!menuObj)
             Debug.Log("WARNING: No menuObj attached to TitleScreenManager.");
@@ -54,19 +53,15 @@ public class TitleScreenManager : MonoBehaviour
         }
     }
 
-    // function called by button press
+    // start the game !!!
     public void StartGame() 
     {
-        // load next scene in the build index
-        // -- CAN CHANGE THIS IN BUILD SETTINGS
-        //
-        // can also directly load scene by name if build settings is screwy for some reason:
-        // SceneManager.LoadScene("Interact");
-
-        // save that player started the game
-        PlayerPrefs.SetInt("saved", 1);
+        // load saved scene number, otherwise just go to next scene in buildIndex
+        if (PlayerPrefs.GetInt("saved", 0) > 0)
+            SceneManager.LoadScene(PlayerPrefs.GetInt("saved", 1));
+        else
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // function called by button press

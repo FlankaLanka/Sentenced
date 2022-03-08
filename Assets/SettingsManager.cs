@@ -47,10 +47,13 @@ public class SettingsManager : MonoBehaviour
 
         paused = false;
         quit = false;
-
-        pauseUI.SetActive(false);
-        optionsUI.SetActive(false);
-        quitUI.SetActive(false);
+        
+        if (pauseUI)
+            pauseUI.SetActive(false);
+        if (optionsUI)
+            optionsUI.SetActive(false);
+        if (quitUI)
+            quitUI.SetActive(false);
     }
 
     // Update is called once per frame

@@ -216,10 +216,10 @@ GameObject:
   - component: {fileID: 48095700}
   - component: {fileID: 48095699}
   - component: {fileID: 48095703}
-  - component: {fileID: 48095704}
   - component: {fileID: 48095705}
   - component: {fileID: 48095706}
   - component: {fileID: 48095707}
+  - component: {fileID: 48095704}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -254,7 +254,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 48095620}
   selectedCommands:
-  - {fileID: 48095706}
+  - {fileID: 48095705}
   variables:
   - {fileID: 48095634}
   - {fileID: 48095635}
@@ -303,12 +303,12 @@ MonoBehaviour:
   - {fileID: 48095693}
   - {fileID: 48095692}
   - {fileID: 48095677}
-  - {fileID: 48095704}
   - {fileID: 48095707}
   - {fileID: 48095624}
   - {fileID: 48095705}
   - {fileID: 48095671}
   - {fileID: 48095706}
+  - {fileID: 48095704}
   - {fileID: 48095661}
   - {fileID: 48095703}
   - {fileID: 48095676}
@@ -2539,7 +2539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 60
   indentLevel: 0
-  storyText: Enable convo after this
+  storyText: Testing Modifier
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -4577,26 +4577,31 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &48095704
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48095618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3113957eb8a5c534a9ef6e25df1803e4, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 124
+  itemId: 129
   indentLevel: 0
-  dialogueSpot: 0
-  TextFont: 55
-  LineSpacing: 1
-  LeftStart: 0
-  TopStart: 0
-  RightEnd: 0
-  BottomEnd: 0
-  SentencedDialoguePrefab: {fileID: 1080256389}
+  storyText: Enable convo after this
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &48095705
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4612,7 +4617,8 @@ MonoBehaviour:
   itemId: 125
   indentLevel: 0
   dialogueSpot: 2
-  TextFont: 100
+  TextFont: 20
+  TextStyle: 0
   LineSpacing: 3
   LeftStart: 100
   TopStart: 123
@@ -4635,6 +4641,7 @@ MonoBehaviour:
   indentLevel: 0
   dialogueSpot: 0
   TextFont: 55
+  TextStyle: 2
   LineSpacing: 1
   LeftStart: 358.1
   TopStart: 62.4389
@@ -4643,19 +4650,27 @@ MonoBehaviour:
   SentencedDialoguePrefab: {fileID: 1080256389}
 --- !u!114 &48095707
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48095618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65d551a201c94bc79950076ff3eaf2e, type: 3}
+  m_Script: {fileID: 11500000, guid: 3113957eb8a5c534a9ef6e25df1803e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 127
+  itemId: 128
   indentLevel: 0
-  sayDialog: {fileID: 1428989305}
+  dialogueSpot: 2
+  TextFont: 100
+  TextStyle: 1
+  LineSpacing: 1
+  LeftStart: 358.1
+  TopStart: 62.4389
+  RightEnd: 519.425
+  BottomEnd: 83.0685
+  SentencedDialoguePrefab: {fileID: 1080256389}
 --- !u!1 &182288710
 GameObject:
   m_ObjectHideFlags: 1
@@ -5371,12 +5386,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4445eb338ea58a7429c2ba87d9bec8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgm_volume: 0.5
+  game_volume: 5
+  music_volume: 5
+  dialogue_volume: 5
+  sfx_volume: 5
+  g_vol: {fileID: 0}
+  m_vol: {fileID: 0}
+  d_vol: {fileID: 0}
+  s_vol: {fileID: 0}
+  gv_text: {fileID: 0}
+  mv_text: {fileID: 0}
+  dv_text: {fileID: 0}
+  sv_text: {fileID: 0}
   quit: 0
   pauseUI: {fileID: 0}
   optionsUI: {fileID: 0}
   quitUI: {fileID: 0}
   fadeObj: {fileID: 0}
+  canPause: 1
 --- !u!4 &661445747
 Transform:
   m_ObjectHideFlags: 0

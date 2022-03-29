@@ -240,11 +240,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 236.44708, y: 283.5786}
+  scrollPos: {x: 168.31346, y: 234.71959}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.55
+  zoom: 0.7899998
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -254,7 +254,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 48095620}
   selectedCommands:
-  - {fileID: 48095705}
+  - {fileID: 48095661}
   variables:
   - {fileID: 48095634}
   - {fileID: 48095635}
@@ -285,7 +285,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -15.803116
     y: 15.3994
-    width: 128.18182
+    width: 125.94939
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 83.905136
     y: 109.48553
-    width: 100.90909
+    width: 100.63293
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -486,7 +486,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -142.18068
     y: 109.62105
-    width: 100.90909
+    width: 100.63293
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -87.54826
     y: -77.91619
-    width: 104.545456
+    width: 104.43039
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1970,10 +1970,10 @@ MonoBehaviour:
   sentences:
     sentence:
     - HELLO MAN
-    - HELLO TO U TOO
-    - Where dad?
-    - Coffee!
-    - ??????????
+    - HELLO TO YOU TOO
+    - Test Text
+    - Test Text
+    - Test Text
     - coffee??????????????
     - COFFFFFFFFFFFFFFFFFFFFEE
     LeftCharSpeaking: 01000100010100
@@ -1987,6 +1987,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 44f4b7edc87d0eb409515f51a5408a52, type: 3}
     emotionSprites: 00000000010000000200000003000000040000000000000006000000
     emotionOutlines: 04000000020000000100000003000000000000000000000000000000
+    textFont: 3200000000000000500000002d000000460000000a00000019000000
   chooseToFade: 0
 --- !u!114 &48095662
 MonoBehaviour:
@@ -2020,6 +2021,7 @@ MonoBehaviour:
     voiceClips: []
     emotionSprites: 
     emotionOutlines: 
+    textFont: 
   chooseToFade: 1
 --- !u!114 &48095663
 MonoBehaviour:
@@ -2494,6 +2496,7 @@ MonoBehaviour:
     voiceClips: []
     emotionSprites: 
     emotionOutlines: 
+    textFont: 15000000320000001f0000000a00000017000000
   chooseToFade: 1
 --- !u!114 &48095669
 MonoBehaviour:
@@ -3090,7 +3093,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 173.57385
     y: -3.6457367
-    width: 75.454544
+    width: 76.58228
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4577,7 +4580,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &48095704
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -4650,7 +4653,7 @@ MonoBehaviour:
   SentencedDialoguePrefab: {fileID: 1080256389}
 --- !u!114 &48095707
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -5999,6 +6002,10 @@ PrefabInstance:
     - target: {fileID: 6947035216093314324, guid: 00b43275246a340448fe46022f94bc25, type: 3}
       propertyPath: m_Name
       value: SentencedDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 6947035216093314324, guid: 00b43275246a340448fe46022f94bc25, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6947035216093314350, guid: 00b43275246a340448fe46022f94bc25, type: 3}
       propertyPath: m_Pivot.x

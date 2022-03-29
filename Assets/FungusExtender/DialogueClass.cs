@@ -33,7 +33,9 @@ public class DialogueClass
         voiceClips = new List<AudioClip>();
         emotionSprites = new List<Emotions>();
         emotionOutlines = new List<OutlineColors>();
-    }
+        textFont = new List<int>();
+
+}
 
     public void CopyDialogue(DialogueClass x)
     {
@@ -42,6 +44,7 @@ public class DialogueClass
         this.voiceClips = new List<AudioClip>(x.voiceClips);
         this.emotionSprites = new List<Emotions>(x.emotionSprites);
         this.emotionOutlines = new List<OutlineColors>(x.emotionOutlines);
+        this.textFont = new List<int>(x.textFont);
     }
 
 
@@ -51,4 +54,5 @@ public class DialogueClass
     public List<AudioClip> voiceClips;
     public List<Emotions> emotionSprites;
     public List<OutlineColors> emotionOutlines;
+    public List<int> textFont;
 }

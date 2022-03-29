@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Fungus;
+using UnityEngine.Assertions;
+using UnityEngine.EventSystems;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -98,10 +100,12 @@ public class DialogueSystem : MonoBehaviour
             if (currentSentences.LeftCharSpeaking[0])
             {
                 NextIsLeft.SetActive(true);
+                NextIsLeft.GetComponent<Button>().onClick.Invoke();
             }
             else
             {
                 NextIsRight.SetActive(true);
+                NextIsLeft.GetComponent<Button>().onClick.Invoke();  
             }
         }
     }
@@ -178,9 +182,17 @@ public class DialogueSystem : MonoBehaviour
             }
             newLine.GetComponent<ConversationState>().status = StatementStatus.AboutToSpeak;
             newLine.GetComponentInChildren<Text>().text = currentSentences.sentence[i];
+            //change font
+            if (currentSentences.textFont.Count > i)
+            {
+                if (currentSentences.textFont[i] != 0)
+                    newLine.GetComponentInChildren<Text>().fontSize = currentSentences.textFont[i];
+            }
+
+
 
             //dialogue play
-            if(currentSentences.voiceClips.Count > i)
+            if (currentSentences.voiceClips.Count > i)
             {
                 a.clip = currentSentences.voiceClips[i];
                 a.Play();
@@ -334,7 +346,7 @@ public class DialogueSystem : MonoBehaviour
     private IEnumerator LerpDiagonal(Transform start, Vector2 end, float totalTime)
     {
         Vector3 scale = start.localScale;
-        Transform dialogueText = start.GetChild(0);
+        //Transform dialogueText = start.GetChild(0);
         float timer = 0f;
 
         //
@@ -345,7 +357,7 @@ public class DialogueSystem : MonoBehaviour
             if(start.localScale.x > 0.75f)
             {
                 start.localScale = scale - scale * timer / totalTime;
-                dialogueText.localScale = start.localScale;
+                //dialogueText.localScale = start.localScale;
             }
             yield return new WaitForSeconds(0.01f);
             timer += 0.01f;

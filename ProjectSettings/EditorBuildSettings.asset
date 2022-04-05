@@ -5,13 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TitleScene.unity
     guid: 127d6502affd27141adc1ca9df27cd64
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StoryTest.unity
     guid: 8310854d5f3cb467db1dcff0637bc1ca
+  - enabled: 1
+    path: Assets/Scenes/Act 1 Scenes/Prologue.unity
+    guid: 23264b5cb547048738b4cf32bd672dae
+  - enabled: 1
+    path: Assets/Scenes/VerticalSlice.unity
+    guid: f6369889196684bb997def80b833ef24
+  - enabled: 1
+    path: Assets/Scenes/Act 2 Scenes/DavidOffice.unity
+    guid: e5f232b91c58b4415880b471bfdc6630
+  - enabled: 1
+    path: Assets/Scenes/Act 3 Scenes/BrothersClash.unity
+    guid: f60e8e2c88ca3484d88a1ab8b4081d68
+  - enabled: 1
+    path: Assets/Scenes/Act 3 Scenes/MLP_Branch.unity
+    guid: 1386d3726030443f29fffc4f86cf159a
+  - enabled: 1
+    path: Assets/Scenes/Act 3 Scenes/Credits.unity
+    guid: 3194063aaad2b4d8c9d0547f9ad81136
   m_configObjects: {}

@@ -9,6 +9,7 @@ using Fungus;
 
 public class ConversationClose : Command
 {
+
     public override void OnEnter()
     {
 

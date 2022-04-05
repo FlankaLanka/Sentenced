@@ -42,6 +42,7 @@ public class ConversationOpen : Command
         convoPanel.Find("RightBG").GetComponent<Image>().sprite = RightImage;
         convoPanel.Find("LeftBG").GetComponent<Image>().sprite = LeftImage;
         convoPanel.Find("RightPersonImage").GetComponent<Image>().sprite = RightPersonImage;
+        convoPanel.Find("RightPersonImage").GetComponent<Image>().material = null;
         convoPanel.Find("LeftPersonImage").GetComponent<Image>().sprite = LeftPersonImage;
         convoPanel.Find("RightPersonName").GetComponent<Text>().text = RightPersonName;
         convoPanel.Find("LeftPersonName").GetComponent<Text>().text = LeftPersonName;

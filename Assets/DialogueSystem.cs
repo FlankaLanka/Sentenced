@@ -41,6 +41,7 @@ public class DialogueSystem : MonoBehaviour
     [Header("Outline Materials")]
     public Material ColoredOutline;
     public Material NoOutline;
+    private DialogueClass.OutlineColors prevOutline;
 
 
     [HideInInspector]
@@ -80,8 +81,8 @@ public class DialogueSystem : MonoBehaviour
 
         LeftBubble = Resources.Load("Prefabs/LeftMain") as GameObject;
         RightBubble = Resources.Load("Prefabs/RightMain") as GameObject;
-        WhiteLeftBubble = Resources.Load<Sprite>("ConvoPanelSprites/convo_bubble_white_circle");
-        WhiteRightBubble = Resources.Load<Sprite>("ConvoPanelSprites/convo_bubble_white_rect");
+        WhiteLeftBubble = Resources.Load<Sprite>("ConvoPanelSprites/convo_small_white");
+        WhiteRightBubble = Resources.Load<Sprite>("ConvoPanelSprites/convo_small_white_r");
 
         MatchQMark = transform.Find("MatchPanelQMark").gameObject;
         NextIsFinish = transform.Find("NextLineFinish").gameObject;
@@ -94,6 +95,8 @@ public class DialogueSystem : MonoBehaviour
 
     private void OnEnable()
     {
+        prevOutline = DialogueClass.OutlineColors.None;
+
         //i = 0;
         if (currentSentences.sentence.Count > 0)
         {
@@ -127,45 +130,6 @@ public class DialogueSystem : MonoBehaviour
 
         if (i < currentSentences.sentence.Count)
         {
-            //change emotion icon
-            if (currentSentences.emotionSprites.Count > i)
-            {
-                if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.None)
-                {
-                    emotionIcon.SetActive(false);
-                }
-                else
-                {
-                    emotionIcon.SetActive(true);
-
-                    if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Angry)
-                    {
-                        emotionIcon.GetComponent<Image>().sprite = AngryIcon;
-                    }
-                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Exclamation)
-                    {
-                        emotionIcon.GetComponent<Image>().sprite = ExclamIcon;
-                    }
-                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Idea)
-                    {
-                        emotionIcon.GetComponent<Image>().sprite = IdeaIcon;
-                    }
-                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Messy)
-                    {
-                        emotionIcon.GetComponent<Image>().sprite = MessyIcon;
-                    }
-                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Question)
-                    {
-                        emotionIcon.GetComponent<Image>().sprite = QuestionIcon;
-                    }
-                    else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Sweat)
-                    {
-                        emotionIcon.GetComponent<Image>().sprite = SweatIcon;
-                    }
-
-                }
-            }
-
             //create the new dialogue
             GameObject newLine;
             if (currentSentences.LeftCharSpeaking[i])
@@ -178,7 +142,46 @@ public class DialogueSystem : MonoBehaviour
                 newLine = Instantiate(RightBubble, RightMainText.position, Quaternion.identity, tempDialogue);
                 newLine.GetComponent<ConversationState>().IsLeftChat = false;
                 //for right dialogue, get the emotion image
-                newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = emotionIcon.GetComponent<Image>().sprite;
+                //newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = emotionIcon.GetComponent<Image>().sprite;
+
+                //change emotion icon
+                if (currentSentences.emotionSprites.Count > i)
+                {
+                    if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.None)
+                    {
+                        newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = null;
+                        newLine.transform.Find("EmotionImageInText").GetComponent<Image>().enabled = false;
+                    }
+                    else
+                    {
+                        newLine.transform.Find("EmotionImageInText").GetComponent<Image>().enabled = true;
+                        if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Angry)
+                        {
+                            newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = AngryIcon;
+                        }
+                        else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Exclamation)
+                        {
+                            newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = ExclamIcon;
+                        }
+                        else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Idea)
+                        {
+                            newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = IdeaIcon;
+                        }
+                        else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Messy)
+                        {
+                            newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = MessyIcon;
+                        }
+                        else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Question)
+                        {
+                            newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = QuestionIcon;
+                        }
+                        else if (currentSentences.emotionSprites[i] == DialogueClass.Emotions.Sweat)
+                        {
+                            newLine.transform.Find("EmotionImageInText").GetComponent<Image>().sprite = SweatIcon;
+                        }
+
+                    }
+                }
             }
             newLine.GetComponent<ConversationState>().status = StatementStatus.AboutToSpeak;
             newLine.GetComponentInChildren<Text>().text = currentSentences.sentence[i];
@@ -189,6 +192,7 @@ public class DialogueSystem : MonoBehaviour
                     newLine.GetComponentInChildren<Text>().fontSize = currentSentences.textFont[i];
             }
 
+            
 
 
             //dialogue play
@@ -203,25 +207,34 @@ public class DialogueSystem : MonoBehaviour
             {
                 if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.None)
                 {
+                    prevOutline = DialogueClass.OutlineColors.None;
                     RightPerson.GetComponent<Image>().material = NoOutline;
                 }
-                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Red)
+                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Red &&
+                         prevOutline != DialogueClass.OutlineColors.Red)
                 {
+                    prevOutline = DialogueClass.OutlineColors.Red;
                     RightPerson.GetComponent<Image>().material = ColoredOutline;
                     StartCoroutine(OutlineTrace(Color.red, ColoredOutline));
                 }
-                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Green)
+                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Green &&
+                         prevOutline != DialogueClass.OutlineColors.Green)
                 {
+                    prevOutline = DialogueClass.OutlineColors.Green;
                     RightPerson.GetComponent<Image>().material = ColoredOutline;
                     StartCoroutine(OutlineTrace(Color.green, ColoredOutline));
                 }
-                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Blue)
+                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Blue &&
+                         prevOutline != DialogueClass.OutlineColors.Blue)
                 {
+                    prevOutline = DialogueClass.OutlineColors.Blue;
                     RightPerson.GetComponent<Image>().material = ColoredOutline;
                     StartCoroutine(OutlineTrace(Color.blue, ColoredOutline));
                 }
-                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Yellow)
+                else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Yellow &&
+                         prevOutline != DialogueClass.OutlineColors.Yellow)
                 {
+                    prevOutline = DialogueClass.OutlineColors.Yellow;
                     RightPerson.GetComponent<Image>().material = ColoredOutline;
                     StartCoroutine(OutlineTrace(Color.yellow, ColoredOutline));
                 }

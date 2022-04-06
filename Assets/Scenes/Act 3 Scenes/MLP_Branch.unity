@@ -884,7 +884,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6742,6 +6742,13 @@ GameObject:
   - component: {fileID: 1541730129}
   - component: {fileID: 1541730128}
   - component: {fileID: 1541730127}
+  - component: {fileID: 1541730256}
+  - component: {fileID: 1541730250}
+  - component: {fileID: 1541730255}
+  - component: {fileID: 1541730254}
+  - component: {fileID: 1541730253}
+  - component: {fileID: 1541730252}
+  - component: {fileID: 1541730251}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -6812,7 +6819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 2219.917, y: -27.885975}
+  scrollPos: {x: 2365.5864, y: -118.437294}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 404
@@ -6824,8 +6831,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1541730226}
-  selectedCommands: []
+  - {fileID: 1541729952}
+  selectedCommands:
+  - {fileID: 1541730250}
   variables:
   - {fileID: 1541729961}
   - {fileID: 1541729960}
@@ -6961,6 +6969,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 00000000000000000200000000000000000000000000000000000000000000000500000000000000000000000100000000000000
     emotionOutlines: 04000000040000000400000004000000040000000400000004000000040000000400000004000000040000000000000004000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541729952
 MonoBehaviour:
@@ -7003,6 +7012,13 @@ MonoBehaviour:
   - {fileID: 1541730231}
   - {fileID: 1541730230}
   - {fileID: 1541730229}
+  - {fileID: 1541730256}
+  - {fileID: 1541730250}
+  - {fileID: 1541730255}
+  - {fileID: 1541730254}
+  - {fileID: 1541730253}
+  - {fileID: 1541730252}
+  - {fileID: 1541730251}
   - {fileID: 1541730228}
   suppressAllAutoSelections: 0
 --- !u!114 &1541729953
@@ -8892,6 +8908,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 00000000000000000000000002000000000000000000000004000000
     emotionOutlines: 04000000040000000400000004000000040000000200000000000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541729985
 MonoBehaviour:
@@ -10428,6 +10445,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 00000000000000000000000002000000000000000000000004000000
     emotionOutlines: 04000000040000000400000004000000040000000200000000000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730005
 MonoBehaviour:
@@ -12046,6 +12064,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 00000000000000000000000005000000
     emotionOutlines: 04000000040000000400000002000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730027
 MonoBehaviour:
@@ -13994,6 +14013,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 000000000000000000000000030000000000000001000000
     emotionOutlines: 040000000400000004000000030000000400000000000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730055
 MonoBehaviour:
@@ -14151,6 +14171,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 00000000040000000000000000000000000000000000000004000000
     emotionOutlines: 04000000020000000400000004000000040000000400000002000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730061
 MonoBehaviour:
@@ -15291,6 +15312,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 000000000000000000000000000000000400000000000000
     emotionOutlines: 040000000400000004000000040000000200000002000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730080
 MonoBehaviour:
@@ -15788,6 +15810,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 00000000010000000000000001000000040000000000000001000000
     emotionOutlines: 04000000000000000000000000000000000000000000000000000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730087
 MonoBehaviour:
@@ -17769,6 +17792,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 000000000000000000000000030000000000000001000000
     emotionOutlines: 040000000400000004000000030000000400000000000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730116
 MonoBehaviour:
@@ -18390,6 +18414,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 000000000300000000000000000000000000000002000000
     emotionOutlines: 040000000300000003000000030000000300000003000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730126
 MonoBehaviour:
@@ -21383,6 +21408,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 000000000400000001000000000000000000000001000000
     emotionOutlines: 040000000200000000000000040000000400000000000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730176
 MonoBehaviour:
@@ -22320,6 +22346,7 @@ MonoBehaviour:
     - {fileID: 0}
     emotionSprites: 000000000400000001000000000000000000000001000000
     emotionOutlines: 040000000200000000000000040000000400000000000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1541730188
 MonoBehaviour:
@@ -24633,6 +24660,197 @@ MonoBehaviour:
     stringVal: 
   startIndex: 0
   callMode: 0
+--- !u!114 &1541730250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541729944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1385
+  indentLevel: 0
+  storyText: 'Due to Justin''s patience with Vanessa, the brothers are able to use
+    the information she gave them to track down Austin. '
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1541730251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541729944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1390
+  indentLevel: 0
+  storyText: And now, the weekly lunches between David and Austin have occasionally
+    become a family event... when Justin isn't too busy to join...
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1541730252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541729944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1389
+  indentLevel: 0
+  storyText: The two still butt heads frequently, but Justin's efforts to listen
+    to David along the way did not go unnoticed...
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1541730253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541729944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1388
+  indentLevel: 0
+  storyText: But in the end, he failed as the brothers were able to balance their
+    perspectives enough to find and apprehend him...
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1541730254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541729944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1387
+  indentLevel: 0
+  storyText: Ethan had hoped he could coerce Austin into reversing the ruling on
+    his Father and restore his sense of a normal family..
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1541730255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541729944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1386
+  indentLevel: 0
+  storyText: They discovered that Ethan had ambushed Austin during his most recent
+    fishing trip 2 days ago.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1541730256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541729944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3113957eb8a5c534a9ef6e25df1803e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1384
+  indentLevel: 0
+  dialogueSpot: 0
+  TextFont: 55
+  TextStyle: 2
+  LineSpacing: 1
+  LeftStart: 358.1
+  TopStart: 45
+  RightEnd: 519.425
+  BottomEnd: 83.0685
+  SentencedDialoguePrefab: {fileID: 737216660}
 --- !u!1 &1542233768
 GameObject:
   m_ObjectHideFlags: 0

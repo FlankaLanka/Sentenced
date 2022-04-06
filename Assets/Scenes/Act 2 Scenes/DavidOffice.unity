@@ -12621,6 +12621,7 @@ MonoBehaviour:
     voiceClips: []
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000
+    textFont: 
   chooseToFade: 1
 --- !u!114 &1411576980
 MonoBehaviour:
@@ -16257,7 +16258,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

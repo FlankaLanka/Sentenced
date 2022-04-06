@@ -9,7 +9,7 @@ public class MaximizeHorizontalExpand : MonoBehaviour
     private float horizontalMax;
     private RectTransform rectText;
     private Text curText;
-    private GameObject emotionIcon;
+    private Transform emotionIcon;
     private ContentSizeFitter fit;
     private bool alreadyUpdatedSize;
     private bool alreadySetActive;
@@ -23,13 +23,16 @@ public class MaximizeHorizontalExpand : MonoBehaviour
         GameObject textTransform = transform.Find("Text").gameObject;
         rectText = textTransform.GetComponent<RectTransform>();
         curText = textTransform.GetComponent<Text>();
-        //emotionIcon = transform.Find("EmotionImageInText").gameObject;
+        
 
         //first set them disabled and only enable when ready (size is fixed) to prevent a flicker bug
         curText.enabled = false;
         GetComponent<Image>().enabled = false;
-        //if (emotionIcon != null)
-            //emotionIcon.SetActive(false);
+
+        
+        emotionIcon = transform.Find("EmotionImageInText");
+        if (emotionIcon != null)
+            emotionIcon.gameObject.SetActive(false);
 
         fit = GetComponent<ContentSizeFitter>();
         alreadyUpdatedSize = false;
@@ -62,10 +65,10 @@ public class MaximizeHorizontalExpand : MonoBehaviour
 
     private IEnumerator EoFrameEnable()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         curText.enabled = true;
         GetComponent<Image>().enabled = true;
-        //if (emotionIcon != null)
-            //emotionIcon.SetActive(true);
+        if (emotionIcon != null)
+            emotionIcon.gameObject.SetActive(true);
     }
 }

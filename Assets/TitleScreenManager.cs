@@ -57,9 +57,9 @@ public class TitleScreenManager : MonoBehaviour
     public void StartGame() 
     {
         // load saved scene number, otherwise just go to next scene in buildIndex
-        if (PlayerPrefs.GetInt("saved", 0) > 0)
-            SceneManager.LoadScene(PlayerPrefs.GetInt("saved", 1));
-        else
+        //if (PlayerPrefs.GetInt("saved", 0) > 0)
+        //    SceneManager.LoadScene(PlayerPrefs.GetInt("saved", 1));
+        //else
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
     }

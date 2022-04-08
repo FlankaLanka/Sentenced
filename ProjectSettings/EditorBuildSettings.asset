@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TitleScene.unity
     guid: 127d6502affd27141adc1ca9df27cd64
   - enabled: 0
@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Act 1 Scenes/Prologue.unity
     guid: 23264b5cb547048738b4cf32bd672dae
   - enabled: 1
-    path: Assets/Scenes/VerticalSlice.unity
+    path: Assets/Scenes/Act 1 Scenes/VerticalSlice.unity
     guid: f6369889196684bb997def80b833ef24
   - enabled: 1
     path: Assets/Scenes/Act 2 Scenes/DavidOffice.unity

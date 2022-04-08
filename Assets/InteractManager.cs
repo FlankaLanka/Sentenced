@@ -209,8 +209,14 @@ public class InteractManager : MonoBehaviour
         }
     }
 
-    IEnumerator ShowScrollArrows(){
-        yield return new WaitForSeconds(1f);
+    public void ShowScrollArrows()
+    {
+        StartCoroutine("SetArrowsTrue");
+    }
+
+    IEnumerator SetArrowsTrue()
+    {
+        yield return new WaitForSeconds(.5f);
         showArrows = true;
     }
 

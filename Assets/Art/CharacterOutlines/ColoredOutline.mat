@@ -81,7 +81,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - DrawTime: -0.0044584274
+    - DrawTime: 0
     - OutlineThickness: 5
     - _AlphaClip: 0
     - _Blend: 0

@@ -18,7 +18,7 @@ public class DialogueSystem : MonoBehaviour
     public Sprite QuestionIcon;
     public Sprite SweatIcon;
 
-    private AudioSource a;
+    private AudioSource[] a;
     private GameObject emotionIcon;
 
     private Transform dialogueContainer;
@@ -64,7 +64,7 @@ public class DialogueSystem : MonoBehaviour
         //set outline color mat to 0, it gets modified in game and applies to material
         ColoredOutline.SetFloat("DrawTime", 0f);
 
-        a = GetComponent<AudioSource>();
+        a = GetComponents<AudioSource>();
         emotionIcon = transform.Find("EmotionIcon").gameObject;
         emotionIcon.SetActive(false);
 
@@ -115,7 +115,10 @@ public class DialogueSystem : MonoBehaviour
 
     public void DisplayNextLine()
     {
-        a.Play();
+        //0 is voice
+        //1 is button sound
+        //a[0].Play();
+        a[1].Play();
 
         //this will fix the color of the button to original since onpointerexit doesnt trigger when clicked
         
@@ -198,8 +201,8 @@ public class DialogueSystem : MonoBehaviour
             //dialogue play
             if (currentSentences.voiceClips.Count > i)
             {
-                a.clip = currentSentences.voiceClips[i];
-                a.Play();
+                a[0].clip = currentSentences.voiceClips[i];
+                a[0].Play();
             }
 
             //change character outline

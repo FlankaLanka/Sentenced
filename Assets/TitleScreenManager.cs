@@ -12,14 +12,18 @@ public class TitleScreenManager : MonoBehaviour
 
     public GameObject newGameButton;
     public GameObject continueButton;
+
+    public Animation fadeEffect;
     
     // saves the current title screen state -- {"title", "settings", "credits", "quit"}
     public string currscreen = "title";
+    bool fadeAudio = false;
 
     // Start is called before the first frame update
     void Start()
     {
         currscreen = "title";
+        fadeAudio = false;
 
         // show new game or continue button?
         if (PlayerPrefs.GetInt("saved", 0) > 0){
@@ -51,6 +55,10 @@ public class TitleScreenManager : MonoBehaviour
                 ReturnToMainMenu();
             }
         }
+
+        if(fadeAudio){
+            GetComponent<AudioSource>().volume = Mathf.Lerp(GetComponent<AudioSource>().volume, 0, Time.deltaTime);
+        }
     }
 
     // start the game !!!
@@ -60,7 +68,15 @@ public class TitleScreenManager : MonoBehaviour
         //if (PlayerPrefs.GetInt("saved", 0) > 0)
         //    SceneManager.LoadScene(PlayerPrefs.GetInt("saved", 1));
         //else
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine("FadeAndStart");
+    }
+
+    IEnumerator FadeAndStart(){
+        fadeAudio = true;
+        fadeEffect.Play();
+        yield return new WaitForSeconds(3f);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Prologue");
         
     }
 

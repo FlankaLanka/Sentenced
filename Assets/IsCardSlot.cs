@@ -9,6 +9,14 @@ public class IsCardSlot : MonoBehaviour, IDropHandler, IPointerExitHandler
     public GameObject display; //make sure item registered in inspector
     public bool canAdd = false;
 
+    public GameObject QMark;
+
+    private void Update()
+    {
+        if (transform.childCount > 0)
+            QMark.SetActive(false);
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         canAdd = true;//this part helps to set child and parent in IsDraggable.cs

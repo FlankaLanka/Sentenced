@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ConvoPanelTransitionIn : MonoBehaviour
 {
+    private Transform leftCenter;
     private Transform leftOut;
     private Transform rightOut;
     private Transform leftImage;
@@ -12,9 +13,11 @@ public class ConvoPanelTransitionIn : MonoBehaviour
     private Vector2 finalRightPos;
 
     public bool chooseToFade;
+    public bool comingInFromMatchPanel;
 
     private void Awake()
     {
+        leftCenter = transform.Find("LeftImageCenterPosition");
         leftOut = transform.Find("LeftImageOutPosition");
         rightOut = transform.Find("RightImageOutPosition");
         leftImage = transform.Find("LeftPersonImage");
@@ -22,7 +25,6 @@ public class ConvoPanelTransitionIn : MonoBehaviour
 
         finalRightPos = rightImage.position;
         finalLeftPos = leftImage.position;
-        chooseToFade = true;
     }
 
     private void OnEnable()
@@ -31,7 +33,15 @@ public class ConvoPanelTransitionIn : MonoBehaviour
         {
             leftImage.position = leftOut.position;
             rightImage.position = rightOut.position;
+            // if (comingInFromMatchPanel)
+                // leftImage.position = leftCenter.position;
             StartCoroutine(ConvoCharsFadeIn());
+        }
+        else if(comingInFromMatchPanel)
+        {
+            rightImage.position = finalRightPos;
+            leftImage.position = leftCenter.position;
+            StartCoroutine(LeftFadeInOnly());
         }
     }
 
@@ -48,5 +58,18 @@ public class ConvoPanelTransitionIn : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
+    }
+
+    private IEnumerator LeftFadeInOnly()
+    {
+        float fadeTime = 1f;
+        float timer = 0f;
+
+        while (timer < fadeTime)
+        {
+            leftImage.position = Vector2.Lerp(leftCenter.position, finalLeftPos, timer / fadeTime);
+            timer += 0.02f;
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }

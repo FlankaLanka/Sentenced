@@ -59,6 +59,10 @@ public class DialogueSystem : MonoBehaviour
     [HideInInspector]
     public bool LeadsToMatchPanel;
 
+
+    private bool clicked;
+
+
     private void Awake()
     {
         //set outline color mat to 0, it gets modified in game and applies to material
@@ -91,6 +95,8 @@ public class DialogueSystem : MonoBehaviour
 
         LeftPerson = transform.Find("LeftPersonImage").gameObject;
         RightPerson = transform.Find("RightPersonImage").gameObject;
+
+        clicked = false;
     }
 
     private void OnEnable()
@@ -115,6 +121,11 @@ public class DialogueSystem : MonoBehaviour
 
     public void DisplayNextLine()
     {
+        if (clicked)
+            return;
+
+        clicked = true;
+
         //0 is voice
         //1 is button sound
         //a[0].Play();
@@ -208,6 +219,7 @@ public class DialogueSystem : MonoBehaviour
             //change character outline
             if(currentSentences.emotionOutlines.Count > i)
             {
+                Material newColorMat = new Material(ColoredOutline);
                 if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.None)
                 {
                     prevOutline = DialogueClass.OutlineColors.None;
@@ -217,29 +229,29 @@ public class DialogueSystem : MonoBehaviour
                          prevOutline != DialogueClass.OutlineColors.Red)
                 {
                     prevOutline = DialogueClass.OutlineColors.Red;
-                    RightPerson.GetComponent<Image>().material = ColoredOutline;
-                    StartCoroutine(OutlineTrace(Color.red, ColoredOutline));
+                    RightPerson.GetComponent<Image>().material = newColorMat;
+                    StartCoroutine(OutlineTrace(Color.red, newColorMat));
                 }
                 else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Green &&
                          prevOutline != DialogueClass.OutlineColors.Green)
                 {
                     prevOutline = DialogueClass.OutlineColors.Green;
-                    RightPerson.GetComponent<Image>().material = ColoredOutline;
-                    StartCoroutine(OutlineTrace(Color.green, ColoredOutline));
+                    RightPerson.GetComponent<Image>().material = newColorMat;
+                    StartCoroutine(OutlineTrace(Color.green, newColorMat));
                 }
                 else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Blue &&
                          prevOutline != DialogueClass.OutlineColors.Blue)
                 {
                     prevOutline = DialogueClass.OutlineColors.Blue;
-                    RightPerson.GetComponent<Image>().material = ColoredOutline;
-                    StartCoroutine(OutlineTrace(Color.blue, ColoredOutline));
+                    RightPerson.GetComponent<Image>().material = newColorMat;
+                    StartCoroutine(OutlineTrace(Color.blue, newColorMat));
                 }
                 else if (currentSentences.emotionOutlines[i] == DialogueClass.OutlineColors.Yellow &&
                          prevOutline != DialogueClass.OutlineColors.Yellow)
                 {
                     prevOutline = DialogueClass.OutlineColors.Yellow;
-                    RightPerson.GetComponent<Image>().material = ColoredOutline;
-                    StartCoroutine(OutlineTrace(Color.yellow, ColoredOutline));
+                    RightPerson.GetComponent<Image>().material = newColorMat;
+                    StartCoroutine(OutlineTrace(Color.yellow, newColorMat));
                 }
             }
 
@@ -293,8 +305,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-
-        //reset audioclip to the click sound
+        clicked = false;
     }
 
 

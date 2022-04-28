@@ -27,6 +27,7 @@ public class ConversationOpen : Command
 
     [Header("Transition")]
     public bool chooseToFade;
+    public bool comingInFromMatchPanel;
 
 
     private Transform convoPanel;
@@ -36,9 +37,9 @@ public class ConversationOpen : Command
         Assert.IsTrue(sentences.sentence.Count == sentences.LeftCharSpeaking.Count);
         Assert.IsTrue(sentences.sentence.Count > 0 && sentences.LeftCharSpeaking.Count > 0);
 
-        GameObject.Find("ConversationCanvas").transform.Find("ConversationPanel").gameObject.SetActive(true);
 
-        convoPanel = GameObject.Find("ConversationPanel").transform;
+        convoPanel = GameObject.Find("ConversationCanvas").transform.Find("ConversationPanel").transform;
+        //convoPanel = GameObject.Find("ConversationPanel").transform;
         convoPanel.Find("RightBG").GetComponent<Image>().sprite = RightImage;
         convoPanel.Find("LeftBG").GetComponent<Image>().sprite = LeftImage;
         convoPanel.Find("RightPersonImage").GetComponent<Image>().sprite = RightPersonImage;
@@ -48,6 +49,9 @@ public class ConversationOpen : Command
         convoPanel.Find("LeftPersonName").GetComponent<Text>().text = LeftPersonName;
 
         convoPanel.GetComponent<ConvoPanelTransitionIn>().chooseToFade = chooseToFade;
+        convoPanel.GetComponent<ConvoPanelTransitionIn>().comingInFromMatchPanel = comingInFromMatchPanel;
+
+        GameObject.Find("ConversationCanvas").transform.Find("ConversationPanel").gameObject.SetActive(true);
 
 
         DialogueSystem d = convoPanel.GetComponent<DialogueSystem>();

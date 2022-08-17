@@ -1975,7 +1975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1600031862297486222, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_Volume
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2622336997493846697, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_LocalScale.x
@@ -6760,7 +6760,6 @@ GameObject:
   - component: {fileID: 1411576897}
   - component: {fileID: 1411576896}
   - component: {fileID: 1411576895}
-  - component: {fileID: 1411576894}
   - component: {fileID: 1411576893}
   - component: {fileID: 1411576892}
   - component: {fileID: 1411576891}
@@ -6786,7 +6785,6 @@ GameObject:
   - component: {fileID: 1411576947}
   - component: {fileID: 1411576946}
   - component: {fileID: 1411576945}
-  - component: {fileID: 1411576944}
   - component: {fileID: 1411576943}
   - component: {fileID: 1411576942}
   - component: {fileID: 1411576941}
@@ -6896,6 +6894,7 @@ GameObject:
   - component: {fileID: 1411577030}
   - component: {fileID: 1411577023}
   - component: {fileID: 1411577022}
+  - component: {fileID: 1411577024}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -6921,7 +6920,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 637967cae6b9647d89e998a1e1e5db40, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -6978,7 +6977,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 1f5c6aacc28134ccf97c085dc6fafa3a, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7006,7 +7005,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 9936d67bbcadd43c68bdcd1e84e3cfb6, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7033,7 +7032,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 4a08b21b8b1fe4ba28b42512e666df9d, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7060,7 +7059,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: f8a69c11a61d041a0a741c4599202525, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7087,7 +7086,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: dac6cef6cbf1e43a886b0544be830194, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7236,6 +7235,7 @@ MonoBehaviour:
   - {fileID: 1411576858}
   - {fileID: 1411576872}
   - {fileID: 1411576863}
+  - {fileID: 1411577024}
   - {fileID: 1411576862}
   - {fileID: 1411576861}
   - {fileID: 1411576860}
@@ -7261,7 +7261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 993.9596, y: 169.79611}
+  scrollPos: {x: 1057.9597, y: -0.20383954}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 403
@@ -7273,9 +7273,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1411576869}
+  - {fileID: 1411576991}
   selectedCommands:
-  - {fileID: 1411577028}
+  - {fileID: 1411576981}
   variables:
   - {fileID: 1411576875}
   - {fileID: 1411576913}
@@ -7588,7 +7588,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1853613697}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 0cf5a38b55a944ae1be84e68452fcd70, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7615,7 +7615,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: d91da02f8c0f04fe0b557c82ac28430e, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7805,7 +7805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -111.28172
+    x: -115.28172
     y: 40.326683
     width: 123.99998
     height: 40
@@ -7833,7 +7833,6 @@ MonoBehaviour:
   - {fileID: 1411576898}
   - {fileID: 1411576896}
   - {fileID: 1411576895}
-  - {fileID: 1411576894}
   - {fileID: 1411576893}
   - {fileID: 1411576892}
   - {fileID: 1411576891}
@@ -7920,7 +7919,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1170998839}
   startVolume: 1
-  endVolume: 0.35
+  endVolume: 0.15
   fadeDuration: 7
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -7960,7 +7959,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1583306585}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: cdaff618530914d28ac8978657258234, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7987,34 +7986,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1411576894
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411576856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 733
-  indentLevel: 1
-  storyText: 'I wanted to check in. Is everything okay? '
-  description: 
-  character: {fileID: 1583306585}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: a9ee8ec75d4354e4e853f099a03ae0a3, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -8037,12 +8009,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 732
   indentLevel: 1
-  storyText: 'Oh, hey David! I got worried when I saw your email cancelling appointments
-    for today...  '
+  storyText: 'Oh, hey David! I got worried when I saw your email canceling appointments
+    for today. I wanted to check in. Is everything okay?   '
   description: 
   character: {fileID: 1583306585}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: ec73eace286eb41a4a3f13e4ae61572c, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -8069,7 +8041,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: a20ea69c0e02744a7bd30adc3346c971, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -9219,7 +9191,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1583306585}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 455d7b13268ee43aba414a6ee2fb3eb0, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -9246,7 +9218,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1583306585}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: e8119e01e58cb436095ad652182d6c2c, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -9273,7 +9245,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 3be70855b9aa74e7a8bf65240d34cfa6, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -9300,7 +9272,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 330e23f2224de421f82cd144d8c04388, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -9327,7 +9299,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: b6e95ee627f67457388ae89fe29e7e51, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -9354,7 +9326,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 1cfad04bb1da84b69a6d218636ba33b5, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -9381,7 +9353,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1583306585}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: e419f9360ef6941f3bbdbb8d3e153a46, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -9404,8 +9376,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 40.664665
-    y: 333.46317
+    x: 36.664665
+    y: 331.46317
     width: 122.99998
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -9434,7 +9406,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -269.76144
-    y: 331.2443
+    y: 335.2443
     width: 123.99998
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -10558,11 +10530,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1078
   indentLevel: 0
-  storyText: 'What was it? Ah... I''m sorry... just give me a minute... '
+  storyText: 'What was it? Ah... I''m-I''m sorry... just give me a minute... '
   description: 
   character: {fileID: 1583306585}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: d8c36181c9c1340ee8c1d777410e8f82, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -10590,7 +10562,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 980022a076d474a088a47303eff3627b, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -10675,9 +10647,9 @@ MonoBehaviour:
   indentLevel: 0
   storyText: 'Agh... darn. I just had it.... '
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1583306585}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 93abbc11ca417410eb38143090bdd350, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -10704,34 +10676,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &1411576944
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411576856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1072
-  indentLevel: 0
-  storyText: Something from before our session yesterday morning.
-  description: 
-  character: {fileID: 1583306585}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 9abdac736467e4f7c8df44e9309549d0, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -10754,11 +10699,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1071
   indentLevel: 0
-  storyText: Actually, before I go, there was something I wanted to tell you, David...
+  storyText: Actually, before I go, there was something I wanted to tell you, David.
+    Something from before our session yesterday morning.
   description: 
   character: {fileID: 1583306585}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: c2f3369056b7145a690883e0d6450a1c, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -10835,7 +10781,6 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1411576945}
-  - {fileID: 1411576944}
   - {fileID: 1411576943}
   - {fileID: 1411576942}
   - {fileID: 1411576941}
@@ -10903,7 +10848,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1583306585}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: b7633cc8bbbcf4dc4a37a57ff681a52f, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -10926,8 +10871,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 2.8534312
-    y: 117.11463
+    x: 4.8534307
+    y: 115.11463
     width: 136.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -10955,7 +10900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -255.84702
+    x: -257.84702
     y: 114.93479
     width: 127.99997
     height: 40
@@ -10988,7 +10933,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 76252adbf1e0244dda8e5b3e154beef7, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -11016,7 +10961,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 86cfc356046ae4a07ad76c6805c52e73, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -11043,7 +10988,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: dcf093150fa6c460187b3dc37558c129, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -11130,7 +11075,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: a58b67bf45bcc4866a67ca00a537b0c6, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -11153,11 +11098,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1106
   indentLevel: 0
-  storyText: 'So... is it protocal for clients to check up on their therapists, or...? '
+  storyText: 'So... is it protocol for clients to check up on their therapists, or...? '
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: e6ce01b47fa114397b757d002d61fc24, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -11222,8 +11167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -136.57799
-    y: 424.65216
+    x: -134.57799
+    y: 420.65216
     width: 151.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -11336,7 +11281,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 02a691badf1f945b69121077eb4fc645, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -11455,11 +11400,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1129
   indentLevel: 0
-  storyText: It's nothing... but we're out low on leads.
+  storyText: It's nothing... but we're low on leads.
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 0815a36c9d4a940bca75752ab9c66879, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -11486,7 +11431,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 1bcd0005a7d34427d9e3ec1131466f62, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -11990,9 +11935,10 @@ MonoBehaviour:
   sentences:
     sentence:
     - Hey, Justin. Hope all is well on your *mandatory* vacation.
-    - Just calling because I heard about a DNA ordered by one Justin Davis...
+    - Just calling because I heard through the grapevine about a DNA test ordered
+      by one Justin Davis...
     - 'You wouldn''t happen to know about that would you? '
-    - C'mon, Cap... It was just a small favor from a colleague
+    - C'mon, Cap... It was just a small favor from a colleague.
     - 'I gave you strict orders to stay out of police business. '
     - 'There''s a protocol for these things, and I can''t be seen giving you special
       treatment. '
@@ -12000,7 +11946,15 @@ MonoBehaviour:
       them. '
     - 'This is your last warning, Justin. Drop it. '
     LeftCharSpeaking: 0000000100000000
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: 985f5e806fd7f473c84f9282b7d25cd2, type: 3}
+    - {fileID: 8300000, guid: 71c0dbe60818c4488ad7fd49302eb6dc, type: 3}
+    - {fileID: 8300000, guid: 17a7c97c6e6f643fa853fddab37e5a46, type: 3}
+    - {fileID: 8300000, guid: f6eb12f2f8e6a46e38aa7ecea85b8394, type: 3}
+    - {fileID: 8300000, guid: 79f0e320151904e9ab1b739c0e9c75f8, type: 3}
+    - {fileID: 8300000, guid: 161613074dd43461b8ab4b4897559d4c, type: 3}
+    - {fileID: 8300000, guid: 100aa42eccb1546088ef3f84a555934a, type: 3}
+    - {fileID: 8300000, guid: ef85cbd5cedb042f28e2a78947b854f7, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -12050,7 +12004,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 791551907}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 8621f39f0710c4cc8b055029604868d4, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -12078,7 +12032,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 791551907}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 94f2fa3b2014448fe9c6b1da2ed8c2ad, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -12101,11 +12055,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1147
   indentLevel: 0
-  storyText: I... understand the feelings behind what you're doing, but--
+  storyText: I... understand the feelings behind what you're doing, but y-you can't--
   description: 
   character: {fileID: 2054203506}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: cb56d0606c39a45ccaeb24a237dd8d5c, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -12156,7 +12110,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 791551907}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: d7888c960f9fd459a97705ca4a06127b, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -12250,7 +12204,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 2010243621}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: cfc623d4bcc764ca58fc02105a2da870, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -12297,7 +12251,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -127.11401
-    y: 535.71484
+    y: 529.71484
     width: 130.99997
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -12490,11 +12444,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1132
   indentLevel: 0
-  storyText: 'I-I don''t know if I handle this anymore... '
+  storyText: 'I-I don''t know if I can handle this anymore... '
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 27f1bc3d02dc748f981e3b9449eba639, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -12522,7 +12476,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 535437551}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: d543d40a8df1040268105eb4455a4088, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -12546,11 +12500,11 @@ MonoBehaviour:
   itemId: 1130
   indentLevel: 0
   storyText: Let's head back to Austin's place. Some of the clues we found at the
-    fishing spot might help us find something new
+    fishing spot might help us find something new.
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: d5d2a8a27bf8e4df78e9486971724d1c, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -12601,7 +12555,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 662680415}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 3
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -12623,7 +12577,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1715112874}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 9b0048a930679438c8abf50abb9090a6, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -13395,7 +13349,7 @@ MonoBehaviour:
   variable: {fileID: 1411577011}
 --- !u!114 &1411577022
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13423,7 +13377,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1411577023
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -13449,6 +13403,33 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &1411577024
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411576856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1180
+  indentLevel: 0
+  storyText: 'All we found was some bait and a random hardhat... '
+  description: 
+  character: {fileID: 535437551}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: b77cc8816804d4c1f8fc4be470e9072b, type: 3}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &1411577025
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -17060,7 +17041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Austin
-  nameColor: {r: 0.9339623, g: 0.92668384, b: 0.118948035, a: 1}
+  nameColor: {r: 0, g: 0, b: 0, a: 1}
   soundEffect: {fileID: 0}
   portraits: []
   portraitsFace: 0

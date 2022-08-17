@@ -2651,6 +2651,19 @@ GameObject:
   - component: {fileID: 176321891}
   - component: {fileID: 176321890}
   - component: {fileID: 176321894}
+  - component: {fileID: 176321907}
+  - component: {fileID: 176321906}
+  - component: {fileID: 176321905}
+  - component: {fileID: 176321904}
+  - component: {fileID: 176321903}
+  - component: {fileID: 176321902}
+  - component: {fileID: 176321901}
+  - component: {fileID: 176321900}
+  - component: {fileID: 176321899}
+  - component: {fileID: 176321898}
+  - component: {fileID: 176321897}
+  - component: {fileID: 176321896}
+  - component: {fileID: 176321895}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -2954,7 +2967,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 251.78093
     y: -446.3153
-    width: 76.415085
+    width: 78
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3099,7 +3112,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 45.783997
     y: -341.3002
-    width: 155.66032
+    width: 162
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3520,7 +3533,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2129.8708
     y: -395.1283
-    width: 83.96225
+    width: 86
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3618,7 +3631,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2234.27
     y: -395.0333
-    width: 97.169785
+    width: 100
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3701,7 +3714,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1974.3555
     y: -535.9114
-    width: 112.264114
+    width: 116
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4046,7 +4059,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2417.2698
     y: -393.2706
-    width: 176.41504
+    width: 184
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5182,7 +5195,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1814.1649
     y: -353.79843
-    width: 106.603745
+    width: 110
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5292,9 +5305,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1379.377
+    x: -1383.377
     y: -33.796677
-    width: 121.698074
+    width: 126
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5327,9 +5340,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -2144.6917
-    y: -34.826202
-    width: 119.81129
+    x: -2148.4724
+    y: -30.826202
+    width: 124
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5379,9 +5392,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1767.8936
+    x: -1771.8936
     y: -263.0366
-    width: 131.13203
+    width: 136
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5486,21 +5499,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 4084.9624, y: -489.24234}
+  scrollPos: {x: 5815.0107, y: -227.9397}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 266
-  zoom: 0.26500013
+  zoom: 0.25
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 176321256}
-  selectedCommands:
-  - {fileID: 176321565}
+  selectedBlocks: []
+  selectedCommands: []
   variables:
   - {fileID: 176321148}
   - {fileID: 176321147}
@@ -5596,7 +5607,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 419.55457
     y: -337.8913
-    width: 146.22636
+    width: 152
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6310,7 +6321,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 237.15544
     y: 43.162895
-    width: 114.15091
+    width: 118
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6422,7 +6433,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 474.62805
     y: -91.72006
-    width: 157.54712
+    width: 164
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6453,7 +6464,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -71.59992
     y: -75.05616
-    width: 212.26407
+    width: 222
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6687,7 +6698,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 215.79694
     y: -227.63493
-    width: 159.4339
+    width: 166
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6781,7 +6792,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 476.34958
     y: 1646.032
-    width: 146.22636
+    width: 152
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6908,7 +6919,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 229.63841
     y: 1951.0737
-    width: 134.90561
+    width: 140
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -6963,7 +6974,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 240.74495
     y: 1436.2552
-    width: 138.6792
+    width: 144
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7056,7 +7067,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 905939633}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: cc4c2ab3c97fb4c449d15406aadd8b38, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7203,7 +7214,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 913.5452
     y: 447.67902
-    width: 144.33957
+    width: 150
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7232,7 +7243,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -119.99379
     y: 449.7575
-    width: 112.264114
+    width: 116
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7352,7 +7363,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 209.6106
     y: 686.08563
-    width: 210.37727
+    width: 220
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7381,7 +7392,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 233.90607
     y: 141.70226
-    width: 133.01883
+    width: 138
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7541,7 +7552,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 905939633}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 567646b4aa8cf4d178190d6d00c59a46, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7825,7 +7836,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 905939633}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 921f2afd486eb409e9b381dcf7ed7840, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7852,7 +7863,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 349744274}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 5539b66cc384e4430bc076968ac51370, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7879,7 +7890,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 905939633}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: a86459177539249928947c9ca4331f80, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7907,7 +7918,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 349744274}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 01aaf6f5bba114a51b2177767add3cc9, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7934,7 +7945,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 349744274}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 62e2928010d514348b4200630ad9c403, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -7958,8 +7969,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 231.96663
-    y: 2269.7446
-    width: 127.35845
+    y: 2265.7446
+    width: 132
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8204,7 +8215,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2521.1646
     y: -394.33405
-    width: 95.283
+    width: 98
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8527,7 +8538,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1082.692
     y: 588.69086
-    width: 208.49048
+    width: 218
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8560,8 +8571,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -1771.9104
-    y: 359.09552
-    width: 116.037704
+    y: 355.09552
+    width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8626,7 +8637,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1758.3656
     y: 1294.1598
-    width: 114.15091
+    width: 118
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10330,7 +10341,14 @@ MonoBehaviour:
     - 'I-I don''t actually... '
     - 'Why would Dad keep something like this a secret? '
     LeftCharSpeaking: 01000101010000
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: 4865424e3e00f4cf2adfb7a30412eb5b, type: 3}
+    - {fileID: 8300000, guid: 7105345ad8b784f8c936415fa80f3716, type: 3}
+    - {fileID: 8300000, guid: 002d33137ee134084a65a4c3c31fb6a7, type: 3}
+    - {fileID: 8300000, guid: edc44204f6bae43249050815bbc941c2, type: 3}
+    - {fileID: 8300000, guid: 36b50ece0db9d405f8d59014aae31b63, type: 3}
+    - {fileID: 8300000, guid: 8860199a2dbfb415ab6ce51db00c1b2a, type: 3}
+    - {fileID: 8300000, guid: 579252960439744d09907a4b3185d71f, type: 3}
     emotionSprites: 00000000000000000000000000000000000000000400000005000000
     emotionOutlines: 04000000040000000400000004000000040000000200000002000000
     textFont: 
@@ -11781,7 +11799,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 252.45801
     y: 1092.864
-    width: 140.566
+    width: 146
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11843,7 +11861,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 739514325}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 0
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -12155,7 +12173,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -872.5366
     y: 929.09247
-    width: 121.698074
+    width: 126
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15230,7 +15248,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 3.4479868
     y: 1642.3982
-    width: 117.92449
+    width: 122
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -16334,7 +16352,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 700730328}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -18997,7 +19015,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 349744274}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 3e59158367b7e49109e6146e604ca536, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -19024,7 +19042,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 349744274}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: f3a2251edf85c48aca4d6068a35462d8, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -19051,7 +19069,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 349744274}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 20d3a3e9bc5c1469ab9d98b9e82acc58, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -19076,7 +19094,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 429.2959
     y: 2078.9204
-    width: 185.84898
+    width: 194
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -19102,9 +19120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -0.70410156
+    x: -4.557665
     y: 2075.9204
-    width: 153.77353
+    width: 160
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -20410,7 +20428,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1288.7498
     y: -277.5841
-    width: 119.81129
+    width: 124
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -20459,7 +20477,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1791.4415
     y: -29.674515
-    width: 189.62257
+    width: 198
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -21418,9 +21436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1334.8738
+    x: -1338.6545
     y: 591.2088
-    width: 185.84898
+    width: 194
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -22375,9 +22393,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -1597.6005
-    y: 591.34235
-    width: 204.7169
+    x: -1601.3812
+    y: 587.34235
+    width: 214
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -22430,7 +22448,18 @@ MonoBehaviour:
     - 'Maybe there''s more info that''ll help you build a profile around here? '
     - 'Alright, I''ll let you know when I''m ready to talk to Elijah.  '
     LeftCharSpeaking: 0100010101000001000001
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: 22e30619ebd08477793c783383adabf6, type: 3}
+    - {fileID: 8300000, guid: b4b0c4d16be8245f5b8e1512a226854d, type: 3}
+    - {fileID: 8300000, guid: c75af631d780f4f4e8278143696cad0c, type: 3}
+    - {fileID: 8300000, guid: 6b2af7bbd191e46a8873aee30d36a793, type: 3}
+    - {fileID: 8300000, guid: 9e6ea386bf90d4787818360bbaf7f971, type: 3}
+    - {fileID: 8300000, guid: a57bf1e8949864a9581c4dc0e53cb776, type: 3}
+    - {fileID: 8300000, guid: bf1f07ee6150842f082b2398e0f82604, type: 3}
+    - {fileID: 8300000, guid: 000b3028093264c21ae9d89a72f74380, type: 3}
+    - {fileID: 8300000, guid: b2f0eeb7da25e40c2a0473babe3ed1f9, type: 3}
+    - {fileID: 8300000, guid: 90086571262df49da8be8aafcedcc8b0, type: 3}
+    - {fileID: 8300000, guid: 32cdbc137c8044b8ab70941e1d8ee9da, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -23201,7 +23230,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2024.6572
     y: 591.3264
-    width: 199.05653
+    width: 208
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -23254,7 +23283,18 @@ MonoBehaviour:
     - 'Maybe there''s more info that''ll help you build a profile around here? '
     - 'Alright, I''ll let you know when I''m ready to talk to Elijah.  '
     LeftCharSpeaking: 0100010101000001000001
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: cc7ae04ec17574b8d93a52807854f736, type: 3}
+    - {fileID: 8300000, guid: f7446dcfacf2641cab133615a5f590ce, type: 3}
+    - {fileID: 8300000, guid: 295506cca107346a08abe1f08aa65011, type: 3}
+    - {fileID: 8300000, guid: 6b2af7bbd191e46a8873aee30d36a793, type: 3}
+    - {fileID: 8300000, guid: 9e6ea386bf90d4787818360bbaf7f971, type: 3}
+    - {fileID: 8300000, guid: a57bf1e8949864a9581c4dc0e53cb776, type: 3}
+    - {fileID: 8300000, guid: bf1f07ee6150842f082b2398e0f82604, type: 3}
+    - {fileID: 8300000, guid: 000b3028093264c21ae9d89a72f74380, type: 3}
+    - {fileID: 8300000, guid: b2f0eeb7da25e40c2a0473babe3ed1f9, type: 3}
+    - {fileID: 8300000, guid: 90086571262df49da8be8aafcedcc8b0, type: 3}
+    - {fileID: 8300000, guid: 32cdbc137c8044b8ab70941e1d8ee9da, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -24023,9 +24063,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -2292.9792
-    y: 587.32635
-    width: 206.6037
+    x: -2288.9792
+    y: 583.32635
+    width: 216
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -24069,7 +24109,7 @@ MonoBehaviour:
     - Maybe you're... gonna help after all.
     - 'Wow, compliments are rare out of you... as backhanded as that one was. '
     - 'Eh, I give credit where it''s due. '
-    - 'Speaking of, the writer of the letter signed it with their inital: "E" '
+    - 'Anyway, the writer of the letter signed it with their inital: "E" '
     - 'Did Austin have contact with anyone who could fit that? '
     - I think I have an idea of who it could be... An old friend named Elijah.
     - 'I just need a sec to find their number. '
@@ -24078,7 +24118,18 @@ MonoBehaviour:
     - 'Maybe there''s more info that''ll help you build a profile around here? '
     - 'Alright, I''ll let you know when I''m ready to talk to Elijah.  '
     LeftCharSpeaking: 0100010101000001000001
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: 6575804ee9e2a4845aed795453843457, type: 3}
+    - {fileID: 8300000, guid: dedbec67635ab467d9654a519a4054fd, type: 3}
+    - {fileID: 8300000, guid: 129083036ea4140ceb095473e7a3f651, type: 3}
+    - {fileID: 8300000, guid: 6b2af7bbd191e46a8873aee30d36a793, type: 3}
+    - {fileID: 8300000, guid: 9e6ea386bf90d4787818360bbaf7f971, type: 3}
+    - {fileID: 8300000, guid: a57bf1e8949864a9581c4dc0e53cb776, type: 3}
+    - {fileID: 8300000, guid: bf1f07ee6150842f082b2398e0f82604, type: 3}
+    - {fileID: 8300000, guid: 000b3028093264c21ae9d89a72f74380, type: 3}
+    - {fileID: 8300000, guid: b2f0eeb7da25e40c2a0473babe3ed1f9, type: 3}
+    - {fileID: 8300000, guid: 90086571262df49da8be8aafcedcc8b0, type: 3}
+    - {fileID: 8300000, guid: 32cdbc137c8044b8ab70941e1d8ee9da, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -24848,8 +24899,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -2592.2712
-    y: 591.3343
-    width: 195.28294
+    y: 595.115
+    width: 204
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -25320,7 +25371,7 @@ MonoBehaviour:
     - Looks like someone's gonna help after all.
     - '... I''ll take that as a compliment, I guess '
     - 'Heh, you should. '
-    - 'Speaking of, the writer of the letter signed it with their inital: "E" '
+    - 'Anyway, the writer of the letter signed it with their inital: "E" '
     - 'Did Austin have contact with anyone who could fit that? '
     - I think I have an idea of who it could be... An old friend named Elijah.
     - 'I just need a sec to find their number. '
@@ -25329,7 +25380,18 @@ MonoBehaviour:
     - 'Maybe there''s more info that''ll help you build a profile around here? '
     - 'Alright, I''ll let you know when I''m ready to talk to Elijah.  '
     LeftCharSpeaking: 0100010101000001000001
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: e87bb50148cd440dd995feaff5677123, type: 3}
+    - {fileID: 8300000, guid: 474ff5dd14f774bf3b35b96716e56ffe, type: 3}
+    - {fileID: 8300000, guid: 200fcc25dc9d04aa6803f8784e9b8cea, type: 3}
+    - {fileID: 8300000, guid: 6b2af7bbd191e46a8873aee30d36a793, type: 3}
+    - {fileID: 8300000, guid: 9e6ea386bf90d4787818360bbaf7f971, type: 3}
+    - {fileID: 8300000, guid: a57bf1e8949864a9581c4dc0e53cb776, type: 3}
+    - {fileID: 8300000, guid: bf1f07ee6150842f082b2398e0f82604, type: 3}
+    - {fileID: 8300000, guid: 000b3028093264c21ae9d89a72f74380, type: 3}
+    - {fileID: 8300000, guid: b2f0eeb7da25e40c2a0473babe3ed1f9, type: 3}
+    - {fileID: 8300000, guid: 90086571262df49da8be8aafcedcc8b0, type: 3}
+    - {fileID: 8300000, guid: 32cdbc137c8044b8ab70941e1d8ee9da, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -26656,7 +26718,15 @@ MonoBehaviour:
     - Let's not focus on "why," we need to think about "how."
     - 'So... we need to think about *how* they delivered the letter to Dad? '
     LeftCharSpeaking: 0100000101000100
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: a6909cc04162a46a986c5d0e90fc9df8, type: 3}
+    - {fileID: 8300000, guid: 8c61f916f0c6c47cca9df8db3c20d717, type: 3}
+    - {fileID: 8300000, guid: 4aa7cff0ea6fc4597bdac40a34b625c8, type: 3}
+    - {fileID: 8300000, guid: 4c05d83dd83c24d47bfa7993771d6dca, type: 3}
+    - {fileID: 8300000, guid: 01e33a360162c4ffeb2f7a419bf2f25c, type: 3}
+    - {fileID: 8300000, guid: dbb0746145549457d858ea34b9d41fc8, type: 3}
+    - {fileID: 8300000, guid: 86b3fc95dcc4f4da6bd4c4b3c8a78204, type: 3}
+    - {fileID: 8300000, guid: 1da9028b1cd8044db8932b70e92f57f7, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -26859,7 +26929,15 @@ MonoBehaviour:
     - Let's not focus on "why," we need to think about "how."
     - 'So... we need to think about *how* they delivered the letter to Dad? '
     LeftCharSpeaking: 0100000101000100
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: eebd5bc8c37c141d49b2643e6aa10271, type: 3}
+    - {fileID: 8300000, guid: 2674a114ee0f44ed1955d21ac61bbfba, type: 3}
+    - {fileID: 8300000, guid: 80251bba0b20e4680aef4569c3387de0, type: 3}
+    - {fileID: 8300000, guid: 397b992c6c2eb41db8e406246884a84a, type: 3}
+    - {fileID: 8300000, guid: 5a1e3f81123d048809199b9b95d141e2, type: 3}
+    - {fileID: 8300000, guid: dbb0746145549457d858ea34b9d41fc8, type: 3}
+    - {fileID: 8300000, guid: 86b3fc95dcc4f4da6bd4c4b3c8a78204, type: 3}
+    - {fileID: 8300000, guid: 1da9028b1cd8044db8932b70e92f57f7, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -27368,11 +27446,19 @@ MonoBehaviour:
     - True, but this suggests he didn't think it was dangerous.
     - 'Okay, important enough to hide... '
     - 'But not dangerous enough to share. '
-    - 'Why would someone even do this to begin with? '
+    - 'Why would someone leave Dad a letter like this though? '
     - Let's not focus on "why," we need to think about "how."
     - 'So... we need to think about *how* they delivered the letter to Dad? '
     LeftCharSpeaking: 0100010000000100
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: d52ec62bdab0441e4aa568bd30da7df0, type: 3}
+    - {fileID: 8300000, guid: 07ef3318c39fd48b1932ab097f59658a, type: 3}
+    - {fileID: 8300000, guid: 610593275cd634c7b95c394298c3f874, type: 3}
+    - {fileID: 8300000, guid: c63c26364af4446cdbb43bb633f4c281, type: 3}
+    - {fileID: 8300000, guid: 504dff0a0503c4c569baf36be7158b1d, type: 3}
+    - {fileID: 8300000, guid: dbb0746145549457d858ea34b9d41fc8, type: 3}
+    - {fileID: 8300000, guid: 86b3fc95dcc4f4da6bd4c4b3c8a78204, type: 3}
+    - {fileID: 8300000, guid: 1da9028b1cd8044db8932b70e92f57f7, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -27440,7 +27526,18 @@ MonoBehaviour:
     - 'Maybe there''s more info that''ll help you build a profile around here? '
     - 'Alright, I''ll let you know when I''m ready to talk to Elijah.  '
     LeftCharSpeaking: 0100010101000001000001
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: 8a66fdde9fce44741ad8072483dd4eb7, type: 3}
+    - {fileID: 8300000, guid: 76d19835734f8497cb746914278505ca, type: 3}
+    - {fileID: 8300000, guid: fb8a031c99579468c83f93a2f87abe0e, type: 3}
+    - {fileID: 8300000, guid: 6b2af7bbd191e46a8873aee30d36a793, type: 3}
+    - {fileID: 8300000, guid: 9e6ea386bf90d4787818360bbaf7f971, type: 3}
+    - {fileID: 8300000, guid: a57bf1e8949864a9581c4dc0e53cb776, type: 3}
+    - {fileID: 8300000, guid: bf1f07ee6150842f082b2398e0f82604, type: 3}
+    - {fileID: 8300000, guid: 000b3028093264c21ae9d89a72f74380, type: 3}
+    - {fileID: 8300000, guid: b2f0eeb7da25e40c2a0473babe3ed1f9, type: 3}
+    - {fileID: 8300000, guid: 90086571262df49da8be8aafcedcc8b0, type: 3}
+    - {fileID: 8300000, guid: 32cdbc137c8044b8ab70941e1d8ee9da, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -27923,7 +28020,7 @@ MonoBehaviour:
   LeadsToMatchOrBranch: 0
   sentences:
     sentence:
-    - Looks like someone's finally learning
+    - Looks like someone's finally learning.
     - 'Keep the childish jabs to yourself. '
     - 'You still can''t take a joke. '
     - 'Anyway, the writer of the letter signed it with their inital: "E" '
@@ -27935,7 +28032,18 @@ MonoBehaviour:
     - 'Maybe there''s more info that''ll help you build a profile around here? '
     - 'Alright, I''ll let you know when I''m ready to talk to Elijah.  '
     LeftCharSpeaking: 0100010101000001000001
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: e9ac5313c9837471ca6dfb78f9c1e577, type: 3}
+    - {fileID: 8300000, guid: 98c2b0c6174a0408ba6bb033c0e6f4cb, type: 3}
+    - {fileID: 8300000, guid: a9eaa1b6c874447cdbfd7dac59a4284e, type: 3}
+    - {fileID: 8300000, guid: 6b2af7bbd191e46a8873aee30d36a793, type: 3}
+    - {fileID: 8300000, guid: 9e6ea386bf90d4787818360bbaf7f971, type: 3}
+    - {fileID: 8300000, guid: a57bf1e8949864a9581c4dc0e53cb776, type: 3}
+    - {fileID: 8300000, guid: bf1f07ee6150842f082b2398e0f82604, type: 3}
+    - {fileID: 8300000, guid: 000b3028093264c21ae9d89a72f74380, type: 3}
+    - {fileID: 8300000, guid: b2f0eeb7da25e40c2a0473babe3ed1f9, type: 3}
+    - {fileID: 8300000, guid: 90086571262df49da8be8aafcedcc8b0, type: 3}
+    - {fileID: 8300000, guid: 32cdbc137c8044b8ab70941e1d8ee9da, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000040000000400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -28479,7 +28587,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -3720.8152
     y: -242.75238
-    width: 112.264114
+    width: 116
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -30137,7 +30245,14 @@ MonoBehaviour:
     - '*Tch* we''re done. '
     - 'Don''t call again. '
     LeftCharSpeaking: 01000000010000
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: b6d2b7ac922504d099e4cf1acebe4298, type: 3}
+    - {fileID: 8300000, guid: 91691611ca736424d861f1d2f4b9506a, type: 3}
+    - {fileID: 8300000, guid: 4b1429d0e9c20406eb8cda2e7e3d669d, type: 3}
+    - {fileID: 8300000, guid: 20cad185867824ad99bd2994e72974ac, type: 3}
+    - {fileID: 8300000, guid: 66c2ad8c2fff24ca996f9965db71f006, type: 3}
+    - {fileID: 8300000, guid: 954059029d4174b17a12b60ed6e1e359, type: 3}
+    - {fileID: 8300000, guid: 76a51ea23a620457789c1d9425a55619, type: 3}
     emotionSprites: 00000000000000000100000000000000000000000000000000000000
     emotionOutlines: 04000000040000000000000000000000000000000000000000000000
     textFont: 
@@ -30158,7 +30273,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -2663.8394
     y: -393.90356
-    width: 97.169785
+    width: 100
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -30245,9 +30360,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -3579.9497
-    y: 757.6556
-    width: 170.75465
+    x: -3627.9497
+    y: 765.6556
+    width: 178
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -31332,9 +31447,16 @@ MonoBehaviour:
     - 'Nobody hated ol'' man A... '
     - 'I''m sorry, kid. Lemme know if I can help you at all. '
     - 'Austin of all people ain''t deserve this. '
-    - Appreciate it. You done more than enough
+    - Appreciate it. You've done more than enough.
     LeftCharSpeaking: 01010000000001
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: f66072661447641bdadaffbd06d918ee, type: 3}
+    - {fileID: 8300000, guid: fbc04a01cc8744133ad7e8f106fd7f50, type: 3}
+    - {fileID: 8300000, guid: 1dfc1933eafe0481c89ac200491d4a23, type: 3}
+    - {fileID: 8300000, guid: f7833d9c7f97a41a6b4368b0d4cc47f2, type: 3}
+    - {fileID: 8300000, guid: effc34f9db65944b3869fc2f9ec2bae7, type: 3}
+    - {fileID: 8300000, guid: b96f8f8de53314dc8878309bbf94cd35, type: 3}
+    - {fileID: 8300000, guid: b29b542bec01c4d64b7edda1c275ce45, type: 3}
     emotionSprites: 00000000000000000200000000000000000000000000000000000000
     emotionOutlines: 04000000040000000200000002000000020000000200000002000000
     textFont: 
@@ -31505,9 +31627,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -3957.8005
+    x: -3957.947
     y: 755.93994
-    width: 172.64145
+    width: 180
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -31892,7 +32014,7 @@ MonoBehaviour:
   itemId: 901
   indentLevel: 1
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 176321619}
+  targetBlock: {fileID: 176321907}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -32364,7 +32486,8 @@ MonoBehaviour:
     sentence:
     - Hmph... Who the hell is calling?!
     LeftCharSpeaking: 00
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: d90de2bd66f0040258ced6583f821572, type: 3}
     emotionSprites: 01000000
     emotionOutlines: 
     textFont: 
@@ -32402,7 +32525,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 700730328}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -33957,7 +34080,7 @@ MonoBehaviour:
   itemId: 993
   indentLevel: 1
   targetFlowchart: {fileID: 0}
-  targetBlock: {fileID: 176321619}
+  targetBlock: {fileID: 176321907}
   startLabel:
     stringRef: {fileID: 0}
     stringVal: 
@@ -35568,13 +35691,20 @@ MonoBehaviour:
     sentence:
     - 'Can you elaborate on your past with Austin? '
     - 'I''ve had enough of this 20 questions nonsense. '
-    - I don't know what you're looking for man, but I'm done being a part of it
-    - Wait, Mr. Anderson! One last thing, please.
+    - I don't know what you're looking for man, but I'm done being a part of it.
+    - Wait, Mr. Harris! One last thing, please.
     - What could it possibly be?!
     - 'It''s about Austin... '
     - Hmph, he in danger or somethin'?
     LeftCharSpeaking: 01000001000100
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: db5a6ef3323eb46a292617b168a29d1f, type: 3}
+    - {fileID: 8300000, guid: 3dcc9229c866449bb830a9b9805075c2, type: 3}
+    - {fileID: 8300000, guid: b75ebef068dd8409a8e8973db2cb415f, type: 3}
+    - {fileID: 8300000, guid: 2fb08f58027944d93ad059ff250bd980, type: 3}
+    - {fileID: 8300000, guid: 88b43fa84c95f4d4fb8a97582af3e7ca, type: 3}
+    - {fileID: 8300000, guid: 97ebf2ee8aaa548019d500143a570109, type: 3}
+    - {fileID: 8300000, guid: a96ea3dbc00ff4cf4b0886fe062eaaa4, type: 3}
     emotionSprites: 00000000020000000100000000000000010000000000000000000000
     emotionOutlines: 04000000000000000000000000000000000000000000000000000000
     textFont: 
@@ -36061,12 +36191,16 @@ MonoBehaviour:
     - 'A letter? '
     - 'Ain''t no letter ringin'' a bell. '
     - 'Hm... alright, thank you for your time. '
-    - Wait a minute...
-    - 'Did something happen to Austin? '
-    LeftCharSpeaking: 010000010000
-    voiceClips: []
-    emotionSprites: 000000000000000000000000000000000000000002000000
-    emotionOutlines: 040000000400000004000000040000000400000004000000
+    - 'Wait a minute... Did something happen to Austin? '
+    LeftCharSpeaking: 0100000100
+    voiceClips:
+    - {fileID: 8300000, guid: bf96fd8b999104941ae60d06399e799f, type: 3}
+    - {fileID: 8300000, guid: d694b2b9193e647c5bc6153230533ac5, type: 3}
+    - {fileID: 8300000, guid: 6365700c439dd44788beadc7407a5820, type: 3}
+    - {fileID: 8300000, guid: 801bc6092ced24f3dbd2a124d6a5d998, type: 3}
+    - {fileID: 8300000, guid: c286b43d812c544c8ab54ebf86aca5f9, type: 3}
+    emotionSprites: 0000000000000000000000000000000002000000
+    emotionOutlines: 0400000004000000040000000400000004000000
     textFont: 
   chooseToFade: 0
 --- !u!114 &176321697
@@ -37558,7 +37692,14 @@ MonoBehaviour:
     - 'Look this is fun and all, but can you just be direct and get to the point
       already? '
     LeftCharSpeaking: 01000001000100
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: c5571c9f286b0407ca38bb3588c325f4, type: 3}
+    - {fileID: 8300000, guid: 8b2cc4efc735c40568accfb5e618117c, type: 3}
+    - {fileID: 8300000, guid: 5fb18ed1b485d4096ad25186bdf2367a, type: 3}
+    - {fileID: 8300000, guid: 017d1115a2f4c4ecba4dfb8d7966971e, type: 3}
+    - {fileID: 8300000, guid: 4e2d37fc4839b4228b16abc0b3274fdf, type: 3}
+    - {fileID: 8300000, guid: 9a3996eea6f3a4b13a7809186bfc7885, type: 3}
+    - {fileID: 8300000, guid: 854d9af7001a246af941a38fe1468312, type: 3}
     emotionSprites: 00000000020000000000000000000000010000000000000001000000
     emotionOutlines: 04000000000000000400000004000000000000000000000000000000
     textFont: 
@@ -37592,8 +37733,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -3530.5896
-    y: 521.23645
-    width: 121.698074
+    y: 517.23645
+    width: 126
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -37658,9 +37799,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -3934.6218
-    y: 517.36053
-    width: 131.13203
+    x: -3938.6218
+    y: 521.36053
+    width: 136
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -37724,9 +37865,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -3948.1196
+    x: -3956.1196
     y: 247.01999
-    width: 191.50937
+    width: 200
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -39234,7 +39375,13 @@ MonoBehaviour:
     - 'I wanted to ask you a couple questions. '
     - 'Whatever. Be quick with it, kid. '
     LeftCharSpeaking: 010000010100
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: e0fd091b0b12c4739af5af1317275711, type: 3}
+    - {fileID: 8300000, guid: 472cbf7de57dc46a7b69c153bd77d9fe, type: 3}
+    - {fileID: 8300000, guid: 8b22c7e262b2548bbb0e5c0af4fae622, type: 3}
+    - {fileID: 8300000, guid: aeae88600671d4913a98ce2a2fb548cd, type: 3}
+    - {fileID: 8300000, guid: 071a2368ecc6a43d8941e343892d2ae2, type: 3}
+    - {fileID: 8300000, guid: b353531be1dbf471e90e9b9fe15d4678, type: 3}
     emotionSprites: 000000000300000000000000000000000000000000000000
     emotionOutlines: 040000000300000003000000030000000300000004000000
     textFont: 
@@ -40719,13 +40866,19 @@ MonoBehaviour:
   sentences:
     sentence:
     - This is Detective Justin Davis.
-    - Am I speaking with Elijah Anderson?
+    - Am I speaking with Elijah Harris?
     - 'What''s a detective want with me, eh? '
     - I wanted to ask you a couple of questions.
     - 'I think you might have some valuable insight into something I''m working on. '
     - 'Whatever. Be quick with it. '
     LeftCharSpeaking: 010100010100
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: 70745c6f2784e44eda33d2a1d6219400, type: 3}
+    - {fileID: 8300000, guid: dea5bb2acfdbb41548cddb2d1971dc5d, type: 3}
+    - {fileID: 8300000, guid: d9c1f5bde085447188f93c5f838e125c, type: 3}
+    - {fileID: 8300000, guid: 071a2368ecc6a43d8941e343892d2ae2, type: 3}
+    - {fileID: 8300000, guid: 02345621dbcd34619bad75824a71680d, type: 3}
+    - {fileID: 8300000, guid: b353531be1dbf471e90e9b9fe15d4678, type: 3}
     emotionSprites: 000000000000000000000000000000000000000001000000
     emotionOutlines: 040000000400000004000000040000000400000000000000
     textFont: 
@@ -40760,7 +40913,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -3571.7651
     y: 38.99346
-    width: 176.41504
+    width: 184
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -40811,8 +40964,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -3939.7651
-    y: 47.025208
-    width: 159.4339
+    y: 43.171646
+    width: 166
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -41864,8 +42017,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -3573.4062
-    y: 994.39526
-    width: 157.54712
+    y: 990.39526
+    width: 164
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -42359,8 +42512,17 @@ MonoBehaviour:
     - Honestly, never thought I'd see the day where *you* weren't being direct enough.
     - 'I''m going to pretend I didn''t hear that. '
     - 'Anyway I''m not done with Elijah, but we need to keep moving, let''s go. '
-    LeftCharSpeaking: 000100010000010101
-    voiceClips: []
+    LeftCharSpeaking: 000100010000000101
+    voiceClips:
+    - {fileID: 8300000, guid: 6297c98f34b0d426f9fe79e1448e6845, type: 3}
+    - {fileID: 8300000, guid: c40170e91720f4b3eb4b33392e9c0270, type: 3}
+    - {fileID: 8300000, guid: 8c1d08f6cab294511b5882987f65a429, type: 3}
+    - {fileID: 8300000, guid: f6eb12f2f8e6a46e38aa7ecea85b8394, type: 3}
+    - {fileID: 8300000, guid: bbd170d89011c4a07b13394189ce077c, type: 3}
+    - {fileID: 8300000, guid: bf6fe84c5f9a64259b195e0cb5f12b2c, type: 3}
+    - {fileID: 8300000, guid: baae5eed11bf24c2d86c821d45868ca8, type: 3}
+    - {fileID: 8300000, guid: 0ba0431efb8b6409a9477e10d4fcb594, type: 3}
+    - {fileID: 8300000, guid: 2fc5363e6e31e4360803852d957c9fc5, type: 3}
     emotionSprites: 060000000000000004000000000000000000000002000000000000000000000000000000
     emotionOutlines: 040000000400000004000000040000000400000004000000040000000400000004000000
     textFont: 
@@ -42401,8 +42563,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -3955.3984
-    y: 993.1113
-    width: 159.4339
+    y: 997.1113
+    width: 166
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -42888,16 +43050,24 @@ MonoBehaviour:
   sentences:
     sentence:
     - 'You handled that pretty well, J. '
-    - 'Questioning  people is my job too, y''know. '
-    - I suppose communicating with an... *abrasive* person like Elijah feels natural
-      for you.
+    - 'Questioning people is my job too, y''know. '
+    - I suppose communicating with an... *abrasive* person like Elijah would feel
+      natural for you.
     - 'Oh, okay. Someone''s got jokes... '
     - 'I mean, if the shoe fits... '
     - 'But anyway, I think we can safely cross Elijah off our list, right? '
     - 'Hm, maybe, but I wouldn''t be so sure. '
     - Let's head to the next spot from the letter and gather more intel first.
     LeftCharSpeaking: 0001000100000101
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: 9f11d9b73cbbc481a8de5b78b5526260, type: 3}
+    - {fileID: 8300000, guid: f3c412f87caa84aeb8d2b5c00f637e00, type: 3}
+    - {fileID: 8300000, guid: 31afc25ba6a2e43e0bedb246d646fed9, type: 3}
+    - {fileID: 8300000, guid: 598933306062e498aac13832c207af79, type: 3}
+    - {fileID: 8300000, guid: 23a9abb74a9984386a3715f08f782b48, type: 3}
+    - {fileID: 8300000, guid: e60a602a33d894e9794393d9533a4bcd, type: 3}
+    - {fileID: 8300000, guid: fcecdd9c44ab842bf98552059fac3d96, type: 3}
+    - {fileID: 8300000, guid: 8487793f74b964d308ef6a4b10b05e62, type: 3}
     emotionSprites: 0300000000000000000000000000000000000000050000000000000000000000
     emotionOutlines: 
     textFont: 
@@ -43096,7 +43266,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 882090586}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -43139,7 +43309,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -3564.5571
     y: 252.12392
-    width: 168.86786
+    width: 176
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -44642,14 +44812,21 @@ MonoBehaviour:
   sentences:
     sentence:
     - When's the last time you've spoken with Austin?
-    - Hm... it's been a minute, we don't really talk much
+    - Hm... it's been a minute, we don't really talk much.
     - '"Been a minute" doesn''t tell me much. '
     - Ha, now look who has a little bite with his bark!
     - 'To answer, I''d say the last time was probably about... a month ago.  '
     - 'Been meaning to catch up with him too. '
     - 'Anyway, this is fun and all, but can you get to the point? '
     LeftCharSpeaking: 01000100000000
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: f79029cd1167442ed991116b1ec587ce, type: 3}
+    - {fileID: 8300000, guid: 4a3522a4e424b4a5799db540c118a1ad, type: 3}
+    - {fileID: 8300000, guid: 22e3cefb0823e45c08b3496e859fe53e, type: 3}
+    - {fileID: 8300000, guid: 5095d149aae68444f9afa35f8be3f0e7, type: 3}
+    - {fileID: 8300000, guid: f09d38749a2a442749996fecc287afa8, type: 3}
+    - {fileID: 8300000, guid: db494e93699574a9f881a6590d612245, type: 3}
+    - {fileID: 8300000, guid: 05316f9a19dff40379a67c431ddf8c49, type: 3}
     emotionSprites: 00000000050000000000000002000000000000000000000005000000
     emotionOutlines: 04000000040000000400000003000000030000000300000000000000
     textFont: 
@@ -44687,7 +44864,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1924688231}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -44733,7 +44910,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 882090586}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -44779,7 +44956,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1924688231}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -44998,7 +45175,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1924688231}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -45090,7 +45267,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 700730328}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 3
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -45182,7 +45359,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 882090586}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -45274,7 +45451,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1924688231}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 0.5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -45343,7 +45520,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1924688231}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 0.5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -45458,7 +45635,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 882090586}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -45527,7 +45704,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 882090586}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -45596,7 +45773,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 882090586}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -45688,7 +45865,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1924688231}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -45757,7 +45934,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1924688231}
   startVolume: 1
-  endVolume: 0.5
+  endVolume: 0.15
   fadeDuration: 0.5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -47147,7 +47324,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &176321894
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -47173,6 +47350,784 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &176321895
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1206
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 176321768}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
+--- !u!114 &176321896
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1205
+  indentLevel: 0
+  control: 4
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 882090586}
+  startVolume: 1
+  endVolume: 0
+  fadeDuration: 5
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
+--- !u!114 &176321897
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1204
+  indentLevel: 0
+  control: 4
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 1924688231}
+  startVolume: 1
+  endVolume: 0
+  fadeDuration: 3
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
+--- !u!114 &176321898
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1203
+  indentLevel: 0
+  control: 4
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 700730328}
+  startVolume: 1
+  endVolume: 0.15
+  fadeDuration: 3
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
+--- !u!114 &176321899
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d2db3a5284f6b4ba9176e1ae3b8110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1202
+  indentLevel: 0
+--- !u!114 &176321900
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1201
+  indentLevel: 0
+--- !u!114 &176321901
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1200
+  indentLevel: 1
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0.1
+  durationOLD: 0
+--- !u!114 &176321902
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 663c8a7831a104d16ad7078a4dc2bd10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1199
+  indentLevel: 0
+  anyOrAllConditions: 0
+  conditions:
+  - compareOperator: 0
+    anyVar:
+      variable: {fileID: 176321147}
+      data:
+        animatorData:
+          animatorRef: {fileID: 0}
+          animatorVal: {fileID: 0}
+        audioSourceData:
+          audioSourceRef: {fileID: 0}
+          audioSourceVal: {fileID: 0}
+        booleanData:
+          booleanRef: {fileID: 0}
+          booleanVal: 0
+        collectionData:
+          collectionRef: {fileID: 0}
+          collectionVal: {fileID: 0}
+        collider2DData:
+          collider2DRef: {fileID: 0}
+          collider2DVal: {fileID: 0}
+        colliderData:
+          colliderRef: {fileID: 0}
+          colliderVal: {fileID: 0}
+        colorData:
+          colorRef: {fileID: 0}
+          colorVal: {r: 0, g: 0, b: 0, a: 0}
+        floatData:
+          floatRef: {fileID: 0}
+          floatVal: 0
+        gameObjectData:
+          gameObjectRef: {fileID: 0}
+          gameObjectVal: {fileID: 0}
+        integerData:
+          integerRef: {fileID: 0}
+          integerVal: 0
+        materialData:
+          materialRef: {fileID: 0}
+          materialVal: {fileID: 0}
+        matrix4x4Data:
+          matrix4x4Ref: {fileID: 0}
+          matrix4x4Val:
+            e00: 0
+            e01: 0
+            e02: 0
+            e03: 0
+            e10: 0
+            e11: 0
+            e12: 0
+            e13: 0
+            e20: 0
+            e21: 0
+            e22: 0
+            e23: 0
+            e30: 0
+            e31: 0
+            e32: 0
+            e33: 0
+        objectData:
+          objectRef: {fileID: 0}
+          objectVal: {fileID: 0}
+        quaternionData:
+          quaternionRef: {fileID: 0}
+          quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+        rigidbody2DData:
+          rigidbody2DRef: {fileID: 0}
+          rigidbody2DVal: {fileID: 0}
+        rigidbodyData:
+          rigidbodyRef: {fileID: 0}
+          rigidbodyVal: {fileID: 0}
+        spriteData:
+          spriteRef: {fileID: 0}
+          spriteVal: {fileID: 0}
+        stringData:
+          stringRef: {fileID: 0}
+          stringVal: 
+        textureData:
+          textureRef: {fileID: 0}
+          textureVal: {fileID: 0}
+        transformData:
+          transformRef: {fileID: 0}
+          transformVal: {fileID: 0}
+        vector2Data:
+          vector2Ref: {fileID: 0}
+          vector2Val: {x: 0, y: 0}
+        vector3Data:
+          vector3Ref: {fileID: 0}
+          vector3Val: {x: 0, y: 0, z: 0}
+        vector4Data:
+          vector4Ref: {fileID: 0}
+          vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  compareOperator: 0
+  anyVar:
+    variable: {fileID: 0}
+    data:
+      animatorData:
+        animatorRef: {fileID: 0}
+        animatorVal: {fileID: 0}
+      audioSourceData:
+        audioSourceRef: {fileID: 0}
+        audioSourceVal: {fileID: 0}
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      collider2DData:
+        collider2DRef: {fileID: 0}
+        collider2DVal: {fileID: 0}
+      colliderData:
+        colliderRef: {fileID: 0}
+        colliderVal: {fileID: 0}
+      colorData:
+        colorRef: {fileID: 0}
+        colorVal: {r: 0, g: 0, b: 0, a: 0}
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      gameObjectData:
+        gameObjectRef: {fileID: 0}
+        gameObjectVal: {fileID: 0}
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      materialData:
+        materialRef: {fileID: 0}
+        materialVal: {fileID: 0}
+      matrix4x4Data:
+        matrix4x4Ref: {fileID: 0}
+        matrix4x4Val:
+          e00: 0
+          e01: 0
+          e02: 0
+          e03: 0
+          e10: 0
+          e11: 0
+          e12: 0
+          e13: 0
+          e20: 0
+          e21: 0
+          e22: 0
+          e23: 0
+          e30: 0
+          e31: 0
+          e32: 0
+          e33: 0
+      objectData:
+        objectRef: {fileID: 0}
+        objectVal: {fileID: 0}
+      quaternionData:
+        quaternionRef: {fileID: 0}
+        quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+      rigidbody2DData:
+        rigidbody2DRef: {fileID: 0}
+        rigidbody2DVal: {fileID: 0}
+      rigidbodyData:
+        rigidbodyRef: {fileID: 0}
+        rigidbodyVal: {fileID: 0}
+      spriteData:
+        spriteRef: {fileID: 0}
+        spriteVal: {fileID: 0}
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      textureData:
+        textureRef: {fileID: 0}
+        textureVal: {fileID: 0}
+      transformData:
+        transformRef: {fileID: 0}
+        transformVal: {fileID: 0}
+      vector2Data:
+        vector2Ref: {fileID: 0}
+        vector2Val: {x: 0, y: 0}
+      vector3Data:
+        vector3Ref: {fileID: 0}
+        vector3Val: {x: 0, y: 0, z: 0}
+      vector4Data:
+        vector4Ref: {fileID: 0}
+        vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  variable: {fileID: 0}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &176321903
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1198
+  indentLevel: 0
+  anyVar:
+    variable: {fileID: 176321147}
+    data:
+      animatorData:
+        animatorRef: {fileID: 0}
+        animatorVal: {fileID: 0}
+      audioSourceData:
+        audioSourceRef: {fileID: 0}
+        audioSourceVal: {fileID: 0}
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      collider2DData:
+        collider2DRef: {fileID: 0}
+        collider2DVal: {fileID: 0}
+      colliderData:
+        colliderRef: {fileID: 0}
+        colliderVal: {fileID: 0}
+      colorData:
+        colorRef: {fileID: 0}
+        colorVal: {r: 0, g: 0, b: 0, a: 0}
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      gameObjectData:
+        gameObjectRef: {fileID: 0}
+        gameObjectVal: {fileID: 0}
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      materialData:
+        materialRef: {fileID: 0}
+        materialVal: {fileID: 0}
+      matrix4x4Data:
+        matrix4x4Ref: {fileID: 0}
+        matrix4x4Val:
+          e00: 0
+          e01: 0
+          e02: 0
+          e03: 0
+          e10: 0
+          e11: 0
+          e12: 0
+          e13: 0
+          e20: 0
+          e21: 0
+          e22: 0
+          e23: 0
+          e30: 0
+          e31: 0
+          e32: 0
+          e33: 0
+      objectData:
+        objectRef: {fileID: 0}
+        objectVal: {fileID: 0}
+      quaternionData:
+        quaternionRef: {fileID: 0}
+        quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+      rigidbody2DData:
+        rigidbody2DRef: {fileID: 0}
+        rigidbody2DVal: {fileID: 0}
+      rigidbodyData:
+        rigidbodyRef: {fileID: 0}
+        rigidbodyVal: {fileID: 0}
+      spriteData:
+        spriteRef: {fileID: 0}
+        spriteVal: {fileID: 0}
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      textureData:
+        textureRef: {fileID: 0}
+        textureVal: {fileID: 0}
+      transformData:
+        transformRef: {fileID: 0}
+        transformVal: {fileID: 0}
+      vector2Data:
+        vector2Ref: {fileID: 0}
+        vector2Val: {x: 0, y: 0}
+      vector3Data:
+        vector3Ref: {fileID: 0}
+        vector3Val: {x: 0, y: 0, z: 0}
+      vector4Data:
+        vector4Ref: {fileID: 0}
+        vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  setOperator: 0
+  variable: {fileID: 0}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &176321904
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ec8c72094f050498c0d9a976e3cf6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1197
+  indentLevel: 0
+  LeftImage: {fileID: 21300000, guid: 1c770f0f800464514b241bc0bd0feebd, type: 3}
+  RightImage: {fileID: 21300000, guid: 48b5ecabbd53b4bbcb96497ad59b2c65, type: 3}
+  LeftPersonName: 
+  LeftPersonImage: {fileID: 21300000, guid: dc5d01fb1e402438d92381baf7a5684e, type: 3}
+  RightPersonName: 
+  RightPersonImage: {fileID: 21300000, guid: 33144f624887c46598c6fdc510ef105a, type: 3}
+  LeadsToMatchOrBranch: 1
+  sentences:
+    sentence:
+    - 'It''s possible... but it''s too early to confirm. '
+    - 'Oh, I get it. '
+    - You think *I* might've done somethin' to that man!
+    - 'That''s why you won''t tell me. '
+    - 'I''m not here to jump to conclusions. I''m here to-- '
+    - '*Tch* we''re done. '
+    - 'Don''t call again. '
+    LeftCharSpeaking: 01000000010000
+    voiceClips:
+    - {fileID: 8300000, guid: 1250604efbb2440a5a1d98c7952e7887, type: 3}
+    - {fileID: 8300000, guid: 91691611ca736424d861f1d2f4b9506a, type: 3}
+    - {fileID: 8300000, guid: 4b1429d0e9c20406eb8cda2e7e3d669d, type: 3}
+    - {fileID: 8300000, guid: 20cad185867824ad99bd2994e72974ac, type: 3}
+    - {fileID: 8300000, guid: 66c2ad8c2fff24ca996f9965db71f006, type: 3}
+    - {fileID: 8300000, guid: 954059029d4174b17a12b60ed6e1e359, type: 3}
+    - {fileID: 8300000, guid: 76a51ea23a620457789c1d9425a55619, type: 3}
+    emotionSprites: 00000000000000000100000000000000000000000000000000000000
+    emotionOutlines: 04000000040000000000000000000000000000000000000000000000
+    textFont: 
+  chooseToFade: 1
+--- !u!114 &176321905
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0a69261867e784dba81823ae23d729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1196
+  indentLevel: 0
+--- !u!114 &176321906
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1195
+  indentLevel: 0
+  anyVar:
+    variable: {fileID: 176321600}
+    data:
+      animatorData:
+        animatorRef: {fileID: 0}
+        animatorVal: {fileID: 0}
+      audioSourceData:
+        audioSourceRef: {fileID: 0}
+        audioSourceVal: {fileID: 0}
+      booleanData:
+        booleanRef: {fileID: 0}
+        booleanVal: 0
+      collectionData:
+        collectionRef: {fileID: 0}
+        collectionVal: {fileID: 0}
+      collider2DData:
+        collider2DRef: {fileID: 0}
+        collider2DVal: {fileID: 0}
+      colliderData:
+        colliderRef: {fileID: 0}
+        colliderVal: {fileID: 0}
+      colorData:
+        colorRef: {fileID: 0}
+        colorVal: {r: 0, g: 0, b: 0, a: 0}
+      floatData:
+        floatRef: {fileID: 0}
+        floatVal: 0
+      gameObjectData:
+        gameObjectRef: {fileID: 0}
+        gameObjectVal: {fileID: 0}
+      integerData:
+        integerRef: {fileID: 0}
+        integerVal: 0
+      materialData:
+        materialRef: {fileID: 0}
+        materialVal: {fileID: 0}
+      matrix4x4Data:
+        matrix4x4Ref: {fileID: 0}
+        matrix4x4Val:
+          e00: 0
+          e01: 0
+          e02: 0
+          e03: 0
+          e10: 0
+          e11: 0
+          e12: 0
+          e13: 0
+          e20: 0
+          e21: 0
+          e22: 0
+          e23: 0
+          e30: 0
+          e31: 0
+          e32: 0
+          e33: 0
+      objectData:
+        objectRef: {fileID: 0}
+        objectVal: {fileID: 0}
+      quaternionData:
+        quaternionRef: {fileID: 0}
+        quaternionVal: {x: 0, y: 0, z: 0, w: 0}
+      rigidbody2DData:
+        rigidbody2DRef: {fileID: 0}
+        rigidbody2DVal: {fileID: 0}
+      rigidbodyData:
+        rigidbodyRef: {fileID: 0}
+        rigidbodyVal: {fileID: 0}
+      spriteData:
+        spriteRef: {fileID: 0}
+        spriteVal: {fileID: 0}
+      stringData:
+        stringRef: {fileID: 0}
+        stringVal: 
+      textureData:
+        textureRef: {fileID: 0}
+        textureVal: {fileID: 0}
+      transformData:
+        transformRef: {fileID: 0}
+        transformVal: {fileID: 0}
+      vector2Data:
+        vector2Ref: {fileID: 0}
+        vector2Val: {x: 0, y: 0}
+      vector3Data:
+        vector3Ref: {fileID: 0}
+        vector3Val: {x: 0, y: 0, z: 0}
+      vector4Data:
+        vector4Ref: {fileID: 0}
+        vector4Val: {x: 0, y: 0, z: 0, w: 0}
+  setOperator: 0
+  variable: {fileID: 0}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+  animatorData:
+    animatorRef: {fileID: 0}
+    animatorVal: {fileID: 0}
+  audioSourceData:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 0}
+  colorData:
+    colorRef: {fileID: 0}
+    colorVal: {r: 0, g: 0, b: 0, a: 0}
+  gameObjectData:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 0}
+  materialData:
+    materialRef: {fileID: 0}
+    materialVal: {fileID: 0}
+  objectData:
+    objectRef: {fileID: 0}
+    objectVal: {fileID: 0}
+  rigidbody2DData:
+    rigidbody2DRef: {fileID: 0}
+    rigidbody2DVal: {fileID: 0}
+  spriteData:
+    spriteRef: {fileID: 0}
+    spriteVal: {fileID: 0}
+  textureData:
+    textureRef: {fileID: 0}
+    textureVal: {fileID: 0}
+  transformData:
+    transformRef: {fileID: 0}
+    transformVal: {fileID: 0}
+  vector2Data:
+    vector2Ref: {fileID: 0}
+    vector2Val: {x: 0, y: 0}
+  vector3Data:
+    vector3Ref: {fileID: 0}
+    vector3Val: {x: 0, y: 0, z: 0}
+--- !u!114 &176321907
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176321094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -3287.9497
+    y: 757.6556
+    width: 190
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1207
+  blockName: B Final Elijah Match 2
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 176321906}
+  - {fileID: 176321905}
+  - {fileID: 176321904}
+  - {fileID: 176321903}
+  - {fileID: 176321902}
+  - {fileID: 176321901}
+  - {fileID: 176321900}
+  - {fileID: 176321899}
+  - {fileID: 176321898}
+  - {fileID: 176321897}
+  - {fileID: 176321896}
+  - {fileID: 176321895}
+  suppressAllAutoSelections: 0
 --- !u!1 &177707081
 GameObject:
   m_ObjectHideFlags: 0
@@ -55057,7 +56012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1600031862297486222, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_Volume
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2622336997493846697, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_LocalScale.x

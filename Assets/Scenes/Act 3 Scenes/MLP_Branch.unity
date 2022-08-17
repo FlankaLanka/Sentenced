@@ -3609,7 +3609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1600031862297486222, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_Volume
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2622336997493846697, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_LocalScale.x
@@ -7418,6 +7418,8 @@ GameObject:
   - component: {fileID: 1541730252}
   - component: {fileID: 1541730251}
   - component: {fileID: 1541730257}
+  - component: {fileID: 1541730259}
+  - component: {fileID: 1541730258}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -7454,9 +7456,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 283.01392
+    x: 285.3531
     y: 66.80354
-    width: 134.81276
+    width: 127.19291
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7489,11 +7491,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1848.844, y: -341.85312}
+  scrollPos: {x: 1417.177, y: -322.62537}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 404
-  zoom: 0.2534996
+  zoom: 0.4275004
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -7502,7 +7504,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1541729952}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1541729951}
   variables:
   - {fileID: 1541729961}
   - {fileID: 1541729960}
@@ -7621,21 +7624,21 @@ MonoBehaviour:
     - Damn it, mandatory reporting... Dad must've thought Ethan was in danger at
       home...
     - 'Yep... But all Ethan sees is that Austin ruined his life. '
-    LeftCharSpeaking: 01010001010000010001010001
+    LeftCharSpeaking: 01010001010000010001010000
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 93a391237275b453b8a9ecf859aa4c20, type: 3}
+    - {fileID: 8300000, guid: 6ddad956d0ccf43fcaa3008efef43a7d, type: 3}
+    - {fileID: 8300000, guid: f70b8f8dc3c484d25af34608a435c58d, type: 3}
+    - {fileID: 8300000, guid: e054d609f064b462892e05360aa9a872, type: 3}
+    - {fileID: 8300000, guid: 51b3f56e8a8f84a09865c8cc708fa8cc, type: 3}
+    - {fileID: 8300000, guid: 1d944d57509094ae7835ba0b9751c21f, type: 3}
+    - {fileID: 8300000, guid: 51a9df7968aac4469b0c8f49c9c3ed15, type: 3}
+    - {fileID: 8300000, guid: 62cee49f009f64f78bb2911dd5988d2c, type: 3}
+    - {fileID: 8300000, guid: d68ff46ffa98347f0ad6fd2293ee84a7, type: 3}
+    - {fileID: 8300000, guid: 9b466a79e021c4339b5a60208b7b4022, type: 3}
+    - {fileID: 8300000, guid: b733a79308bdb42238d6304004bc5773, type: 3}
+    - {fileID: 8300000, guid: 85e2cd01ad16a4a31b6a141f61da776f, type: 3}
+    - {fileID: 8300000, guid: baf89871bd2124bacb18adb73bca65ea, type: 3}
     emotionSprites: 00000000000000000200000000000000000000000000000000000000000000000500000000000000000000000100000000000000
     emotionOutlines: 04000000040000000400000004000000040000000400000004000000040000000400000004000000040000000000000004000000
     textFont: 
@@ -7655,8 +7658,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -422.97638
-    y: 1010.32635
-    width: 213.70834
+    y: 1012.6601
+    width: 197.36829
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7688,6 +7691,8 @@ MonoBehaviour:
   - {fileID: 1541730253}
   - {fileID: 1541730252}
   - {fileID: 1541730251}
+  - {fileID: 1541730259}
+  - {fileID: 1541730258}
   - {fileID: 1541730228}
   suppressAllAutoSelections: 0
 --- !u!114 &1541729953
@@ -7807,7 +7812,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 2057661120}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 3
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -7908,8 +7913,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -14
-    y: 75.754456
-    width: 146.6471
+    y: 71.80968
+    width: 138.88881
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7958,7 +7963,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 95.54438
     y: 309.50842
-    width: 219.62552
+    width: 206.725
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8013,9 +8018,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -168.87595
-    y: 306.8428
-    width: 136.78516
+    x: -169.87595
+    y: 304.8428
+    width: 129.53209
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -9556,7 +9561,7 @@ MonoBehaviour:
   LeadsToMatchOrBranch: 1
   sentences:
     sentence:
-    - Actually... I came to apologize
+    - Actually... I came to apologize.
     - 'Oh, alright. Well, if you stick around he''ll probably be here soon.   '
     - 'How can you be so sure? '
     - 'I have an appointment with him this morning! It''s weird that he''s running
@@ -9568,13 +9573,13 @@ MonoBehaviour:
       else...  '
     LeftCharSpeaking: 01000100010000
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: f912fdcda508449369cb3bb10e2d0f87, type: 3}
+    - {fileID: 8300000, guid: db9e436ab4fa2421b808a8963381ab9c, type: 3}
+    - {fileID: 8300000, guid: 7df4b898e84c346269141c37562d684d, type: 3}
+    - {fileID: 8300000, guid: 78cb63f160aa14434b0062c1d392f451, type: 3}
+    - {fileID: 8300000, guid: 24ee62f86c89e43589fb47b1f43b33b8, type: 3}
+    - {fileID: 8300000, guid: 3a7c8df761c3c4cfdac1f09fce50b751, type: 3}
+    - {fileID: 8300000, guid: 36affad1656444d5992375251adda674, type: 3}
     emotionSprites: 00000000000000000000000002000000000000000000000004000000
     emotionOutlines: 04000000040000000400000004000000040000000200000000000000
     textFont: 
@@ -11105,13 +11110,13 @@ MonoBehaviour:
       else...  '
     LeftCharSpeaking: 01000100010000
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: e3ce04f8d944f4e65a061738f34269d8, type: 3}
+    - {fileID: 8300000, guid: db9e436ab4fa2421b808a8963381ab9c, type: 3}
+    - {fileID: 8300000, guid: 7df4b898e84c346269141c37562d684d, type: 3}
+    - {fileID: 8300000, guid: 78cb63f160aa14434b0062c1d392f451, type: 3}
+    - {fileID: 8300000, guid: 24ee62f86c89e43589fb47b1f43b33b8, type: 3}
+    - {fileID: 8300000, guid: 3a7c8df761c3c4cfdac1f09fce50b751, type: 3}
+    - {fileID: 8300000, guid: 36affad1656444d5992375251adda674, type: 3}
     emotionSprites: 00000000000000000000000002000000000000000000000004000000
     emotionOutlines: 04000000040000000400000004000000040000000200000000000000
     textFont: 
@@ -11146,7 +11151,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 108.5
     y: 158.22789
-    width: 184.1225
+    width: 171.63731
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -11192,7 +11197,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -186.5
     y: 161.75945
-    width: 186.0949
+    width: 177.48526
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12727,10 +12732,10 @@ MonoBehaviour:
     - 'Did something happen? '
     LeftCharSpeaking: 00010000
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: efd18b37ba4464e59ae90358ff1a0f0e, type: 3}
+    - {fileID: 8300000, guid: b35dfe69a2eb0499181272ff09c0aab6, type: 3}
+    - {fileID: 8300000, guid: 13fd5a3f3cca049c29b8258c26f9fd76, type: 3}
+    - {fileID: 8300000, guid: 0d99aab123f3f4ece9106e637ce9876c, type: 3}
     emotionSprites: 00000000000000000000000005000000
     emotionOutlines: 04000000040000000400000002000000
     textFont: 
@@ -14670,16 +14675,16 @@ MonoBehaviour:
     - 'Well... there was this one thing he always said to try... '
     - 'Oh wait, I got it! It was last week!    '
     - 'There was a man outside, who seemed... off, I couldn''t explain it. '
-    - I meant to tell, David, but... *ugh* just like *everything else* since the
-      accident it slipped my mind...
+    - I meant to tell David, but... *ugh* just like *everything else* since the accident
+      it slipped my mind...
     LeftCharSpeaking: 010100000000
     voiceClips:
+    - {fileID: 8300000, guid: 37d96f49f88264815b74cf8d62cde485, type: 3}
+    - {fileID: 8300000, guid: 03082a47b9b46405283d03e69d9e128d, type: 3}
     - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: a4a291cc2dac240b2928722320601e81, type: 3}
+    - {fileID: 8300000, guid: aab0895f60ad8444d960a9c3c0e53fd0, type: 3}
+    - {fileID: 8300000, guid: cc0a8b06aa131404fa8527448d36332c, type: 3}
     emotionSprites: 000000000000000000000000030000000000000001000000
     emotionOutlines: 040000000400000004000000030000000400000000000000
     textFont: 
@@ -14831,13 +14836,13 @@ MonoBehaviour:
       like this.  '
     LeftCharSpeaking: 01000000010000
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: cf132e3a3840a48b7803004901551376, type: 3}
+    - {fileID: 8300000, guid: 65e9d596aa2214c04acb7a9e83071583, type: 3}
+    - {fileID: 8300000, guid: 3c32dc3f04ea243b6aacfd57896d1626, type: 3}
+    - {fileID: 8300000, guid: 116f4b525ba3f44aeab48149e4175c2d, type: 3}
+    - {fileID: 8300000, guid: 5d7392ef8f08d4aa1bfb56f4a88f47f0, type: 3}
+    - {fileID: 8300000, guid: 54a24bd7c92bc4e47bed0943689fe46c, type: 3}
+    - {fileID: 8300000, guid: 892b1b97e2b9b4be7bd0a2d58047a9d8, type: 3}
     emotionSprites: 00000000040000000000000000000000000000000000000004000000
     emotionOutlines: 04000000020000000400000004000000040000000400000002000000
     textFont: 
@@ -14858,7 +14863,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -376.79077
     y: 455.16208
-    width: 121.00603
+    width: 114.32742
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15390,7 +15395,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -803.59503
     y: 551.8606
-    width: 122.97842
+    width: 116.6666
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15427,7 +15432,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 2102090589}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 2
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -15473,7 +15478,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 2102090589}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 2
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -15973,12 +15978,12 @@ MonoBehaviour:
     - 'I wish David were here... he just always knows what to say at times like this.  '
     LeftCharSpeaking: 010001010000
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: b29a3ca48e0584083bc3dc5322e0cec0, type: 3}
+    - {fileID: 8300000, guid: 0a695c403031d4882bad9900decf060a, type: 3}
+    - {fileID: 8300000, guid: 55ca6d4f7593d4d42b18bdcc510e14ef, type: 3}
+    - {fileID: 8300000, guid: 52848fd0b997f451b9804054f6ea8576, type: 3}
+    - {fileID: 8300000, guid: 5d6ab5ad0aef34839912ff515903d47c, type: 3}
+    - {fileID: 8300000, guid: 892b1b97e2b9b4be7bd0a2d58047a9d8, type: 3}
     emotionSprites: 000000000000000000000000000000000400000000000000
     emotionOutlines: 040000000400000004000000040000000200000002000000
     textFont: 
@@ -16470,13 +16475,13 @@ MonoBehaviour:
     - 'I''m outta here. Good luck. '
     LeftCharSpeaking: 01000100000100
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 67ee3275970c74a3b9b98d502e0aac6b, type: 3}
+    - {fileID: 8300000, guid: d2cb5b0afbd5a4b65b64fecf3ce9e2b2, type: 3}
+    - {fileID: 8300000, guid: 389297254be61451f9256581a26b27d7, type: 3}
+    - {fileID: 8300000, guid: 5ac222e1378a14ed58a8e8306ec4e10c, type: 3}
+    - {fileID: 8300000, guid: 90a6586b4a6504bb2b849d5684471e96, type: 3}
+    - {fileID: 8300000, guid: 70445477d25874a4f8b87e22da4a51a9, type: 3}
+    - {fileID: 8300000, guid: 0c02211c69c314a9fbe0715723b23d34, type: 3}
     emotionSprites: 00000000010000000000000001000000040000000000000001000000
     emotionOutlines: 04000000000000000000000000000000000000000000000000000000
     textFont: 
@@ -18449,16 +18454,16 @@ MonoBehaviour:
     - 'Oh wait, alone! I remember now, it was last Monday!    '
     - 'There was a man outside on his own, who seemed... off, I couldn''t explain
       it. '
-    - I meant to tell, David, but... *ugh* just like *everything else* since the
-      accident it slipped my mind...
+    - I meant to tell David, but... *ugh* just like *everything else* since the accident
+      it slipped my mind...
     LeftCharSpeaking: 010001000000
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: ec58b48f7b7664917ad53a990af4aa10, type: 3}
+    - {fileID: 8300000, guid: a4120d0fa16b34c64ae72b50f026ef48, type: 3}
+    - {fileID: 8300000, guid: c3dfda08bb82a460ead1156198589622, type: 3}
+    - {fileID: 8300000, guid: ca99691a55ccc456db9659e1c79e2de5, type: 3}
+    - {fileID: 8300000, guid: aab0895f60ad8444d960a9c3c0e53fd0, type: 3}
+    - {fileID: 8300000, guid: cc0a8b06aa131404fa8527448d36332c, type: 3}
     emotionSprites: 000000000000000000000000030000000000000001000000
     emotionOutlines: 040000000400000004000000030000000400000000000000
     textFont: 
@@ -18493,7 +18498,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 202.58655
     y: 459.7669
-    width: 156.50905
+    width: 147.07593
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -18547,9 +18552,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -107.86232
-    y: 453.34747
-    width: 162.42621
+    x: -103.86232
+    y: 451.68665
+    width: 156.43265
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -18581,9 +18586,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -106.42055
+    x: -99.555565
     y: 689.1438
-    width: 158.48145
+    width: 149.41512
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -19069,20 +19074,18 @@ MonoBehaviour:
     - Maybe we could narrow down the time?
     - Yes, of course! My appointments are always at 10am, so it had to be a little
       before then!
-    - Monday around 10am. Hm... that gives me an idea.
     - 'Thank you, Vanessa, this''ll mean a lot to David... '
     - 'And it means a lot to me too. '
     - I'm just glad I could help!
-    LeftCharSpeaking: 010000010100
+    LeftCharSpeaking: 0100010100
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    emotionSprites: 000000000300000000000000000000000000000002000000
-    emotionOutlines: 040000000300000003000000030000000300000003000000
+    - {fileID: 8300000, guid: 9e1e4e75792064de897e86b365f90e4e, type: 3}
+    - {fileID: 8300000, guid: 4c03d7d6d2a1849f2a94ed5c0dd9b6ba, type: 3}
+    - {fileID: 8300000, guid: b206a6f9c6dcb40abb735a43efe0c13d, type: 3}
+    - {fileID: 8300000, guid: 9b4656931839e40d194a4f3a1fae6504, type: 3}
+    - {fileID: 8300000, guid: 988eb4511431843baa31a2c34c511c92, type: 3}
+    emotionSprites: 0000000003000000000000000000000002000000
+    emotionOutlines: 0400000003000000030000000300000003000000
     textFont: 
   chooseToFade: 1
 --- !u!114 &1541730126
@@ -20543,7 +20546,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 214.14256
     y: 696.1735
-    width: 154.53665
+    width: 145.90634
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -20576,9 +20579,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -397.91003
-    y: 692.6418
-    width: 174.26056
+    x: -401.85483
+    y: 686.3026
+    width: 161.11101
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -22062,19 +22065,19 @@ MonoBehaviour:
     sentence:
     - 'How about you... narrow down the time? '
     - 'I really want to, but just saying that doesn''t really help... '
-    - I'm doing my best to remember
+    - I'm doing my best to remember.
     - 'I''m not trying to be impatient with you... but we''ve been going in circles
       for a while now. '
-    - 'Y''know what? Lets take a break. This is David''s job anyway.  '
-    - 'If you''re going to act like this then maybe I should just go anyway. '
-    LeftCharSpeaking: 000101000001
+    - 'Y''know what? Let''s take a break. This is David''s job anyway.  '
+    - 'If you''re going to act like this then maybe I should just go. '
+    LeftCharSpeaking: 010000010100
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 86ac648fce8cc44f9853011df0e11319, type: 3}
+    - {fileID: 8300000, guid: f8b2e1420967e47adb22e6ce75d9fc13, type: 3}
+    - {fileID: 8300000, guid: 152b744e0fa94491d81efda5ca7394d7, type: 3}
+    - {fileID: 8300000, guid: 01ff515d657304fcf83c9fba519b74c5, type: 3}
+    - {fileID: 8300000, guid: b65e664164167491dbeb4b80066879d7, type: 3}
+    - {fileID: 8300000, guid: a0acb4d1647fa466193dd2a39ae1c6a9, type: 3}
     emotionSprites: 000000000400000001000000000000000000000001000000
     emotionOutlines: 040000000200000000000000040000000400000000000000
     textFont: 
@@ -23000,19 +23003,19 @@ MonoBehaviour:
     sentence:
     - 'Can''t you just... narrow down the time? '
     - 'I really want to, but just saying that doesn''t really help... '
-    - I'm doing my best to remember
+    - I'm doing my best to remember.
     - 'I''m not trying to be impatient with you... but we''ve been going in circles
       for a while now. '
     - 'Y''know what? Lets take a break. This is David''s job anyway.  '
-    - If you're going to act like this then maybe I should just go anyway.
-    LeftCharSpeaking: 000101000001
+    - If you're going to act like this then maybe I should just go.
+    LeftCharSpeaking: 010000010100
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 5630d9de46df14ae7a5ca1a1fee87cc4, type: 3}
+    - {fileID: 8300000, guid: f8b2e1420967e47adb22e6ce75d9fc13, type: 3}
+    - {fileID: 8300000, guid: 152b744e0fa94491d81efda5ca7394d7, type: 3}
+    - {fileID: 8300000, guid: 01ff515d657304fcf83c9fba519b74c5, type: 3}
+    - {fileID: 8300000, guid: b65e664164167491dbeb4b80066879d7, type: 3}
+    - {fileID: 8300000, guid: a0acb4d1647fa466193dd2a39ae1c6a9, type: 3}
     emotionSprites: 000000000400000001000000000000000000000001000000
     emotionOutlines: 040000000200000000000000040000000400000000000000
     textFont: 
@@ -23049,7 +23052,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1888378583}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: e156f28fb05d545029982b38aeecba08, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -23076,7 +23079,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1888378583}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 527c747bc97e446c9b3024a55ef87db0, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -23193,7 +23196,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1888378583}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 1126a42d8128b4d56a89cd38f24bf881, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -23220,7 +23223,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1888378583}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 8e734f906dd6b4689950bfc05b28a1a3, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -23248,7 +23251,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1888378583}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 104f4b5eee28d483291e37ee104e9dca, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -23801,7 +23804,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 929188994}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 2
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -23940,7 +23943,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 158815785}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: f5967c4b696044fe5acdab52307e439d, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -23967,7 +23970,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1888378583}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 3eedbb28518fa48c4908f490a62e602f, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -23994,7 +23997,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 158815785}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 3a9d0a4e64f07447690490d87c25c43b, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -24022,7 +24025,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 2057661120}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 2
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -24381,8 +24384,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -374.77753
-    y: 848.07196
-    width: 124.950806
+    y: 845.7382
+    width: 119.00578
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -24459,7 +24462,7 @@ MonoBehaviour:
   description: 
   character: {fileID: 1888378583}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
+  voiceOverClip: {fileID: 8300000, guid: 3e8072f58e5f542ec9dbed5b65bb02b6, type: 3}
   showAlways: 1
   showCount: 1
   extendPrevious: 0
@@ -25371,8 +25374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1390
   indentLevel: 0
-  storyText: And now, the weekly lunches between David and Austin have occasionally
-    become a family event... when Justin isn't too busy to join...
+  storyText: 'And now, the weekly lunches between David and Austin have occasionally
+    become a family event. '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -25522,7 +25525,7 @@ MonoBehaviour:
   SentencedDialoguePrefab: {fileID: 737216660}
 --- !u!114 &1541730257
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -25548,6 +25551,60 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &1541730258
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541729944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1393
+  indentLevel: 0
+  storyText: 'Justin realized that maybe this is how it was meant to be all along... '
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1541730259
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541729944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1392
+  indentLevel: 0
+  storyText: 'Despite the mandatory desk duty for his insubordinance... '
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &1554667336
 GameObject:
   m_ObjectHideFlags: 0

@@ -3616,7 +3616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1600031862297486222, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_Volume
-      value: 0.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2622336997493846697, guid: 7efe5bc8ae0a6d64397976d69724e7fe, type: 3}
       propertyPath: m_LocalScale.x
@@ -7319,11 +7319,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 529.302, y: 3.7514925}
+  scrollPos: {x: 993.5032, y: -442.07382}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.5615002
+  zoom: 0.5355003
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -7331,9 +7331,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1338135942}
-  selectedCommands:
-  - {fileID: 1338136132}
+  - {fileID: 1338136032}
+  selectedCommands: []
   variables:
   - {fileID: 1338135924}
   - {fileID: 1338135941}
@@ -7367,7 +7366,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 129.3199
     y: 90.130844
-    width: 103.4283
+    width: 104.15497
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7831,9 +7830,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -157.2523
-    y: 94.80982
-    width: 136.37575
+    x: -158.94006
+    y: 94.98948
+    width: 135.90097
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7901,7 +7900,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -393.44257
     y: 88.13609
-    width: 99.86641
+    width: 96.68532
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -7980,9 +7979,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 108.25443
+    x: 106.47349
     y: 358.178
-    width: 162.19943
+    width: 158.30994
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8490,7 +8489,7 @@ MonoBehaviour:
   sentences:
     sentence:
     - I came to the same conclusion.
-    - Ha, at times like this it feels like we could actually be a fun duo!
+    - 'Haha seems our vibes actually aligned for once! '
     - 'Hm... Dad''s clients also felt like an Old Friend, huh? '
     - What if we used your connects to get a warrant for Dad's patient files!
     - I can't do that, David.
@@ -8501,16 +8500,16 @@ MonoBehaviour:
     - Is this "Captain" and your job *really* more important than family?
     LeftCharSpeaking: 01000000010001010000
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: da2a1bf8a93a64fc9b6fef7564b7d9d9, type: 3}
+    - {fileID: 8300000, guid: ce576d5abd3d8497c8bc42b032240160, type: 3}
+    - {fileID: 8300000, guid: b1892744e78664d9a839e637a843b97c, type: 3}
+    - {fileID: 8300000, guid: 4b4e916365cd249eaa4a6b96b1722ffa, type: 3}
+    - {fileID: 8300000, guid: 7b2ac897b93b340e285cf0c5aeda35cd, type: 3}
+    - {fileID: 8300000, guid: 808cb3041f8d54d709abb5b8ac5d168e, type: 3}
+    - {fileID: 8300000, guid: fb6b55fc1cff04917842608968388460, type: 3}
+    - {fileID: 8300000, guid: 39691259b96504b81a26129cfdfa45af, type: 3}
+    - {fileID: 8300000, guid: 2c2d4fa92752540b1998ce41fe993c5f, type: 3}
+    - {fileID: 8300000, guid: 44eab3e479a1e492997a38942710de18, type: 3}
     emotionSprites: 00000000030000000000000003000000000000000500000000000000000000000200000001000000
     emotionOutlines: 04000000030000000300000003000000020000000200000002000000000000000000000000000000
     textFont: 
@@ -8534,7 +8533,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 57794693}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 4
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -8569,9 +8568,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -408.46234
-    y: 649.0005
-    width: 156.8566
+    x: -410.32974
+    y: 645.5203
+    width: 154.5751
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -8603,9 +8602,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -206.4662
-    y: 657.99854
-    width: 160.41849
+    x: -213.84418
+    y: 652.3998
+    width: 157.37622
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -10126,18 +10125,18 @@ MonoBehaviour:
     - I'd say it's a little warranted given our situation!
     - 'If you''d let me finish... you''d know Elijah left a message too. '
     - What? Really?
-    - 'He mentioned that Austin made it *everyone* feel like they were an "Old Friend". '
+    - 'He mentioned that Austin made *everyone* feel like they were an "Old Friend". '
     - From his clients to complete strangers...
     - 'So... he''s saying we should broaden our search? '
     LeftCharSpeaking: 01000100010100
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 80b80a84649424df6b3524db9e6d5793, type: 3}
+    - {fileID: 8300000, guid: 4ab3cde5f08254082a2aa4e5c3ec28ea, type: 3}
+    - {fileID: 8300000, guid: eb73fa829002042868e1fab13bd0f06e, type: 3}
+    - {fileID: 8300000, guid: 3793964945e4b42b9a024b4d207232c2, type: 3}
+    - {fileID: 8300000, guid: 930d3292d916a40b69d18b137d28112d, type: 3}
+    - {fileID: 8300000, guid: 10f9fe8c25dba4006937f20392bf824b, type: 3}
+    - {fileID: 8300000, guid: afbe0dd1b3853449ca4b1cbccda42c0b, type: 3}
     emotionSprites: 00000000010000000000000002000000000000000000000005000000
     emotionOutlines: 04000000000000000000000000000000000000000000000002000000
     textFont: 
@@ -10175,7 +10174,7 @@ MonoBehaviour:
     audioSourceRef: {fileID: 0}
     audioSourceVal: {fileID: 1099043765}
   startVolume: 1
-  endVolume: 0.4
+  endVolume: 0.15
   fadeDuration: 2.5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
@@ -10645,7 +10644,7 @@ MonoBehaviour:
     sentence:
     - That seems to be the case.
     - 'Hm... Dad''s clients also felt like an Old Friend, huh? '
-    - What if we used your connects to get a warrant for Dad's patient files!
+    - What if we used your connections to get a warrant for Dad's patient files!
     - I can't do that, David.
     - 'What do you mean, you can''t? '
     - 'I *mean* I''m in hot water. Cap''n cut me off after the DNA test. '
@@ -10653,7 +10652,16 @@ MonoBehaviour:
     - 'And if we don''t we might never see our Dad again! '
     - Is this "Captain" and your job *really* more important than family?
     LeftCharSpeaking: 010000010001010000
-    voiceClips: []
+    voiceClips:
+    - {fileID: 8300000, guid: e21f461dc225f4270a9cc46c0c34d221, type: 3}
+    - {fileID: 8300000, guid: b1892744e78664d9a839e637a843b97c, type: 3}
+    - {fileID: 8300000, guid: 4b4e916365cd249eaa4a6b96b1722ffa, type: 3}
+    - {fileID: 8300000, guid: aec05fa5bbe8341edbeafe16859ba0b8, type: 3}
+    - {fileID: 8300000, guid: 808cb3041f8d54d709abb5b8ac5d168e, type: 3}
+    - {fileID: 8300000, guid: 7b2ac897b93b340e285cf0c5aeda35cd, type: 3}
+    - {fileID: 8300000, guid: fb6b55fc1cff04917842608968388460, type: 3}
+    - {fileID: 8300000, guid: 2c2d4fa92752540b1998ce41fe993c5f, type: 3}
+    - {fileID: 8300000, guid: 44eab3e479a1e492997a38942710de18, type: 3}
     emotionSprites: 000000000000000003000000000000000100000000000000000000000200000001000000
     emotionOutlines: 040000000400000003000000030000000000000000000000000000000000000000000000
     textFont: 
@@ -10672,9 +10680,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -365.82095
-    y: 354.83658
-    width: 183.57074
+    x: -367.6019
+    y: 354.83832
+    width: 177.91776
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12208,13 +12216,13 @@ MonoBehaviour:
     - 'So... he''s saying we should broaden our search? '
     LeftCharSpeaking: 01010000010100
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: ab0eaee1da72d4b88b51882018b71921, type: 3}
+    - {fileID: 8300000, guid: 6e6bc4da02ec046f3bf98bea0299cdf8, type: 3}
+    - {fileID: 8300000, guid: e8be797bc6af14914acd27c5aa69c492, type: 3}
+    - {fileID: 8300000, guid: ce198053246b548acb93df34f3f0bcdd, type: 3}
+    - {fileID: 8300000, guid: 930d3292d916a40b69d18b137d28112d, type: 3}
+    - {fileID: 8300000, guid: 10f9fe8c25dba4006937f20392bf824b, type: 3}
+    - {fileID: 8300000, guid: afbe0dd1b3853449ca4b1cbccda42c0b, type: 3}
     emotionSprites: 00000000000000000200000005000000000000000000000003000000
     emotionOutlines: 04000000040000000300000002000000040000000400000003000000
     textFont: 
@@ -12248,8 +12256,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 47.4621
-    y: 202.27074
-    width: 107.88066
+    y: 202.43138
+    width: 106.02238
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -12293,9 +12301,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -305.77945
-    y: 191.2848
-    width: 118.566315
+    x: -300.4366
+    y: 185.94197
+    width: 118.16056
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13825,17 +13833,17 @@ MonoBehaviour:
   sentences:
     sentence:
     - 'I don''t like that look... '
-    - Yeah. DNA test came up empty. But--
-    - Oh god this bad! This is really, really bad!
+    - Yeah. DNA test came up empty. However--
+    - Oh god this is bad! This is really, really bad!
     - 'That was our best bet at tracking Dad down! '
     - 'What do we do now? '
     LeftCharSpeaking: 0001000000
     voiceClips:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 2e4253283710e44ae92edc8ffcfdafd3, type: 3}
+    - {fileID: 8300000, guid: 73175ae06c63241b992ec2472291fc81, type: 3}
+    - {fileID: 8300000, guid: cc0f794a395234107b12ec7afbc85144, type: 3}
+    - {fileID: 8300000, guid: 9b0bf250ff3b247e5af7f816c2c1aca2, type: 3}
+    - {fileID: 8300000, guid: 4f4d4115559c94e338f224993260aa18, type: 3}
     emotionSprites: 0000000000000000000000000000000000000000
     emotionOutlines: 0400000004000000020000000200000002000000
     textFont: 
@@ -13890,8 +13898,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 200.17728
-    y: 661.44556
-    width: 196.03735
+    y: 663.1206
+    width: 190.05595
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -13967,9 +13975,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -111.892944
-    y: 862.3297
-    width: 106.09972
+    x: -115.62428
+    y: 868.0132
+    width: 106.956085
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15120,12 +15128,20 @@ MonoBehaviour:
     - 'The real world is different... They don''t care. '
     - And even if we *did* get a warrant, we'd be grasping at straws.
     - Austin's had hundreds of clients. It would take *weeks* to check all of them!
-    - I...
-    - 'Okay. '
+    - I... Okay.
     - Just... Leave me alone.
-    LeftCharSpeaking: 01000001010101000000
-    voiceClips: []
-    emotionSprites: 00000000040000000500000000000000000000000000000000000000000000000000000004000000
+    LeftCharSpeaking: 010000010101010000
+    voiceClips:
+    - {fileID: 8300000, guid: f459d253625da44e28a19e17c452e0d0, type: 3}
+    - {fileID: 8300000, guid: 65501c127bc3747699c8d3335df893a3, type: 3}
+    - {fileID: 8300000, guid: b190919688cd4416096a71616a5847e7, type: 3}
+    - {fileID: 8300000, guid: d701e0783e4a44d8c9ac5365437767cb, type: 3}
+    - {fileID: 8300000, guid: ca734f0a321304e3c8db5ee040f426f5, type: 3}
+    - {fileID: 8300000, guid: 458c56e72bd234436af87eb8e176104d, type: 3}
+    - {fileID: 8300000, guid: 0cc6bd60a85234ad8b25642575399c34, type: 3}
+    - {fileID: 8300000, guid: 27a9d299007aa44548b1df915bb943ef, type: 3}
+    - {fileID: 8300000, guid: a935fe21d31db459293d4e4a2ff4b51b, type: 3}
+    emotionSprites: 000000000400000005000000000000000000000000000000000000000000000000000000
     emotionOutlines: 04000000020000000200000002000000020000000200000002000000020000000200000002000000
     textFont: 
   chooseToFade: 1
@@ -16694,9 +16710,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -21.014744
-    y: 659.7965
-    width: 179.1184
+    x: -17.534567
+    y: 663.1708
+    width: 176.05035
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -17206,12 +17222,20 @@ MonoBehaviour:
     - 'The real world is different... They don''t care. '
     - 'And even if we *did* get a warrant, we''d be grasping at straws. '
     - Austin's had hundreds of clients. It would take *weeks* to check all of them!
-    - I...
-    - 'Okay. '
+    - I... Okay.
     - 'I''ll figure it out by myself then. Just... Leave me alone. '
-    LeftCharSpeaking: 01000001010101000000
-    voiceClips: []
-    emotionSprites: 00000000040000000500000000000000000000000000000000000000000000000000000004000000
+    LeftCharSpeaking: 010000010101010000
+    voiceClips:
+    - {fileID: 8300000, guid: b0659f754848c4f8a8cd0f4e0d5f46a4, type: 3}
+    - {fileID: 8300000, guid: 65501c127bc3747699c8d3335df893a3, type: 3}
+    - {fileID: 8300000, guid: b190919688cd4416096a71616a5847e7, type: 3}
+    - {fileID: 8300000, guid: d701e0783e4a44d8c9ac5365437767cb, type: 3}
+    - {fileID: 8300000, guid: ca734f0a321304e3c8db5ee040f426f5, type: 3}
+    - {fileID: 8300000, guid: 458c56e72bd234436af87eb8e176104d, type: 3}
+    - {fileID: 8300000, guid: 0cc6bd60a85234ad8b25642575399c34, type: 3}
+    - {fileID: 8300000, guid: 27a9d299007aa44548b1df915bb943ef, type: 3}
+    - {fileID: 8300000, guid: a935fe21d31db459293d4e4a2ff4b51b, type: 3}
+    emotionSprites: 000000000400000005000000000000000000000000000000000000000000000000000000
     emotionOutlines: 04000000020000000200000002000000020000000200000002000000020000000200000002000000
     textFont: 
   chooseToFade: 1
@@ -17721,12 +17745,20 @@ MonoBehaviour:
     - 'The real world is different... They don''t care. '
     - 'And even if we *did* get a warrant, we''d be grasping at straws. '
     - Austin's had hundreds of clients. It would take *weeks* to check all of them!
-    - I...
-    - 'Okay. '
+    - I... Okay.
     - I'll figure it out by myself then. Just... leave me alone.
-    LeftCharSpeaking: 01000001010101000000
-    voiceClips: []
-    emotionSprites: 00000000040000000500000000000000000000000000000000000000000000000000000004000000
+    LeftCharSpeaking: 010000010101010000
+    voiceClips:
+    - {fileID: 8300000, guid: d1b64292628fd4d3f8657db116f76997, type: 3}
+    - {fileID: 8300000, guid: 65501c127bc3747699c8d3335df893a3, type: 3}
+    - {fileID: 8300000, guid: b190919688cd4416096a71616a5847e7, type: 3}
+    - {fileID: 8300000, guid: d701e0783e4a44d8c9ac5365437767cb, type: 3}
+    - {fileID: 8300000, guid: ca734f0a321304e3c8db5ee040f426f5, type: 3}
+    - {fileID: 8300000, guid: 458c56e72bd234436af87eb8e176104d, type: 3}
+    - {fileID: 8300000, guid: 0cc6bd60a85234ad8b25642575399c34, type: 3}
+    - {fileID: 8300000, guid: 27a9d299007aa44548b1df915bb943ef, type: 3}
+    - {fileID: 8300000, guid: a935fe21d31db459293d4e4a2ff4b51b, type: 3}
+    emotionSprites: 000000000400000005000000000000000000000000000000000000000000000000000000
     emotionOutlines: 04000000020000000200000002000000020000000200000002000000020000000200000002000000
     textFont: 
   chooseToFade: 1
@@ -18253,12 +18285,20 @@ MonoBehaviour:
     - 'The real world is different... They don''t care. '
     - 'And even if we *did* get a warrant, we''d be grasping at straws. '
     - Austin's had hundreds of clients. It would take *weeks* to check all of them!
-    - I...
-    - 'Okay. '
+    - I... Okay.
     - 'I''ll figure it out by myself then. Just... Leave me alone. '
-    LeftCharSpeaking: 01000001010101000000
-    voiceClips: []
-    emotionSprites: 00000000040000000500000000000000000000000000000000000000000000000000000004000000
+    LeftCharSpeaking: 010000010101010000
+    voiceClips:
+    - {fileID: 8300000, guid: 39691259b96504b81a26129cfdfa45af, type: 3}
+    - {fileID: 8300000, guid: 65501c127bc3747699c8d3335df893a3, type: 3}
+    - {fileID: 8300000, guid: b190919688cd4416096a71616a5847e7, type: 3}
+    - {fileID: 8300000, guid: d701e0783e4a44d8c9ac5365437767cb, type: 3}
+    - {fileID: 8300000, guid: ca734f0a321304e3c8db5ee040f426f5, type: 3}
+    - {fileID: 8300000, guid: 458c56e72bd234436af87eb8e176104d, type: 3}
+    - {fileID: 8300000, guid: 0cc6bd60a85234ad8b25642575399c34, type: 3}
+    - {fileID: 8300000, guid: 27a9d299007aa44548b1df915bb943ef, type: 3}
+    - {fileID: 8300000, guid: a935fe21d31db459293d4e4a2ff4b51b, type: 3}
+    emotionSprites: 000000000400000005000000000000000000000000000000000000000000000000000000
     emotionOutlines: 04000000020000000200000002000000020000000200000002000000020000000200000002000000
     textFont: 
   chooseToFade: 1
@@ -20400,7 +20440,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1338136137
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -20428,7 +20468,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1338136138
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}

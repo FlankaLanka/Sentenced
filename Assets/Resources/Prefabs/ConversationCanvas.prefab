@@ -1203,7 +1203,7 @@ MonoBehaviour:
   MessyIcon: {fileID: 21300000, guid: 532585012e5294240999a9c98d93b474, type: 3}
   QuestionIcon: {fileID: 21300000, guid: e1c54a8bfacccd24cbae8530fa97163f, type: 3}
   SweatIcon: {fileID: 21300000, guid: 2856a32cdc51a7641a40d27a89983289, type: 3}
-  ColoredOutline: {fileID: 2100000, guid: 324291d6d27cc134ca6275493e05f790, type: 2}
+  ColoredOutline: {fileID: 2100000, guid: 583bc09f14fe40d48b38c84b66e9c1bd, type: 2}
   NoOutline: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   currentSentences:
     sentence: []
@@ -1337,9 +1337,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 65a81f1f484e9ab4dad54ecebaf84caf, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 15b0a532be3f2d24ca6386030d9afdf7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
